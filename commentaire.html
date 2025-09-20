@@ -1,0 +1,290 @@
+re<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Zone de commentaires sécurisée pour IDA COURS">
+  <meta name="keywords" content="cours, apprentissage, commentaires, sécurité">
+  <meta name="author" content="IDA COURS">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="favicon.png" sizes="180x180">
+  <link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="favicon.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+  <meta name="google-site-verification" content="8WaeKM-mQAcuLhGP1eHzoO1Gr0IX9lq_NoNGavj0fB8" />
+<title>Commentaires sécurisés | IDA COURS</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container-nav">
+          <div class="logo-nav">SDBSN-CODE</div>
+          <ul class="nav-links">
+              <li><a href="index.html" class="nav-link ">Accueil</a></li>
+              <li><a href="videos.html" class="nav-link">Vidéos</a></li>
+              <li><a href="L1.html" class="nav-link">Licence 1</a></li>
+              <li><a href="L2.html" class="nav-link">Licence 2</a></li>
+              <li><a href="L3.html" class="nav-link">licence 3</a></li>
+              <li><a href="pdftuto.html" class="nav-link">Annexe informative</a></li>
+              <li><a href="commentaire.html" class="nav-link active">Commentaires</a></li>
+          </ul>
+          <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+      </div>
+  </nav>
+  <section id="hero" class="hero-section">
+    <div class="hero-content">
+        <h1 class="hero-title">Bienvenue sur la plateforme d'apprentissage IDA COURS</h1>
+        <p class="hero-slogan">"Ensemble, développons nos compétences et notre avenir !"</p>
+        <a href="commentaire.html" class="btn-cta">Commencer &darr;</a>
+    </div>
+    <div class="hero-illustration">
+        <img src="files/ChatGPT Image 1 juil. 2025, 03_24_36.png" alt="Apprentissage">
+    </div>
+</section>
+  <h1>Zone de commentaires - IDA COURS</h1>
+
+  <!-- Formulaire de connexion / inscription -->
+  <form id="authForm">
+    <h2>Connexion / Inscription</h2>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="password" id="password" placeholder="Mot de passe" required>
+    <button type="submit">Se connecter / S'inscrire</button>
+  </form>
+
+  <!-- Déconnexion -->
+  <div class="comment-section" id="userSection" style="display:none;">
+    <p>Connecté en tant que : <span id="userEmail"></span></p>
+    <button class="logout-btn" id="logoutBtn">Se déconnecter</button>
+
+    <!-- Formulaire de commentaire -->
+    <form id="commentForm">
+      <textarea id="commentaire" placeholder="Votre commentaire..." required></textarea>
+      <button type="submit">Envoyer le commentaire</button>
+    </form>
+  </div>
+
+  <!-- Affichage des commentaires -->
+  <div>
+    <h2>Commentaires récents:</h2>
+    <ul id="listeCommentaires"></ul>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+    import { getFirestore, collection, addDoc, getDocs, query, orderBy, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDDKOVv1A8eXDK6_uDTvEp3eBBgfIGzYPo",
+      authDomain: "ida-cours.firebaseapp.com",
+      projectId: "ida-cours",
+      storageBucket: "ida-cours.firebasestorage.app",
+      messagingSenderId: "158609791870",
+      appId: "1:158609791870:web:795a994a441c0dfadf312f",
+      measurementId: "G-M9JC11KTP2"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+
+    const authForm = document.getElementById("authForm");
+    const commentForm = document.getElementById("commentForm");
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+    const commentaireInput = document.getElementById("commentaire");
+    const userSection = document.getElementById("userSection");
+    const userEmailDisplay = document.getElementById("userEmail");
+    const logoutBtn = document.getElementById("logoutBtn");
+    const listeCommentaires = document.getElementById("listeCommentaires");
+
+    // Auth: inscription ou connexion
+    authForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = emailInput.value;
+      const password = passwordInput.value;
+
+      try {
+        // Essaye de se connecter
+        await signInWithEmailAndPassword(auth, email, password);
+      } catch (err1) {
+        try {
+          // Sinon, crée un compte
+          await createUserWithEmailAndPassword(auth, email, password);
+        } catch (err2) {
+          alert("Erreur : " + err2.message); // Affiche l'erreur à l'utilisateur
+        }
+      }
+    });
+
+    // Déconnexion
+    logoutBtn.addEventListener("click", () => {
+      signOut(auth);
+    });
+
+    // Quand l'utilisateur est connecté/déconnecté
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        userSection.style.display = "block";
+        authForm.style.display = "none";
+        userEmailDisplay.textContent = user.email;
+        chargerCommentaires();
+      } else {
+        userSection.style.display = "none";
+        authForm.style.display = "block";
+        listeCommentaires.innerHTML = "";
+      }
+    });
+
+    // Ajout de commentaire
+    commentForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const texte = commentaireInput.value;
+      const user = auth.currentUser;
+
+      if (!texte || !user) return;
+
+      try {
+        await addDoc(collection(db, "commentaires"), {
+          email: user.email,
+          texte: texte,
+          date: serverTimestamp()
+        });
+        commentaireInput.value = "";
+        chargerCommentaires();
+      } catch (err) {
+        alert("Erreur lors de l'envoi du commentaire : " + err.message);
+      }
+    });
+
+    // Chargement des commentaires
+    async function chargerCommentaires() {
+      listeCommentaires.innerHTML = "";
+      const commentairesRef = collection(db, "commentaires");
+      const q = query(commentairesRef, orderBy("date", "desc"));
+      const querySnapshot = await getDocs(q);
+
+      querySnapshot.forEach(async (doc) => {
+        const data = doc.data();
+        const li = document.createElement("li");
+        li.innerHTML = `
+          <span class="email">${data.email} :</span><br>${data.texte}
+          <div>
+            <button class="reply-btn" data-id="${doc.id}">Répondre</button>
+            <div class="reply-form" style="display:none;">
+              <textarea placeholder="Votre réponse..." class="reply-text"></textarea>
+              <button class="send-reply">Envoyer</button>
+            </div>
+            <ul class="replies" id="replies-${doc.id}"></ul>
+          </div>
+        `;
+
+        listeCommentaires.appendChild(li);
+
+        // Réponses à ce commentaire
+        const repliesUl = li.querySelector(`#replies-${doc.id}`);
+        const repliesRef = collection(db, "commentaires", doc.id, "reponses");
+        const repliesSnapshot = await getDocs(query(repliesRef, orderBy("date", "asc")));
+        repliesSnapshot.forEach(replyDoc => {
+          const replyData = replyDoc.data();
+          const replyLi = document.createElement("li");
+          replyLi.innerHTML = `<span class="email">${replyData.email} :</span><br>${replyData.texte}`;
+          repliesUl.appendChild(replyLi);
+        });
+
+        // Gestion du bouton "Répondre"
+        const replyBtn = li.querySelector(".reply-btn");
+        const replyForm = li.querySelector(".reply-form");
+        const replyText = li.querySelector(".reply-text");
+        const sendReply = li.querySelector(".send-reply");
+
+        replyBtn.addEventListener("click", () => {
+          replyForm.style.display = replyForm.style.display === "none" ? "block" : "none";
+        });
+
+        sendReply.addEventListener("click", async () => {
+          const user = auth.currentUser;
+          const texte = replyText.value;
+          if (!texte || !user) return;
+
+          await addDoc(collection(db, "commentaires", doc.id, "reponses"), {
+            email: user.email,
+            texte: texte,
+            date: serverTimestamp()
+          });
+
+          replyText.value = "";
+          chargerCommentaires(); // Recharger les commentaires pour voir la réponse
+        });
+      });
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+   <footer class="modern-footer">
+    <div class="footer-wave"></div>
+    <div class="footer-content">
+        <div class="footer-section">
+            <img src="ASSETS/téléchargement (2).jpg" alt="Logo IDA COURS" class="footer-logo">
+            <p>Votre partenaire de confiance pour une formation en ligne de qualité. Développez vos compétences et construisez votre avenir avec nous.</p>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/princeseydoubhk" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/Sdbsntech" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/seydou-bakhayokho-864070343" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.youtube.com/channel/UCCZJBOaAPdAoTiD-iJ2ftkg" class="social-icon" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://github.com/Sdbsntech" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Liens Rapides</h3>
+            <ul class="footer-links">
+                <li><a href="index.html"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+                <li><a href="pdftuto.html"><i class="fas fa-chevron-right"></i> Annexe informative</a></li>
+                <li><a href="videos.html"><i class="fas fa-chevron-right"></i> Vidéos</a></li>
+                <li><a href="L1.html"><i class="fas fa-chevron-right"></i> Licence 1</a></li>
+                <li><a href="L2.html"><i class="fas fa-chevron-right"></i> Licence 2</a></li>
+                <li><a href="L3.html"><i class="fas fa-chevron-right"></i> Licence 3</a></li>
+                <li><a href="commentaire.html"><i class="fas fa-chevron-right"></i> Commentaires</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Ressources</h3>
+            <ul class="footer-links">
+                <li><a href="bibliotheques.html"><i class="fas fa-book"></i> Bibliothèque</a></li>
+                <li><a href="#calendrier"><i class="fas fa-calendar-alt"></i> Calendrier</a></li>
+                <li><a href="FAQ.HTML"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                <li><a href="https://grafikart.fr/tutoriels/variables-441#autoplay"><i class="fas fa-user-graduate"></i>Liens-utiles</a></li>
+                <li><a href="formateur.html"><i class="fas fa-chalkboard-teacher"></i> Nos Formateurs</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <div class="footer-contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>DAKAR, PIKINE, DALIFORT</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+221 77 362 45 39</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>sdbsntech1@gmail.com</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 IDA COURS. Plateforme réalisée par Seydou Bakhayokho.</p>
+    </div>
+</footer>
+    <script src="main.js"></script>
+</body>
+</html>
