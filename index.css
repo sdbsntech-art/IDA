@@ -24,6 +24,22 @@ body {
   margin: 0;
   min-height: 100vh;
 }
+ .legal-links {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 16px;
+    }
+    .legal-links a {
+        color: #666;
+        text-decoration: none;
+        margin: 0 10px;
+        transition: color 0.3s;
+    }
+    .legal-links a:hover {
+        color: #e6e5eb;
+        text-decoration: underline;
+    }
+
 
 /* ====== Navbar ====== */
 .navbar {

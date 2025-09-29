@@ -298,11 +298,248 @@
             </div>
         </div>
     </div>
-
+    <div class="legal-links">
+                    <a href="mention_legale.html">mention_legale.</a>
+                    <a href="politique_confidentialite.html">politique_confidentialite</a>
+                    <a href="condition_d'utilisation.html">condition_d'utilisation</a>
+                </div>
     <div class="footer-bottom">
         <p>&copy; 2025 IDA COURS. Plateforme réalisée par Seydou Bakhayokho.</p>
     </div>
 </footer>
   <script src="main.js"></script>
+  <script>
+    // protection.js - Code de protection contre l'inspection
+document.addEventListener('DOMContentLoaded', function() {
+    'use strict';
+    
+    // Configuration
+    const config = {
+        disableRightClick: true,
+        disableDevTools: true,
+        disableKeyboardShortcuts: true,
+        showWarning: true,
+        warningMessage: "Cette action n'est pas autorisée sur ce site."
+    };
+    
+    // 🔒 Empêcher le clic droit
+    if (config.disableRightClick) {
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            if (config.showWarning) {
+                showWarning(config.warningMessage);
+            }
+            return false;
+        });
+    }
+    
+    // ⌨️ Empêcher les raccourcis clavier
+    if (config.disableKeyboardShortcuts) {
+        document.addEventListener('keydown', function(e) {
+            // F12 - DevTools
+            if (e.key === 'F12' || e.keyCode === 123) {
+                e.preventDefault();
+                if (config.showWarning) {
+                    showWarning("L'ouverture des outils de développement est désactivée.");
+                }
+                return false;
+            }
+            
+            // Ctrl+Shift+I / Cmd+Opt+I
+            if ((e.ctrlKey && e.shiftKey && e.key === 'I') || 
+                (e.metaKey && e.altKey && e.key === 'I')) {
+                e.preventDefault();
+                if (config.showWarning) {
+                    showWarning("L'inspection du code est désactivée.");
+                }
+                return false;
+            }
+            
+            // Ctrl+U / Cmd+U - View Source
+            if ((e.ctrlKey && e.key === 'u') || (e.metaKey && e.key === 'u')) {
+                e.preventDefault();
+                if (config.showWarning) {
+                    showWarning("La visualisation du code source est désactivée.");
+                }
+                return false;
+            }
+            
+            // Ctrl+Shift+C / Cmd+Shift+C - Inspect Element
+            if ((e.ctrlKey && e.shiftKey && e.key === 'C') || 
+                (e.metaKey && e.shiftKey && e.key === 'C')) {
+                e.preventDefault();
+                if (config.showWarning) {
+                    showWarning("L'inspection d'élément est désactivée.");
+                }
+                return false;
+            }
+            
+            // Ctrl+S / Cmd+S - Save Page
+            if ((e.ctrlKey && e.key === 's') || (e.metaKey && e.key === 's')) {
+                e.preventDefault();
+                if (config.showWarning) {
+                    showWarning("La sauvegarde de la page est désactivée.");
+                }
+                return false;
+            }
+        });
+    }
+    
+    // 🛠️ Détection avancée des DevTools
+    if (config.disableDevTools) {
+        detectDevTools();
+    }
+    
+    // Fonction pour afficher les avertissements
+    function showWarning(message) {
+        // Créer ou mettre à jour l'élément d'avertissement
+        let warning = document.getElementById('protection-warning');
+        if (!warning) {
+            warning = document.createElement('div');
+            warning.id = 'protection-warning';
+            warning.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #ff4757;
+                color: white;
+                padding: 15px 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                z-index: 10000;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                max-width: 300px;
+                animation: slideIn 0.3s ease;
+            `;
+            document.body.appendChild(warning);
+            
+            // Ajouter l'animation CSS
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideIn {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        
+        warning.textContent = message;
+        warning.style.display = 'block';
+        
+        // Masquer après 3 secondes
+        setTimeout(() => {
+            warning.style.display = 'none';
+        }, 3000);
+    }
+    
+    // Fonction de détection des DevTools
+    function detectDevTools() {
+        const threshold = 160;
+        const checkDevTools = function() {
+            const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+            const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+            
+            if (widthThreshold || heightThreshold) {
+                // DevTools détecté
+                document.body.innerHTML = `
+                    <div style="
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                        color: white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-family: Arial, sans-serif;
+                        text-align: center;
+                        z-index: 9999;
+                    ">
+                        <div>
+                            <h1 style="font-size: 2em; margin-bottom: 20px;">🚫 Accès Restreint</h1>
+                            <p style="font-size: 1.2em; margin-bottom: 30px;">
+                                Les outils de développement sont désactivés sur ce site.<br>
+                                Veuillez fermer les DevTools pour continuer.
+                            </p>
+                            <button onclick="location.reload()" style="
+                                background: white;
+                                color: #667eea;
+                                border: none;
+                                padding: 12px 24px;
+                                border-radius: 5px;
+                                font-size: 1em;
+                                cursor: pointer;
+                                font-weight: bold;
+                            ">
+                                Recharger la page
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }
+        };
+        
+        // Vérifier périodiquement
+        setInterval(checkDevTools, 1000);
+        
+        // Événement de redimensionnement
+        window.addEventListener('resize', checkDevTools);
+    }
+    
+    // Protection supplémentaire contre la sélection de texte
+    document.addEventListener('selectstart', function(e) {
+        e.preventDefault();
+        return false;
+    });
+    
+    // Protection contre le drag & drop d'images
+    document.addEventListener('dragstart', function(e) {
+        if (e.target.tagName === 'IMG') {
+            e.preventDefault();
+            return false;
+        }
+    });
+    
+    console.log('🔒 Protection activée - IDA Cours');
+});
+
+// Protection avancée contre la console
+(function() {
+    'use strict';
+    
+    // Rediriger la console
+    const originalConsole = {
+        log: console.log,
+        warn: console.warn,
+        error: console.error,
+        info: console.info
+    };
+    
+    // Redéfinir les méthodes de la console
+    ['log', 'warn', 'error', 'info'].forEach(method => {
+        console[method] = function() {
+            // Vous pouvez choisir de ne rien faire ou d'afficher un message
+            originalConsole.log(`🚫 Console.${method} est surveillée - IDA Cours`);
+        };
+    });
+    
+    // Empêcher l'accès aux propriétés sensibles
+    Object.defineProperty(window, 'console', {
+        get: function() {
+            return {
+                log: function() { /* bloqué */ },
+                warn: function() { /* bloqué */ },
+                error: function() { /* bloqué */ },
+                info: function() { /* bloqué */ }
+            };
+        },
+        set: function() { /* bloqué */ }
+    });
+})();
+  </script>
 </body>
 </html>
