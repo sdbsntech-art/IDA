@@ -1,0 +1,16 @@
+[build]
+  base = ""
+  publish = "."
+  command = ""
+
+[build.environment]
+  NODE_VERSION = "16"
+
+[context.production.environment]
+  NODE_VERSION = "16"
+
+[context.deploy-preview]
+  command = ""
+
+[context.branch-deploy]
+  command = ""

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/brands.min.css">
+    <link rel="stylesheet" href="index.css">
+    <meta name="google-site-verification" content="8WaeKM-mQAcuLhGP1eHzoO1Gr0IX9lq_NoNGavj0fB8" />
+<title>Exercice Licence 3</title>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5462969054920766"
+     crossorigin="anonymous"></script>
+
+<meta name="google-adsense-account" content="ca-pub-3942650991755175">
+</head>
+<script>
+    // protection.js - Code de protection contre l'inspection
+document.addEventListener('DOMContentLoaded', function() {
+    'use strict';
+    
+    // Configuration
+    const config = {
+        disableRightClick: true,
+        disableDevTools: true,
+        disableKeyboardShortcuts: true,
+        showWarning: true,
+        warningMessage: "Cette action n'est pas autorisée sur ce site."
+    };
+    
+    // 🔒 Empêcher le clic droit
+    if (config.disableRightClick) {
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            if (config.showWarning) {
+                showWarning(config.warningMessage);
+            }
+            return false;
+        });
+    }
+    
+    // ⌨️ Empêcher les raccourcis clavier
+    if (config.disableKeyboardShortcuts) {
+        document.addEventListener('keydown', function(e) {
+            // F12 - DevTools
+            if (e.key === 'F12' || e.keyCode === 123) {
+                e.preventDefault();
+                if (config.showWarning) {
+                    showWarning("L'ouverture des outils de développement est désactivée.");
+                }
+                return false;
+            }
+            
+            // Ctrl+Shift+I / Cmd+Opt+I
+            if ((e.ctrlKey && e.shiftKey && e.key === 'I') || 
+                (e.metaKey && e.altKey && e.key === 'I')) {
+                e.preventDefault();
+                if (config.showWarning) {
+                    showWarning("L'inspection du code est désactivée.");
+                }
+                return false;
+            }
+            
+            // Ctrl+U / Cmd+U - View Source
+            if ((e.ctrlKey && e.key === 'u') || (e.metaKey && e.key === 'u')) {
+                e.preventDefault();
+                if (config.showWarning) {
+                    showWarning("La visualisation du code source est désactivée.");
+                }
+                return false;
+            }
+            
+            // Ctrl+Shift+C / Cmd+Shift+C - Inspect Element
+            if ((e.ctrlKey && e.shiftKey && e.key === 'C') || 
+                (e.metaKey && e.shiftKey && e.key === 'C')) {
+                e.preventDefault();
+                if (config.showWarning) {
+                    showWarning("L'inspection d'élément est désactivée.");
+                }
+                return false;
+            }
+            
+            // Ctrl+S / Cmd+S - Save Page
+            if ((e.ctrlKey && e.key === 's') || (e.metaKey && e.key === 's')) {
+                e.preventDefault();
+                if (config.showWarning) {
+                    showWarning("La sauvegarde de la page est désactivée.");
+                }
+                return false;
+            }
+        });
+    }
+    
+    // 🛠️ Détection avancée des DevTools
+    if (config.disableDevTools) {
+        detectDevTools();
+    }
+    
+    // Fonction pour afficher les avertissements
+    function showWarning(message) {
+        // Créer ou mettre à jour l'élément d'avertissement
+        let warning = document.getElementById('protection-warning');
+        if (!warning) {
+            warning = document.createElement('div');
+            warning.id = 'protection-warning';
+            warning.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #ff4757;
+                color: white;
+                padding: 15px 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                z-index: 10000;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                max-width: 300px;
+                animation: slideIn 0.3s ease;
+            `;
+            document.body.appendChild(warning);
+            
+            // Ajouter l'animation CSS
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideIn {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        
+        warning.textContent = message;
+        warning.style.display = 'block';
+        
+        // Masquer après 3 secondes
+        setTimeout(() => {
+            warning.style.display = 'none';
+        }, 3000);
+    }
+    
+    // Fonction de détection des DevTools
+    function detectDevTools() {
+        const threshold = 160;
+        const checkDevTools = function() {
+            const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+            const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+            
+            if (widthThreshold || heightThreshold) {
+                // DevTools détecté
+                document.body.innerHTML = `
+                    <div style="
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                        color: white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-family: Arial, sans-serif;
+                        text-align: center;
+                        z-index: 9999;
+                    ">
+                        <div>
+                            <h1 style="font-size: 2em; margin-bottom: 20px;">🚫 Accès Restreint</h1>
+                            <p style="font-size: 1.2em; margin-bottom: 30px;">
+                                Les outils de développement sont désactivés sur ce site.<br>
+                                Veuillez fermer les DevTools pour continuer.
+                            </p>
+                            <button onclick="location.reload()" style="
+                                background: white;
+                                color: #667eea;
+                                border: none;
+                                padding: 12px 24px;
+                                border-radius: 5px;
+                                font-size: 1em;
+                                cursor: pointer;
+                                font-weight: bold;
+                            ">
+                                Recharger la page
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }
+        };
+        
+        // Vérifier périodiquement
+        setInterval(checkDevTools, 1000);
+        
+        // Événement de redimensionnement
+        window.addEventListener('resize', checkDevTools);
+    }
+    
+    // Protection supplémentaire contre la sélection de texte
+    document.addEventListener('selectstart', function(e) {
+        e.preventDefault();
+        return false;
+    });
+    
+    // Protection contre le drag & drop d'images
+    document.addEventListener('dragstart', function(e) {
+        if (e.target.tagName === 'IMG') {
+            e.preventDefault();
+            return false;
+        }
+    });
+    
+    console.log('🔒 Protection activée - IDA Cours');
+});
+
+// Protection avancée contre la console
+(function() {
+    'use strict';
+    
+    // Rediriger la console
+    const originalConsole = {
+        log: console.log,
+        warn: console.warn,
+        error: console.error,
+        info: console.info
+    };
+    
+    // Redéfinir les méthodes de la console
+    ['log', 'warn', 'error', 'info'].forEach(method => {
+        console[method] = function() {
+            // Vous pouvez choisir de ne rien faire ou d'afficher un message
+            originalConsole.log(`🚫 Console.${method} est surveillée - IDA Cours`);
+        };
+    });
+    
+    // Empêcher l'accès aux propriétés sensibles
+    Object.defineProperty(window, 'console', {
+        get: function() {
+            return {
+                log: function() { /* bloqué */ },
+                warn: function() { /* bloqué */ },
+                error: function() { /* bloqué */ },
+                info: function() { /* bloqué */ }
+            };
+        },
+        set: function() { /* bloqué */ }
+    });
+})();
+</script>
+<style>
+  .semestre2 {
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: #4175c4;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .semestre2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #74aae9;
+    margin-top: 1rem;
+  }
+  .semestre2:hover {
+    color: #0a449c;
+  }
+</style>
+<body>
+    <main>
+        <header>
+            <h1>Exercice Licence 3</h1>
+            <hr>
+ <section class="tc-matiere section visible">
+      <h2><i class="fas fa-mobile-alt"></i> Développer une application...</h2>
+      <ul class="tc-list">
+        <li>
+          <a href="files/developpez_une_application_mobile_multi_plateforme_avec_ionic_part1.rar" target="_blank">
+            Développez une application mobile multi-plateforme avec Ionic (partie 1) [Ressource .rar]
+          </a>
+        </li>
+      </ul>
+    </section>
+
+         
+    </main>
+    <footer class="modern-footer">
+    <div class="footer-wave"></div>
+    <div class="footer-content">
+        <div class="footer-section">
+            <img src="ASSETS/téléchargement (2).jpg" alt="Logo IDA COURS" class="footer-logo">
+            <p>Votre partenaire de confiance pour une formation en ligne de qualité. Développez vos compétences et construisez votre avenir avec nous.</p>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/princeseydoubhk" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/Sdbsntech" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/seydou-bakhayokho-864070343" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.youtube.com/channel/UCCZJBOaAPdAoTiD-iJ2ftkg" class="social-icon" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://github.com/Sdbsntech" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Liens Rapides</h3>
+            <ul class="footer-links">
+                <li><a href="index.html"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+                <li><a href="pdftuto.html"><i class="fas fa-chevron-right"></i> Annexe informative</a></li>
+                <li><a href="videos.html"><i class="fas fa-chevron-right"></i> Vidéos</a></li>
+                <li><a href="L1.html"><i class="fas fa-chevron-right"></i> Licence 1</a></li>
+                <li><a href="L2.html"><i class="fas fa-chevron-right"></i> Licence 2</a></li>
+                <li><a href="L3.html"><i class="fas fa-chevron-right"></i> Licence 3</a></li>
+                <li><a href="commentaire.html"><i class="fas fa-chevron-right"></i> Commentaires</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Ressources</h3>
+            <ul class="footer-links">
+                <li><a href="bibliotheques.html"><i class="fas fa-book"></i> Bibliothèque</a></li>
+                <li><a href="#calendrier"><i class="fas fa-calendar-alt"></i> Calendrier</a></li>
+                <li><a href="FAQ.HTML"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                <li><a href="formateur.html"><i class="fas fa-chalkboard-teacher"></i> Nos Formateurs</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <div class="footer-contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>DAKAR, PIKINE, DALIFORT</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+221 77 362 45 39</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>sdbsntech1@gmail.com</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="legal-links">
+                    <a href="mention_legale.html">mention_legale.</a>
+                    <a href="politique_confidentialite.html">politique_confidentialite</a>
+                    <a href="condition_d'utilisation.html">condition_d'utilisation</a>
+                </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 IDA COURS. Plateforme réalisée par Seydou Bakhayokho.</p>
+    </div>
+</footer>
+</body>
+</html>

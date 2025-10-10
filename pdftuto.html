@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="option de cours">
+    <meta name="keywords" content="cours, option, pdf, tuto">
+    <meta name="author" content="IDA COURS">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="favicon.png" sizes="180x180">
+    <link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="favicon.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <meta name="google-site-verification" content="8WaeKM-mQAcuLhGP1eHzoO1Gr0IX9lq_NoNGavj0fB8" />
+<title>option de cours</title>
+
+    <style>
+        .pdf-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin: 30px auto;
+            max-width: 1200px;
+        }
+
+        .module-section {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .pdf-section h2 {
+            font-size: 1.6rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: left;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .module-title {
+            font-size: 2rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .semester-title {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            text-align: center;
+            margin: 40px 0;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .pdf-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .pdf-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: #f8f9fa;
+            padding: 15px 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+
+        .pdf-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            border-color: #3498db;
+        }
+
+        .pdf-item i {
+            font-size: 1.8rem;
+            color: #e74c3c;
+            transition: transform 0.3s ease;
+        }
+
+        .pdf-item:hover i {
+            transform: scale(1.1);
+        }
+
+        .pdf-item a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            flex: 1;
+        }
+
+        .pdf-item a:hover {
+            color: #3498db;
+        }
+
+        @media (max-width: 768px) {
+            .pdf-section {
+                padding: 20px;
+                margin: 15px;
+            }
+
+            .pdf-list {
+                grid-template-columns: 1fr;
+            }
+
+            .semester-title {
+                font-size: 1.8rem;
+            }
+
+            .module-title {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5462969054920766"
+     crossorigin="anonymous"></script>
+
+<meta name="google-adsense-account" content="ca-pub-3942650991755175">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container-nav">
+            <div class="logo-nav">SDBSN-CODE</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link ">Accueil</a></li>
+                <li><a href="videos.html" class="nav-link">Vidéos</a></li>
+                <li><a href="L1.html" class="nav-link">Licence 1</a></li>
+                <li><a href="L2.html" class="nav-link">Licence 2</a></li>
+                <li><a href="L3.html" class="nav-link">Licence 3</a></li>
+                <li><a href="pdftuto.html" class="nav-link active">Annexe informative</a></li>
+                <li><a href="commentaire.html" class="nav-link">Commentaires</a></li>
+            </ul>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Bienvenue sur la plateforme d'apprentissage IDA COURS</h1>
+                <p class="hero-slogan">"Ensemble, développons nos compétences et notre avenir !"</p>
+                <a href="pdftuto.html" class="btn-cta">Commencer &darr;</a>
+            </div>
+            <div class="hero-illustration">
+                <img src="files/ChatGPT Image 1 juil. 2025, 03_24_36.png" alt="Apprentissage">
+            </div>
+        </section>
+        <h1>DOCUMENT UTILES</h1>
+        <!-- Section PDF/Tutos -->
+        <section id="pdf" class="pdf-section">
+             <h2>DOCUMENTS SUPPLÉMENTAIRES (PHP & AUTRES)</h2>
+            <div class="pdf-list">
+                <!-- PHP -->
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/TP_2_25_L2.pdf" target="_blank" download>TP 2 - PHP</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/TP_3_L2_25.pdf" target="_blank" download>TP 3 - PHP</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/TP_4_L2_2025.pdf" target="_blank" download>TP 4 - PHP</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/TP1_L3_25.pdf" target="_blank" download>TP 1 - PHP</a>
+                </div>
+            </div>
+            <div class="pdf-list">
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/2. Gestion des processus.pdf" target="_blank" download>2. Gestion des processus (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-archive"></i>
+                    <a href="ASSETS/bootstrap-4.0.0-dist.zip" target="_blank" download>Bootstrap 4.0.0 (ZIP)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/Chap.Anal_L2_info_f.pvar (1).pdf" target="_blank" download>Chap.Anal_L2_info_f.pvar (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/Chap4.Anal_L2_info_25 (1).pdf" target="_blank" download>Chap4.Anal_L2_info_25 (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/Chap6-Les sessions et les cookies_24.pdf" target="_blank" download>Chap6 - Les sessions et les cookies (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/Chapitre 2 - Les listes chainees.pdf" target="_blank" download>Chapitre 2 - Les listes chaînées (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/Chapitre 3 - Les arbres binaires.pdf" target="_blank" download>Chapitre 3 - Les arbres binaires (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-database"></i>
+                    <a href="ASSETS/cinematheque_v2.sql" target="_blank" download>cinematheque_v2.sql (SQL)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/Cours_pyton_2025.pdf" target="_blank" download>Cours Python 2025 (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/exer_series_fourier_plusvar.pdf" target="_blank" download>Exercices séries Fourier (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/fonc_pl.var.pdf" target="_blank" download>Fonctions PL (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/L2.an.Four_info (1).pdf" target="_blank" download>L2 Analyse Fourier Info (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/L2_ana_serie_fourrier.pdf" target="_blank" download>L2 Analyse série Fourier (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/Programmer en samusant avec JavaScript.pdf" target="_blank" download>Programmer en s'amusant avec JavaScript (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/ProjetWEB_L2_2025.pdf" target="_blank" download>Projet WEB L2 2025 (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/python_elementaire_td.pdf" target="_blank" download>Python élémentaire TD (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/Série  L2 Informatique 2024-2025.pdf" target="_blank" download>Série L2 Informatique 2024-2025 (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/TD1 - Systèmes d'Exploitation II.pdf" target="_blank" download>TD1 - Systèmes d'Exploitation II (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/TD2 - Systèmes d'Exploitation II.pdf" target="_blank" download>TD2 - Systèmes d'Exploitation II (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/Tout-sur-le-Javascript.pdf" target="_blank" download>Tout sur le JavaScript (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/TP_4_L2_2025.pdf" target="_blank" download>TP 4 - L2 2025 (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/TPPython.pdf" target="_blank" download>TP Python (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/TP-Python-TP1.pdf" target="_blank" download>TP Python - TP1 (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/0436-developpement-web-php-avance.pdf" target="_blank" download>Développement Web PHP Avancé (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/0478-introduction-html-xhtml-et-css.pdf" target="_blank" download>Introduction HTML, XHTML et CSS (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-powerpoint"></i>
+                    <a href="ASSETS/0483-php-data-objects-pdo.ppt" target="_blank" download>PHP Data Objects (PDO) (PPT)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/0504-cours-web-html-1-partie (1).pdf" target="_blank" download>Cours Web HTML 1ère partie (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/0510-pdf-langage-html-2-partie.pdf" target="_blank" download>Langage HTML 2ème partie (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/0519-pdf-php-bases-initiation.pdf" target="_blank" download>PHP Bases Initiation (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/0520-pdf-php-fonctions-formulaire.pdf" target="_blank" download>PHP Fonctions & Formulaires (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/0521-pdf-php-fichiers-repertoires.pdf" target="_blank" download>PHP Fichiers & Répertoires (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/0522-pdf-php-base-de-donnees.pdf" target="_blank" download>PHP Base de Données (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/0523-pdf-php-les-cookies.pdf" target="_blank" download>PHP Les Cookies (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/0524-pdf-php-les-sessions.pdf" target="_blank" download>PHP Les Sessions (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/0525-pdf-php-programmation-objet.pdf" target="_blank" download>PHP Programmation Objet (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/0541-php-oriente-objet.pdf" target="_blank" download>PHP Orienté Objet (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/0555-programmer-en-php (1).pdf" target="_blank" download>Programmer en PHP (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/0566-programmation-en-java-et-exercices.pdf" target="_blank" download>Programmation en Java et Exercices (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/0589-php-accelere (1).pdf" target="_blank" download>PHP Accéléré (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/0591-web-cote-serveur-php-pdo-mvc-dal-controller.pdf" target="_blank" download>Web côté serveur PHP PDO MVC DAL Controller (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/0620-guide-du-developpeur-php (1).pdf" target="_blank" download>Guide du développeur PHP (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/0750_programmation_web_en_php_conception_architectures_et_developpement.pdf" target="_blank" download>Programmation Web en PHP : Conception, Architectures et Développement (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/0757-apprenez-angularjs.pdf" target="_blank" download>Apprenez AngularJS (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-archive"></i>
+                    <a href="ASSETS/Apprenez à résoudre des algorithmes en JavaScript.rar" target="_blank" download>Résoudre des algorithmes en JavaScript (RAR)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-video"></i>
+                    <a href="ASSETS/CREER UN SITE .mp4" target="_blank" download>Créer un site (Vidéo MP4)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/D1-S2 PC 3eme 2019.pdf" target="_blank" download>D1-S2 PC 3ème 2019 (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/Django_5_By_Example_Build_powerful_and_reliable_Python_web_applications.pdf" target="_blank" download>Django 5 By Example (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/Le PC _ architecture maintenance et mise à niveau -18ed.pdf" target="_blank" download>Le PC : Architecture, Maintenance et Mise à Niveau (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/Paramétrage Cisco.pdf" target="_blank" download>Paramétrage Cisco (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/TD algorithmique et programmation I.docx.pdf" target="_blank" download>TD Algorithmique et Programmation I (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="ASSETS/W4Websites Projects (1).pdf" target="_blank" download>W4Websites Projects (PDF)</a>
+                </div>
+                <div class="pdf-item">
+                    <i class="fas fa-file-video"></i>
+                    <a href="ASSETS/yt1s.io-2- Pourquoi la sécurité informatique.mp4" target="_blank" download>Pourquoi la sécurité informatique (Vidéo MP4)</a>
+                </div>
+            </div>
+        </section>
+       
+        
+    </main>
+    <footer class="modern-footer">
+    <div class="footer-wave"></div>
+    <div class="footer-content">
+        <div class="footer-section">
+            <img src="ASSETS/téléchargement (2).jpg" alt="Logo IDA COURS" class="footer-logo">
+            <p>Votre partenaire de confiance pour une formation en ligne de qualité. Développez vos compétences et construisez votre avenir avec nous.</p>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/princeseydoubhk" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/Sdbsntech" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/seydou-bakhayokho-864070343" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.youtube.com/channel/UCCZJBOaAPdAoTiD-iJ2ftkg" class="social-icon" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://github.com/Sdbsntech" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Liens Rapides</h3>
+            <ul class="footer-links">
+                <li><a href="index.html"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+                <li><a href="pdftuto.html"><i class="fas fa-chevron-right"></i> Annexe informative</a></li>
+                <li><a href="videos.html"><i class="fas fa-chevron-right"></i> Vidéos</a></li>
+                <li><a href="L1.html"><i class="fas fa-chevron-right"></i> Licence 1</a></li>
+                <li><a href="L2.html"><i class="fas fa-chevron-right"></i> Licence 2</a></li>
+                <li><a href="L3.html"><i class="fas fa-chevron-right"></i> Licence 3</a></li>
+                <li><a href="commentaire.html"><i class="fas fa-chevron-right"></i> Commentaires</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Ressources</h3>
+            <ul class="footer-links">
+                <li><a href="bibliotheques.html"><i class="fas fa-book"></i> Bibliothèque</a></li>
+                <li><a href="#calendrier"><i class="fas fa-calendar-alt"></i> Calendrier</a></li>
+                <li><a href="FAQ.HTML"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                <li><a href="formateur.html"><i class="fas fa-chalkboard-teacher"></i> Nos Formateurs</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <div class="footer-contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>DAKAR, PIKINE, DALIFORT</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+221 77 362 45 39</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>sdbsntech1@gmail.com</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="legal-links">
+                    <a href="mention_legale.html">mention_legale.</a>
+                    <a href="politique_confidentialite.html">politique_confidentialite</a>
+                    <a href="condition_d'utilisation.html">condition_d'utilisation</a>
+                </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 IDA COURS. Plateforme réalisée par Seydou Bakhayokho.</p>
+    </div>
+</footer>
+    <script src="main.js"></script>
+</body>
+</html>

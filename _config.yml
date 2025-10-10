@@ -1,0 +1,7 @@
+baseurl: "/ida-cour"
+url: "https://seydou-16.github.io"
+gem 'jekyll'
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
