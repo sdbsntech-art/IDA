@@ -1,0 +1,52 @@
+================================================================================
+RAPPORT DE VÉRIFICATION DES CHEMINS PDF
+================================================================================
+
+STATISTIQUES GÉNÉRALES:
+----------------------------------------
+Total des références PDF: 334
+Chemins valides: 313
+Chemins cassés: 21
+  - Fichiers manquants: 10
+  - Différences de casse: 11
+
+FICHIERS MANQUANTS:
+----------------------------------------
+❌ L1.html:120 - ASSETS/Leadership - séquence 1.pdf
+❌ L1.html:121 - ASSETS/Leadership - séquence 2.pdf
+❌ L1.html:122 - ASSETS/Leadership-sequence-3-1.pdf
+❌ L1.html:123 - ASSETS/Leadership-sequence-3-2.pdf
+❌ L1.html:124 - ASSETS/Leadership - séquence 4.pdf
+❌ L1.html:125 - ASSETS/Leadership - séquence 5.pdf
+❌ L1.html:143 - ASSETS/DWMG1142_Séquence 1_Introduction aux Technologies Mobiles.pdf
+❌ L1.html:144 - ASSETS/DWMG1142_Séquence 2_Généralités sur les Technologies Mobiles.pdf
+❌ L1.html:145 - ASSETS/DWMG1142_Séquence 3_Evolution des périphériques mobiles(1).pdf
+❌ L1.html:146 - ASSETS/DWMG1142_Séquence 4_Plateformes et Applications mobiles.pdf
+
+DIFFÉRENCES DE CASSE:
+----------------------------------------
+⚠️  exerciceL2.html:435 - ASSETS/td3.pdf
+   → Suggestion: TD3.pdf
+⚠️  exerciceL2.html:478 - ASSETS/td3.pdf
+   → Suggestion: TD3.pdf
+⚠️  L1.html:243 - ASSETS/séquence 2.pdf
+   → Suggestion: Séquence 2.pdf
+⚠️  L2.html:279 - ASSETS/Sequence 2.pdf
+   → Suggestion: sequence 2.pdf
+⚠️  L2.html:282 - ASSETS/Séquence 3.pdf
+   → Suggestion: séquence 3.pdf
+⚠️  L2.html:285 - ASSETS/Sequence 4.pdf
+   → Suggestion: sequence 4.pdf
+⚠️  L2.html:365 - ASSETS/Sequence 1.pdf
+   → Suggestion: sequence 1.pdf
+⚠️  L2.html:368 - ASSETS/Sequence 2.pdf
+   → Suggestion: sequence 2.pdf
+⚠️  L3.html:147 - files/SEQUENCE 1.pdf
+   → Suggestion: sequence 1.pdf
+⚠️  L3.html:148 - files/SEQUENCE 2.pdf
+   → Suggestion: sequence 2.pdf
+⚠️  L3.html:149 - files/SEQUENCE 3.pdf
+   → Suggestion: sequence 3.pdf
+
+❌ 21 PROBLÈME(S) TROUVÉ(S)
+================================================================================
