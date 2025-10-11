@@ -16,6 +16,55 @@
   --background-color: #f8f9fa;
   --text-color: #2c3e50;
 }
+.grafikart-footer-info {
+    font-size: 0.9rem;
+    color: var(--secondary);
+    margin-top: 1rem;
+    line-height: 1.5;
+    font-family: var(--font-main);
+    
+}
+
+
+.grafikart-footer-info a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: var(--transition);
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    padding: 0.1rem 0;
+}
+
+.grafikart-footer-info a:hover {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+    transform: translateY(-1px);
+}
+
+.grafikart-footer-info a:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: var(--radius);
+}
+
+/* Optionnel : Style pour les liens de la plateforme Grafikart */
+.grafikart-footer-info a[href*="grafikart.fr"] {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.grafikart-footer-info a[href*="grafikart.fr"]:hover {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+/* Optionnel : Icône pour les liens externes */
+.grafikart-footer-info a[href^="http"]:not([href*="votresite.com"])::after {
+    content: " ↗";
+    font-size: 0.8em;
+    opacity: 0.7;
+}
+
 
 body {
   background: var(--main-bg);

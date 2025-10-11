@@ -275,7 +275,7 @@
                 <li><a href="bibliotheques.html"><i class="fas fa-book"></i> Bibliothèque</a></li>
                 <li><a href="#calendrier"><i class="fas fa-calendar-alt"></i> Calendrier</a></li>
                 <li><a href="FAQ.HTML"><i class="fas fa-question-circle"></i> FAQ</a></li>
-                <li><a href="https://grafikart.fr/tutoriels/variables-441#autoplay"><i class="fas fa-user-graduate"></i>Liens-utiles</a></li>
+                <li><a href="https://grafikart.fr/"><i class="fas fa-user-graduate"></i>Liens-utiles</a></li>
                 <li><a href="formateur.html"><i class="fas fa-chalkboard-teacher"></i> Nos Formateurs</a></li>
             </ul>
         </div>
@@ -303,7 +303,8 @@
                     <a href="politique_confidentialite.html">politique_confidentialite</a>
                     <a href="condition_d'utilisation.html">condition_d'utilisation</a>
                 </div>
-    <div class="footer-bottom">
+    
+<div class="footer-bottom">
         <p>&copy; 2025 IDA COURS. Plateforme réalisée par Seydou Bakhayokho.</p>
     </div>
 </footer>
@@ -541,5 +542,53 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 })();
   </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Bloquer le clic droit
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        return false;
+    });
+
+    // Bloquer copier/coller/couper
+    ['copy', 'cut', 'paste'].forEach(function(evt) {
+        document.addEventListener(evt, function(e) {
+            e.preventDefault();
+            return false;
+        });
+    });
+
+    // Bloquer raccourcis DevTools et code source
+    document.addEventListener('keydown', function(e) {
+        // F12
+        if (e.key === 'F12' || e.keyCode === 123) {
+            e.preventDefault();
+            return false;
+        }
+        // Ctrl+Shift+I / Cmd+Opt+I
+        if ((e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') ||
+            (e.metaKey && e.altKey && e.key.toLowerCase() === 'i')) {
+            e.preventDefault();
+            return false;
+        }
+        // Ctrl+U / Cmd+U
+        if ((e.ctrlKey && e.key.toLowerCase() === 'u') ||
+            (e.metaKey && e.key.toLowerCase() === 'u')) {
+            e.preventDefault();
+            return false;
+        }
+    });
+
+    // Détection DevTools par resize
+    setInterval(function() {
+        if (window.outerWidth - window.innerWidth > 160 ||
+            window.outerHeight - window.innerHeight > 160) {
+            document.body.innerHTML = '<h1 style="color:red;text-align:center;margin-top:20vh;">Accès restreint : DevTools détecté !</h1>';
+        }
+    }, 1000);
+});
+</script>
+
 </body>
 </html>
