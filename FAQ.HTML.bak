@@ -631,10 +631,6 @@ document.addEventListener('DOMContentLoaded', function() {
 })();
 </script>
 <body>
-<amp-auto-ads type="adsense"
-        data-ad-client="ca-pub-3942650991755175">
-</amp-auto-ads>
-
     
   <div class="faq-container">
     <h2>📘 Foire Aux Questions – Conseils et Bonnes Pratiques</h2>
