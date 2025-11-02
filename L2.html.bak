@@ -63,6 +63,10 @@
   }
 </style>
 <body>
+<amp-auto-ads type="adsense"
+        data-ad-client="ca-pub-3942650991755175">
+</amp-auto-ads>
+
   <nav class="navbar">
     <div class="container-nav">
       <div class="logo-nav">SDBSN-CODE</div>
