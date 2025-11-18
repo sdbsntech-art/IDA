@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <!-- ads.txt: google.com, pub-3830476419469874, DIRECT, f08c47fec0942fa0 -->
-
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3830476419469874"
      crossorigin="anonymous"></script>
 
@@ -10,26 +8,58 @@
         src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
 </script>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Zone de commentaires sécurisée pour IDA COURS">
-  <meta name="keywords" content="cours, apprentissage, commentaires, sécurité">
-  <meta name="author" content="IDA COURS">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="favicon.png" sizes="180x180">
-  <link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="favicon.png" sizes="16x16" type="image/png">
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="index.css">
-  <meta name="google-site-verification" content="8WaeKM-mQAcuLhGP1eHzoO1Gr0IX9lq_NoNGavj0fB8" />
-<title>Commentaires sécurisés | IDA COURS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plateforme d'apprentissage moderne et interactive pour étudiants et professionnels.">
+    <meta name="keywords" content="cours, apprentissage, vidéos, exercices, pdf, td, tc, forum, informatique, IDA COURS">
+    <meta name="author" content="IDA COURS">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Plateforme d'Apprentissage IDA COURS">
+    <meta property="og:description" content="Plateforme d'apprentissage moderne et interactive pour étudiants et professionnels.">
+    <meta property="og:image" content="https://sdbsn-code.netlify.app/ASSETS/téléchargement%20(2).jpg">
+    <meta property="og:url" content="https://sdbsn-code.netlify.app/">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Plateforme d'Apprentissage IDA COURS">
+    <meta name="twitter:description" content="Plateforme d'apprentissage moderne et interactive pour étudiants et professionnels.">
+    <meta name="twitter:image" content="https://sdbsn-code.netlify.app/ASSETS/téléchargement%20(2).jpg">
+    <!-- Balise de vérification Google Search Console -->
+    <meta name="google-site-verification" content="8WaeKM-mQAcuLhGP1eHzoO1Gr0IX9lq_NoNGavj0fB8" />
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="files/sdbsn.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="files/sdbsn.png" sizes="180x180">
+    <link rel="icon" href="files/sdbsn.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="files/sdbsn.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Plateforme d'Apprentissage</title>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3830476419469874"
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5462969054920766"
      crossorigin="anonymous"></script>
 
 <meta name="google-adsense-account" content="ca-pub-3942650991755175">
 </head>
+<style>
+    .legal-links {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 16px;
+    }
+    .legal-links a {
+        color: #666;
+        text-decoration: none;
+        margin: 0 10px;
+        transition: color 0.3s;
+    }
+    .legal-links a:hover {
+        color: #e6e5eb;
+        text-decoration: underline;
+    }
+
+</style>
 <body>
 <amp-auto-ads type="adsense"
         data-ad-client="ca-pub-3942650991755175">
@@ -37,211 +67,118 @@
 
     <!-- Navigation -->
     <nav class="navbar">
-      <div class="container-nav">
-          <div class="logo-nav">SDBSN-CODE</div>
-          <ul class="nav-links">
-              <li><a href="index.html" class="nav-link ">Accueil</a></li>
-              <li><a href="videos.html" class="nav-link">Vidéos</a></li>
-              <li><a href="L1.html" class="nav-link">Licence 1</a></li>
-              <li><a href="L2.html" class="nav-link">Licence 2</a></li>
-              <li><a href="L3.html" class="nav-link">licence 3</a></li>
-              <li><a href="pdftuto.html" class="nav-link">Annexe informative</a></li>
-              <li><a href="commentaire.html" class="nav-link active">Commentaires</a></li>
-          </ul>
-          <div class="menu-toggle"><i class="fas fa-bars"></i></div>
-      </div>
-  </nav>
-  <section id="hero" class="hero-section">
-    <div class="hero-content">
-        <h1 class="hero-title">Bienvenue sur la plateforme d'apprentissage IDA COURS</h1>
-        <p class="hero-slogan">"Ensemble, développons nos compétences et notre avenir !"</p>
-        <a href="commentaire.html" class="btn-cta">Commencer &darr;</a>
-    </div>
-    <div class="hero-illustration">
-        <img src="files/ChatGPT Image 1 juil. 2025, 03_24_36.png" alt="Apprentissage">
-    </div>
-</section>
-  <h1>Zone de commentaires - IDA COURS</h1>
+        <div class="container-nav">
+            <div class="logo-nav">SDBSN-CODE</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link active">Accueil</a></li>
+                <li><a href="videos.html" class="nav-link">Vidéos</a></li>
+                <li><a href="L1.html" class="nav-link">Licence 1</a></li>
+                <li><a href="L2.html" class="nav-link">Licence 2</a></li>
+                <li><a href="L3.html" class="nav-link">Licence 3</a></li>
+                <li><a href="pdftuto.html" class="nav-link">Annexe informative</a></li>
+                <li><a href="commentaire.html" class="nav-link">Commentaires</a></li>
+            </ul>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
 
-  <!-- Formulaire de connexion / inscription -->
-  <form id="authForm">
-    <h2>Connexion / Inscription</h2>
-    <input type="email" id="email" placeholder="Email" required>
-    <input type="password" id="password" placeholder="Mot de passe" required>
-    <button type="submit">Se connecter / S'inscrire</button>
-  </form>
-
-  <!-- Déconnexion -->
-  <div class="comment-section" id="userSection" style="display:none;">
-    <p>Connecté en tant que : <span id="userEmail"></span></p>
-    <button class="logout-btn" id="logoutBtn">Se déconnecter</button>
-
-    <!-- Formulaire de commentaire -->
-    <form id="commentForm">
-      <textarea id="commentaire" placeholder="Votre commentaire..." required></textarea>
-      <button type="submit">Envoyer le commentaire</button>
-    </form>
-  </div>
-
-  <!-- Affichage des commentaires -->
-  <div>
-    <h2>Commentaires récents:</h2>
-    <ul id="listeCommentaires"></ul>
-  </div>
-
-  <!-- Firebase SDK -->
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-    import { getFirestore, collection, addDoc, getDocs, query, orderBy, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-
-    const firebaseConfig = {
-      apiKey: "AIzaSyDDKOVv1A8eXDK6_uDTvEp3eBBgfIGzYPo",
-      authDomain: "ida-cours.firebaseapp.com",
-      projectId: "ida-cours",
-      storageBucket: "ida-cours.firebasestorage.app",
-      messagingSenderId: "158609791870",
-      appId: "1:158609791870:web:795a994a441c0dfadf312f",
-      measurementId: "G-M9JC11KTP2"
-    };
-
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-    const db = getFirestore(app);
-
-    const authForm = document.getElementById("authForm");
-    const commentForm = document.getElementById("commentForm");
-    const emailInput = document.getElementById("email");
-    const passwordInput = document.getElementById("password");
-    const commentaireInput = document.getElementById("commentaire");
-    const userSection = document.getElementById("userSection");
-    const userEmailDisplay = document.getElementById("userEmail");
-    const logoutBtn = document.getElementById("logoutBtn");
-    const listeCommentaires = document.getElementById("listeCommentaires");
-
-    // Auth: inscription ou connexion
-    authForm.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const email = emailInput.value;
-      const password = passwordInput.value;
-
-      try {
-        // Essaye de se connecter
-        await signInWithEmailAndPassword(auth, email, password);
-      } catch (err1) {
-        try {
-          // Sinon, crée un compte
-          await createUserWithEmailAndPassword(auth, email, password);
-        } catch (err2) {
-          alert("Erreur : " + err2.message); // Affiche l'erreur à l'utilisateur
-        }
-      }
-    });
-
-    // Déconnexion
-    logoutBtn.addEventListener("click", () => {
-      signOut(auth);
-    });
-
-    // Quand l'utilisateur est connecté/déconnecté
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        userSection.style.display = "block";
-        authForm.style.display = "none";
-        userEmailDisplay.textContent = user.email;
-        chargerCommentaires();
-      } else {
-        userSection.style.display = "none";
-        authForm.style.display = "block";
-        listeCommentaires.innerHTML = "";
-      }
-    });
-
-    // Ajout de commentaire
-    commentForm.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const texte = commentaireInput.value;
-      const user = auth.currentUser;
-
-      if (!texte || !user) return;
-
-      try {
-        await addDoc(collection(db, "commentaires"), {
-          email: user.email,
-          texte: texte,
-          date: serverTimestamp()
-        });
-        commentaireInput.value = "";
-        chargerCommentaires();
-      } catch (err) {
-        alert("Erreur lors de l'envoi du commentaire : " + err.message);
-      }
-    });
-
-    // Chargement des commentaires
-    async function chargerCommentaires() {
-      listeCommentaires.innerHTML = "";
-      const commentairesRef = collection(db, "commentaires");
-      const q = query(commentairesRef, orderBy("date", "desc"));
-      const querySnapshot = await getDocs(q);
-
-      querySnapshot.forEach(async (doc) => {
-        const data = doc.data();
-        const li = document.createElement("li");
-        li.innerHTML = `
-          <span class="email">${data.email} :</span><br>${data.texte}
-          <div>
-            <button class="reply-btn" data-id="${doc.id}">Répondre</button>
-            <div class="reply-form" style="display:none;">
-              <textarea placeholder="Votre réponse..." class="reply-text"></textarea>
-              <button class="send-reply">Envoyer</button>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Bienvenue sur la plateforme d'apprentissage IDA COURS</h1>
+                <p class="hero-slogan">"Ensemble, développons nos compétences et notre avenir !"</p>
+                <a href="index.html" class="btn-cta">Commencer &darr;</a>
             </div>
-            <ul class="replies" id="replies-${doc.id}"></ul>
-          </div>
-        `;
+            <div class="hero-illustration">
+                <img src="files/ChatGPT Image 1 juil. 2025, 03_24_36.png" alt="Apprentissage">
+            </div>
+        </section>
+        <!-- Section Matières stylisée -->
+        <section class="matieres">
+          <a href="videos.html#html" class="matiere-card" data-aos="fade-up">
+            <img src="ASSETS/html.png" alt="HTML">
+            <h3>HTML</h3>
+            <p>Apprenez les bases du web avec des vidéos et exercices interactifs.</p>
+          </a>
+          <a href="videos.html#css" class="matiere-card" data-aos="fade-up" data-aos-delay="100">
+            <img src="ASSETS/css.png" alt="CSS">
+            <h3>CSS</h3>
+            <p>Maîtrisez la mise en forme et le design de vos pages web.</p>
+          </a>
+          <a href="videos.html#js" class="matiere-card" data-aos="fade-up" data-aos-delay="200">
+            <img src="ASSETS/js.png" alt="JavaScript">
+            <h3>JavaScript</h3>
+            <p>Rendez vos sites dynamiques et interactifs grâce à JS.</p>
+          </a>
+          <a href="videos.html#php" class="matiere-card" data-aos="fade-up" data-aos-delay="300">
+            <img src="ASSETS/php.png" alt="PHP">
+            <h3>PHP</h3>
+            <p>Développez des applications web robustes côté serveur.</p>
+          </a>
+          <a href="videos.html#python" class="matiere-card" data-aos="fade-up" data-aos-delay="400">
+            <img src="ASSETS/python.jpeg" alt="Python">
+            <h3>Python</h3>
+            <p>Explorez la programmation moderne et l'analyse de données.</p>
+          </a>
+          <a href="videos.html#vuejs" class="matiere-card" data-aos="fade-up" data-aos-delay="500">
+            <img src="ASSETS/vue js.jpeg" alt="Vue.js">
+            <h3>Vue.js</h3>
+            <p>Créez des interfaces utilisateur réactives et performantes.</p>
+          </a>
+          <a href="videos.html#angular" class="matiere-card" data-aos="fade-up" data-aos-delay="600">
+            <img src="ASSETS/angular.png" alt="Angular">
+            <h3>Angular</h3>
+            <p>Développez des applications web puissantes et modulaires.</p>
+          </a>
+        </section>
+        <style>
+            .matiere-card {
+                background-color: #f9f9f9;
+                border-radius: 8px;
+                padding: 20px;
+                text-align: center;
+                transition: transform 0.3s, box-shadow 0.3s;
+                text-decoration: none;
+            }
+            .matiere-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            }
+        </style>
+        <section class="uvs">
+            <h1>L'importance d'étudier à L'UNCHK (ex UVS)</h1>
+            <p>Les universités numériques sont des institutions d'enseignement supérieur qui utilisent les technologies numériques pour offrir des cours et des programmes d'études. Elles permettent aux étudiants d'accéder à des ressources éducatives en ligne, de suivre des cours à distance et de bénéficier d'une flexibilité dans leur apprentissage.</p>
+            <p>Les universités numériques offrent une variété de programmes d'études, allant des diplômes de premier cycle aux diplômes de deuxième cycle et aux certificats professionnels. Elles sont souvent accréditées par des organismes d'accréditation reconnus et peuvent offrir des diplômes équivalents à ceux des universités traditionnelles.</p>
+            <p>Les avantages d'étudier à une université numérique incluent la flexibilité d'apprendre à son propre rythme, l'accès à des ressources éducatives de haute qualité et la possibilité de suivre des cours de n'importe où dans le monde. De plus, les universités numériques peuvent offrir des programmes spécialisés qui ne sont pas disponibles dans les universités traditionnelles.</p>
+            <p>En somme, les universités numériques sont une excellente option pour les étudiants qui cherchent à poursuivre leurs études tout en ayant la flexibilité de travailler ou de s'occuper d'autres engagements.</p>
+           
+        </section>
+        
+        <section class="video-center">
+            <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/S2saQVUIBe8?si=FmnyMp4zm-vWRf6p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-overlay">
+                    <img class="matiere-logo" src="ASSETS/uvs.png" alt="uvs-logo">
+                    <div class="play-button"></div>
+                </div>
+            </div>
+        </section>
 
-        listeCommentaires.appendChild(li);
+        <!-- Section des programmes -->
+        <section class="programme">
+            <h2>Les différents programmes de l'université</h2>
+            
+            <p>La filière informatique est un domaine d'études qui se concentre sur la conception, le développement et la gestion de systèmes informatiques. Elle couvre une variété de sujets, y compris la programmation, les bases de données, les réseaux, la sécurité informatique et l'intelligence artificielle.</p>
+            <p>Les étudiants de la filière informatique acquièrent des compétences techniques et analytiques qui leur permettent de résoudre des problèmes complexes et de créer des solutions innovantes. Ils apprennent également à travailler en équipe et à communiquer efficacement, ce qui est essentiel dans le monde professionnel.</p>
+            <p>Les diplômés de la filière informatique peuvent travailler dans une variété de secteurs, y compris les technologies de l'information, les télécommunications, la finance et la santé. Ils peuvent occuper des postes tels que développeur de logiciels, analyste de données, ingénieur en sécurité informatique et chef de projet.</p>
+        </section>
+    </main>
+    
 
-        // Réponses à ce commentaire
-        const repliesUl = li.querySelector(`#replies-${doc.id}`);
-        const repliesRef = collection(db, "commentaires", doc.id, "reponses");
-        const repliesSnapshot = await getDocs(query(repliesRef, orderBy("date", "asc")));
-        repliesSnapshot.forEach(replyDoc => {
-          const replyData = replyDoc.data();
-          const replyLi = document.createElement("li");
-          replyLi.innerHTML = `<span class="email">${replyData.email} :</span><br>${replyData.texte}`;
-          repliesUl.appendChild(replyLi);
-        });
-
-        // Gestion du bouton "Répondre"
-        const replyBtn = li.querySelector(".reply-btn");
-        const replyForm = li.querySelector(".reply-form");
-        const replyText = li.querySelector(".reply-text");
-        const sendReply = li.querySelector(".send-reply");
-
-        replyBtn.addEventListener("click", () => {
-          replyForm.style.display = replyForm.style.display === "none" ? "block" : "none";
-        });
-
-        sendReply.addEventListener("click", async () => {
-          const user = auth.currentUser;
-          const texte = replyText.value;
-          if (!texte || !user) return;
-
-          await addDoc(collection(db, "commentaires", doc.id, "reponses"), {
-            email: user.email,
-            texte: texte,
-            date: serverTimestamp()
-          });
-
-          replyText.value = "";
-          chargerCommentaires(); // Recharger les commentaires pour voir la réponse
-        });
-      });
-    }
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
-   <footer class="modern-footer">
+    <!-- Footer -->
+    <footer class="modern-footer">
     <div class="footer-wave"></div>
     <div class="footer-content">
         <div class="footer-section">
@@ -307,9 +244,39 @@
         <p>&copy; 2025 IDA COURS. Plateforme réalisée par Seydou Bakhayokho.</p>
     </div>
     </footer>
+
+    <!-- JavaScript -->
     <script src="main.js"></script>
+    <style>
+        .video-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 640px;
+            height: 360px;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        
+
+        
+    </style>
     <script>
-      // protection.js - Code de protection contre l'inspection
+        // protection.js - Code de protection contre l'inspection
 document.addEventListener('DOMContentLoaded', function() {
     'use strict';
     

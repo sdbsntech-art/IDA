@@ -8,234 +8,24 @@
         src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
 </script>
 
-    <meta name="google-site-verification" content="7OCwSNaLeEeHm82sAVrKzi0jWCevcYh-05eiK_bEDfg" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/brands.min.css">
     <link rel="stylesheet" href="index.css">
-    <title>Mentions Légales - IDA Cours</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <meta name="google-site-verification" content="8WaeKM-mQAcuLhGP1eHzoO1Gr0IX9lq_NoNGavj0fB8" />
+<title>Exercice Licence 2</title>
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #2c3e50;
-            background-image: url(files/web\ plat.jpg);
-            
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .legal-container {
-            max-width: 1000px;
-            margin: 40px auto;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px;
-            text-align: center;
-        }
-
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .header p {
-            font-size: 1.1em;
-            opacity: 0.9;
-        }
-
-        .content {
-            padding: 50px;
-        }
-
-        .legal-section {
-            margin-bottom: 40px;
-            padding: 30px;
-            border-radius: 15px;
-            background: #f8f9fa;
-            border-left: 5px solid #667eea;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .legal-section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2);
-        }
-
-        .legal-section h2 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-            font-size: 1.5em;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .legal-section h2 i {
-            color: #667eea;
-        }
-
-        .legal-section p {
-            margin-bottom: 15px;
-            color: #555;
-            font-size: 1.05em;
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .info-card {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            border: 2px solid #e9ecef;
-            transition: all 0.3s ease;
-        }
-
-        .info-card:hover {
-            border-color: #667eea;
-            transform: translateY(-3px);
-        }
-
-        .info-card h3 {
-            color: #667eea;
-            margin-bottom: 15px;
-            font-size: 1.2em;
-        }
-
-        .footer-note {
-            text-align: center;
-            padding: 30px;
-            background: #f8f9fa;
-            margin-top: 40px;
-            border-radius: 15px;
-            color: #6c757d;
-            font-style: italic;
-        }
-
-        @media (max-width: 768px) {
-            .content {
-                padding: 30px 20px;
-            }
-            
-            .header {
-                padding: 30px 20px;
-            }
-            
-            .header h1 {
-                font-size: 2em;
-            }
-            
-            .legal-section {
-                padding: 20px;
-            }
-        }
-
-        /* Animation d'entrée */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .legal-section {
-            animation: fadeInUp 0.6s ease-out;
-        }
-
-        .legal-section:nth-child(2) { animation-delay: 0.1s; }
-        .legal-section:nth-child(3) { animation-delay: 0.2s; }
-        .legal-section:nth-child(4) { animation-delay: 0.3s; }
-        .legal-section:nth-child(5) { animation-delay: 0.4s; }
-    </style>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3830476419469874"
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5462969054920766"
      crossorigin="anonymous"></script>
+
+<meta name="google-adsense-account" content="ca-pub-3942650991755175">
 </head>
-<body>
-<amp-auto-ads type="adsense"
-        data-ad-client="ca-pub-3942650991755175">
-</amp-auto-ads>
-
-    <div class="legal-container">
-        <div class="header">
-            <h1><i class="fas fa-balance-scale"></i> Mentions Légales</h1>
-            <p>Informations légales concernant le site IDA Cours</p>
-        </div>
-
-        <div class="content">
-            <div class="legal-section">
-                <h2><i class="fas fa-user-tie"></i> Éditeur du Site</h2>
-                <p><strong>Nom :</strong> Seydou Bakhayokho</p>
-                <p><strong>Statut :</strong> Étudiant en Informatique</p>
-                <p><strong>Établissement :</strong> Université Numérique Cheikh Hamidou KANE (UNCHK)</p>
-                <p><strong>Spécialisation :</strong> Développement Web Frontend, Cybersécurité & Analyse de données</p>
-                <p><strong>Adresse :</strong> Dalifort, Pikine, Sénégal</p>
-            </div>
-
-            <div class="legal-section">
-                <h2><i class="fas fa-server"></i> Hébergement</h2>
-                <p><strong>Hébergeur :</strong> Netlify, Inc.</p>
-                <p><strong>Adresse :</strong> 2325 3rd Street, Suite 296, San Francisco, California 94107, États-Unis</p>
-                <p><strong>Site web :</strong> <a href="https://www.netlify.com" style="color: #667eea; text-decoration: none;">https://www.netlify.com</a></p>
-            </div>
-
-            <div class="legal-section">
-                <h2><i class="fas fa-code"></i> Développement & Publication</h2>
-                <p><strong>Directeur de la publication :</strong> Seydou Bakhayokho</p>
-                <p><strong>Plateforme de développement :</strong> GitHub</p>
-                <p><strong>Technologies utilisées :</strong> HTML, CSS, JavaScript, Netlify</p>
-                <p>Le site a été développé dans un cadre éducatif et professionnel.</p>
-            </div>
-
-            <div class="legal-section">
-                <h2><i class="fas fa-shield-alt"></i> Propriété Intellectuelle</h2>
-                <p>L'ensemble de ce site relève de la législation sénégalaise et internationale sur le droit d'auteur et la propriété intellectuelle.</p>
-                <p>Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.</p>
-            </div>
-
-            <div class="info-grid">
-                <div class="info-card">
-                    <h3><i class="fas fa-graduation-cap"></i> Mission du Site</h3>
-                    <p>IDA Cours a pour objectif de fournir des ressources éducatives et des cours en ligne accessibles à tous les apprenants.</p>
-                </div>
-                
-                <div class="info-card">
-                    <h3><i class="fas fa-envelope"></i> Contact</h3>
-                    <p>Pour toute question concernant les mentions légales, vous pouvez contacter le directeur de publication aux coordonnées mentionnées ci-dessous.</p>
-                    <pre>77-362-45-39 && 76-468-58-65.</pre>
-                </div>
-            </div>
-
-            <div class="footer-note">
-                <p><i class="fas fa-info-circle"></i> Dernière mise à jour : 29/09/2025.</p>
-                <p>Ce site est maintenu à titre éducatif et professionnel.</p>
-            </div>
-        </div>
-    </div>
-    <script>
-        // protection.js - Code de protection contre l'inspection
+<script>
+  // protection.js - Code de protection contre l'inspection
 document.addEventListener('DOMContentLoaded', function() {
     'use strict';
     
@@ -466,33 +256,260 @@ document.addEventListener('DOMContentLoaded', function() {
         set: function() { /* bloqué */ }
     });
 })();
-    </script>
+</script>
+<style>
+  .semestre2 {
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: #4175c4;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .semestre2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #74aae9;
+    margin-top: 1rem;
+  }
+  .semestre2:hover {
+    color: #0a449c;
+  }
+</style>
 
-    <script>
-        // Animation supplémentaire au scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+<body>
+<amp-auto-ads type="adsense"
+        data-ad-client="ca-pub-3942650991755175">
+</amp-auto-ads>
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
+    <main>
+        <header>
+            <h1>Exercice Licence 2</h1>
+             <hr>
+      <h2 style="margin-bottom:2rem;" class="semestre2">SEMESTRE 1:</h2>
+ <section class="tc-matiere section visible">
+      <h2><i class="fab fa-html5"></i> Framework HTML/CSS/JS</h2>
+      <ul class="tc-list">
+        <li>
+      <a href="ASSETS/TP SEQ 01 - FRAMEWORKS WEB CÔTE CLIENT.pdf" target="_blank">TP SEQ 01 - FRAMEWORKS WEB CÔTE CLIENT (PDF)</a>
+    </li>
+    <li>
+      <a href="ASSETS/TP SEQ 02_FRAMEWORKS WEB CÔTE CLIENT.pdf" target="_blank">TP SEQ 02_FRAMEWORKS WEB CÔTE CLIENT (PDF)</a>
+    </li>
+    <li>
+      <a href="ASSETS/TP SEQ 03_FRAMEWORKS WEB CÔTE CLIENT.pdf" target="_blank">TP SEQ 03_FRAMEWORKS WEB CÔTE CLIENT (PDF)</a>
+    </li>
+      </ul>
+    </section>
+    <section class="tc-matiere section visible">
+      <h2><i class="fas fa-file-code"></i> Manipulation des données XML</h2>
+      <ul class="tc-list">
+        <li>
+      <a href="ASSETS/Travaux Dirigés Séquence 1.pdf" target="_blank">Travaux Dirigés Séquence 1 (PDF)</a>
+    </li>
+    <li>
+      <a href="ASSETS/Travaux Dirigés séquence 2 Schéma dun document XML.pdf" target="_blank">Travaux Dirigés Séquence 2 Schéma d'un document XML (PDF)</a>
+    </li>
+    <li>
+      <a href="ASSETS/Travaux  Dirigés Séquence  3 Formatage d’un document XML.pdf" target="_blank">Travaux Dirigés Séquence 3 Formatage d’un document XML (PDF)</a>
+    </li>
+    <li>
+      <a href="ASSETS/Travaux Dirigés Séquence 4 Mise à jour dun document XML.pdf" target="_blank">Travaux Dirigés Séquence 4 Mise à jour d’un document XML (PDF)</a>
+    </li>
+      </ul>
+    </section>
+    <section class="tc-matiere section visible">
+  <h2><i class="fas fa-database"></i> Modélisation de Base de Données</h2>
+  <ul class="tc-list">
+    <li>
+      <a href="ASSETS/TD 03 - Algèbre relationnelle.pdf" target="_blank">TD 03 - Algèbre relationnelle (PDF)</a>
+    </li>
+    <li>
+      <a href="ASSETS/TD3_TP 01 - Langage SQL.pdf" target="_blank">TD3_TP 01 - Langage SQL (PDF)</a>
+    </li>
+  </ul>
+</section>
+        <!-- ...jusqu'à 15 TC... -->
+      <section class="tc-matiere section visible">
+      <h2><i class="fab fa-php"></i> PHP</h2>
+      <ul class="tc-list">
+    <li>
+      <a href="ASSETS/TP SEQ 01 - LANGAGE PHP DE BASE.pdf" target="_blank">TP SEQ 01 - LANGAGE PHP DE BASE (PDF)</a>
+    </li>
+    <li>
+      <a href="ASSETS/TP SEQ 02 - LANGAGE PHP DE BASE.pdf" target="_blank">TP SEQ 02 - LANGAGE PHP DE BASE (PDF)</a>
+    </li>
+    <li>
+      <a href="ASSETS/TP SEQ 03 - LANGAGE PHP DE BASE.pdf" target="_blank">TP SEQ 03 - LANGAGE PHP DE BASE (PDF)</a>
+    </li>
+    <li>
+      <a href="ASSETS/TP SEQ 04 - LANGAGE PHP DE BASE.pdf" target="_blank">TP SEQ 04 - LANGAGE PHP DE BASE (PDF)</a>
+    </li>
+    <li>
+      <a href="ASSETS/TP SEQ 05 - LANGAGE PHP DE BASE.pdf" target="_blank">TP SEQ 05 - LANGAGE PHP DE BASE (PDF)</a>
+    </li>
+    </ul>
+    </section>
+     <section class="tc-matiere section visible">
+      <h2><i class="fas fa-database"></i> SQL</h2>
+      <ul class="tc-list">
+        <li>
+      <a href="ASSETS/FicheTPSEQ1.pdf" target="_blank">Fiche TP Séquence 1 (PDF)</a>
+    </li>
+     </section> 
+     <section class="tc-matiere section visible">
+      <h2><i class="fas fa-laptop-code"></i> Language C</h2>
+      <ul class="tc-list">
+        <li>
+      <a href="ASSETS/td_Fonctions.pdf" target="_blank">TD Fonctions (PDF)</a>
+    </li>
+    <li>
+      <a href="ASSETS/TD1 Les tableaux.pdf" target="_blank">TD1 Les tableaux (PDF)</a>
+    </li>
+      </ul>
+      </section>
+      <section class="tc-matiere section visible">
+      <h2><i class="fas fa-project-diagram"></i> Algorithme</h2> 
+      <ul class="tc-list">
+        <li>
+      <a href="ASSETS/TD.pdf" target="_blank">TD (PDF)</a>
+    </li>
+    <li>
+      <a href="ASSETS/TD_Tableaux.pdf" target="_blank">TD Tableaux (PDF)</a>
+    </li>
+    <li>
+      <a href="ASSETS/TD3..pdf" target="_blank">TD3 (PDF)</a>
+    </li>
+      </ul>
+      </section>
+      <hr>
+      <h2 style="margin-bottom:2rem;" class="semestre2">SEMESTRE 2:</h2>
+    <section class="tc-matiere section visible">
+  <h2><i class="fab fa-android"></i> Programmation avec Android</h2>
+  <ul class="tc-list">
+    <li>
+      <a href="ASSETS/Programmation mobile avec android_TD3.pdf" target="_blank">TD3 Programmation mobile avec Android (PDF)</a>
+    </li>
+    <li>
+      <a href="ASSETS/Programmation mobile avec android_TD4.pdf" target="_blank">TD4 Programmation mobile avec Android (PDF)</a>
+    </li>
+  </ul>
+</section>
+    <section class="tc-matiere section visible">
+  <h2><i class="fab fa-apple"></i> Programmation mobile avec iOS</h2>
+  <ul class="tc-list">
+    <li>
+      <a href="ASSETS/TD1 Programmation mobile iOs.pdf" target="_blank">TD1 Programmation mobile iOS (PDF)</a>
+    </li>
+    <li>
+      <a href="ASSETS/TD2 Programmation mobile iOs.pdf" target="_blank">TD2 Programmation mobile iOS (PDF)</a>
+    </li>
+    <li>
+      <a href="ASSETS/TD3 Programmation mobile iOs.pdf" target="_blank">TD3 Programmation mobile iOS (PDF)</a>
+    </li>
+  </ul>
+</section>
 
-        // Observer toutes les sections
-        document.querySelectorAll('.legal-section').forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(30px)';
-            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(section);
-        });
-    </script>
-    <footer class="modern-footer">
+<section class="tc-matiere section visible">
+  <h2><i class="fab fa-php"></i> PHP Avancé</h2>
+  <ul class="tc-list">
+    <li>
+      <a href="ASSETS/TP SEQ 01 - LANGAGE PHP AVANCE.pdf" target="_blank">TP SEQ 01 - LANGAGE PHP AVANCÉ (PDF)</a>
+    </li>
+    <li>
+      <a href="ASSETS/TP SEQ 02 - LANGAGE PHP AVANCE.pdf" target="_blank">TP SEQ 02 - LANGAGE PHP AVANCÉ (PDF)</a>
+    </li>
+    <li>
+      <a href="ASSETS/TP SEQ 03 - LANGAGE PHP AVANCE.pdf" target="_blank">TP SEQ 03 - LANGAGE PHP AVANCÉ (PDF)</a>
+    </li>
+    <li>
+      <a href="ASSETS/TP SEQ 04 - LANGAGE PHP AVANCE.pdf" target="_blank">TP SEQ 04 - LANGAGE PHP AVANCÉ (PDF)</a>
+    </li>
+    <li>
+      <a href="ASSETS/TP SEQ 05 - LANGAGE PHP AVANCE.pdf" target="_blank">TP SEQ 05 - LANGAGE PHP AVANCÉ (PDF)</a>
+    </li>
+    <li>
+      <a href="ASSETS/TP SEQ 06 - LANGAGE PHP AVANCE.pdf" target="_blank">TP SEQ 06 - LANGAGE PHP AVANCÉ (PDF)</a>
+    </li>
+  </ul>
+</section>
+
+<section class="tc-matiere section visible">
+  <h2><i class="fas fa-project-diagram"></i> Langage UML</h2>
+  <ul class="tc-list">
+    <li>
+      <a href="ASSETS/TD2.pdf" target="_blank">TD2 UML (PDF)</a>
+    </li>
+    <li>
+      <a href="ASSETS/td3.pdf" target="_blank">TD3 UML (PDF)</a>
+    </li>
+  </ul>
+</section>
+
+
+<section class="tc-matiere section visible">
+  <h2><i class="fab fa-java"></i> Langage JAVA</h2>
+  <ul class="tc-list">
+    <li>
+      <a href="ASSETS/Langage Java_TD1.pdf" target="_blank">Langage Java TD1 (PDF)</a>
+    </li>
+    <li>
+      <a href="ASSETS/Langage Java_TD2.pdf" target="_blank">Langage Java TD2 (PDF)</a>
+    </li>
+  </ul>
+</section>
+
+<section class="tc-matiere section visible">
+  <h2><i class="fas fa-server"></i> JSP / Servlet</h2>
+  <ul class="tc-list">
+    <li>
+      <a href="ASSETS/Travaux Dirigés Séquence 1- Introduction générale sur JEE.pdf" target="_blank">TD Séquence 1 - Introduction générale sur JEE (PDF)</a>
+    </li>
+    <li>
+      <a href="ASSETS/Travaux Dirigés Séquence 2- Développement WEB  avec JEE (Java Enterprise Edition), eclipse  JBOSS 7.pdf" target="_blank">TD Séquence 2 - Développement WEB avec JEE, Eclipse, JBOSS 7 (PDF)</a>
+    </li>
+    <li>
+      <a href="ASSETS/Travaux Dirigés Séquence 3 - Les servlets.pdf" target="_blank">TD Séquence 3 - Les servlets (PDF)</a>
+    </li>
+    <li>
+      <a href="ASSETS/Travaux Dirigés Séquence 4 -  JSP.pdf" target="_blank">TD Séquence 4 - JSP (PDF)</a>
+    </li>
+  </ul>
+</section>
+
+<section class="tc-matiere section visible">
+  <h2><i class="fab fa-php"></i> Framework PHP</h2>
+  <ul class="tc-list">
+    <li>
+      <a href="ASSETS/TD1 - Laravel.pdf" target="_blank">TD1 - Laravel (PDF)</a>
+    </li>
+    <li>
+      <a href="ASSETS/td3.pdf" target="_blank">TD3 (PDF)</a>
+    </li>
+  </ul>
+</section>
+
+<section class="tc-matiere section visible">
+  <h2><i class="fas fa-desktop"></i> IHM (Interface Homme Machine)</h2>
+  <ul class="tc-list">
+    <li>
+      <a href="ASSETS/TD1.pdf" target="_blank">TD1 IHM (PDF)</a>
+    </li>
+    <li>
+      <a href="ASSETS/TD1_IHM.pdf" target="_blank">TD1_IHM (PDF)</a>
+    </li>
+    <li>
+      <a href="ASSETS/TD2.pdf" target="_blank">TD2 IHM (PDF)</a>
+    </li>
+  </ul>
+</section>
+
+   
+        
+    </main>
+     <footer class="modern-footer">
     <div class="footer-wave"></div>
     <div class="footer-content">
         <div class="footer-section">

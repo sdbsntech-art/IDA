@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <!-- ads.txt: google.com, pub-3830476419469874, DIRECT, f08c47fec0942fa0 -->
-
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3830476419469874"
      crossorigin="anonymous"></script>
 
@@ -10,22 +8,105 @@
         src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
 </script>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Zone de commentaires sécurisée pour IDA COURS">
-  <meta name="keywords" content="cours, apprentissage, commentaires, sécurité">
-  <meta name="author" content="IDA COURS">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="favicon.png" sizes="180x180">
-  <link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="favicon.png" sizes="16x16" type="image/png">
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="index.css">
-  <meta name="google-site-verification" content="8WaeKM-mQAcuLhGP1eHzoO1Gr0IX9lq_NoNGavj0fB8" />
-<title>Commentaires sécurisés | IDA COURS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plateforme d'apprentissage moderne et interactive.">
+    <meta name="keywords" content="cours, apprentissage, vidéos, exercices, pdf, td, tc, forum">
+    <meta name="author" content="IDA COURS">
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3830476419469874"
+    <meta name="google-site-verification" content="8WaeKM-mQAcuLhGP1eHzoO1Gr0IX9lq_NoNGavj0fB8" />
+<title>Nos Formateurs - IDA COURS</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Style global */
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 2rem;
+            color: #333;
+        }
+
+        .trainers-container {
+            max-width: 1200px;
+            margin: auto;
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #1a237e;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .trainer-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .trainer-item {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 1.5rem;
+            border: 1px solid #ddd;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .trainer-item:hover {
+            background-color: #eef6ff;
+            border-color: #3399ff;
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .trainer-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid #3498db;
+        }
+
+        .trainer-name {
+            font-weight: bold;
+            color: #1a237e;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .trainer-description {
+            color: #555;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .trainer-link {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .trainer-link:hover {
+            text-decoration: underline;
+            color: #0056b3;
+        }
+
+        
+    </style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5462969054920766"
      crossorigin="anonymous"></script>
 
 <meta name="google-adsense-account" content="ca-pub-3942650991755175">
@@ -35,212 +116,91 @@
         data-ad-client="ca-pub-3942650991755175">
 </amp-auto-ads>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-      <div class="container-nav">
-          <div class="logo-nav">SDBSN-CODE</div>
-          <ul class="nav-links">
-              <li><a href="index.html" class="nav-link ">Accueil</a></li>
-              <li><a href="videos.html" class="nav-link">Vidéos</a></li>
-              <li><a href="L1.html" class="nav-link">Licence 1</a></li>
-              <li><a href="L2.html" class="nav-link">Licence 2</a></li>
-              <li><a href="L3.html" class="nav-link">licence 3</a></li>
-              <li><a href="pdftuto.html" class="nav-link">Annexe informative</a></li>
-              <li><a href="commentaire.html" class="nav-link active">Commentaires</a></li>
-          </ul>
-          <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+  <div class="trainers-container">
+    <h2>Nos Formateurs</h2>
+
+    <div class="trainer-list">
+      <!-- Formateur 1 - Grafikart -->
+      <div class="trainer-item">
+        <img class="trainer-photo" src="ASSETS/Grafikart.jpeg" alt="Grafikart">
+        <div class="trainer-name">Grafikart</div>
+        <div class="trainer-description">
+          Grafikart est un formateur expert en développement web, avec des années d'expérience dans la création de tutoriels et de formations en ligne.
+        </div>
+        <a class="trainer-link" href="https://www.grafikart.fr" target="_blank">Visiter son site</a>
       </div>
-  </nav>
-  <section id="hero" class="hero-section">
-    <div class="hero-content">
-        <h1 class="hero-title">Bienvenue sur la plateforme d'apprentissage IDA COURS</h1>
-        <p class="hero-slogan">"Ensemble, développons nos compétences et notre avenir !"</p>
-        <a href="commentaire.html" class="btn-cta">Commencer &darr;</a>
+
+      <!-- Formateur 2 - UVS -->
+      <div class="trainer-item">
+        <img class="trainer-photo" src="ASSETS/uvs.png" alt="UVS">
+        <div class="trainer-name">Université Virtuelle du Sénégal (UVS)</div>
+        <div class="trainer-description">
+          L'UVS est une université en ligne qui propose des formations de qualité dans divers domaines, y compris l'informatique et le développement web.
+        </div>
+        <a class="trainer-link" href="https://www.uvs.sn" target="_blank">Visiter leur site</a>
+      </div>
+
+      <!-- Formateur 3 - Force-N -->
+      <div class="trainer-item">
+        <img class="trainer-photo" src="ASSETS/force n.jpeg" alt="Force-N">
+        <div class="trainer-name">Force-N</div>
+        <div class="trainer-description">
+          Force-N est une organisation de formation et de développement technologique qui propose des cours en informatique et en intelligence artificielle.
+        </div>
+        <a class="trainer-link" href="https://www.force-n.com" target="_blank">Visiter leur site</a>
+      </div>
+
+      <!-- Formateur 4 - Coursera -->
+      <div class="trainer-item">
+        <img class="trainer-photo" src="ASSETS/coursera.png" alt="Coursera">
+        <div class="trainer-name">Coursera</div>
+        <div class="trainer-description">
+          Coursera est une plateforme en ligne de cours qui propose des formations de qualité, souvent dispensées par des universités et institutions prestigieuses.
+        </div>
+        <a class="trainer-link" href="https://www.coursera.org" target="_blank">Visiter leur site</a>
+      </div>
+
+      <!-- Formateur 5 - Udemy -->
+      <div class="trainer-item">
+        <img class="trainer-photo" src="ASSETS/udemy.png" alt="Udemy">
+        <div class="trainer-name">Udemy</div>
+        <div class="trainer-description">
+          Udemy est une plateforme d'apprentissage en ligne qui propose une large variété de cours, notamment dans les domaines du développement web, du marketing et plus encore.
+        </div>
+        <a class="trainer-link" href="https://www.udemy.com" target="_blank">Visiter leur site</a>
+      </div>
+
+      <!-- Formateur 6 - OpenClassrooms -->
+      <div class="trainer-item">
+        <img class="trainer-photo" src="ASSETS/openclasroom.png" alt="OpenClassrooms">
+        <div class="trainer-name">OpenClassrooms</div>
+        <div class="trainer-description">
+          OpenClassrooms est une plateforme d'enseignement en ligne qui propose des formations en développement web, data science et plus encore.
+        </div>
+        <a class="trainer-link" href="https://www.openclassrooms.com" target="_blank">Visiter leur site</a>
+      </div>
+
+      <!-- Formateur 7 - Orange Digital Center -->
+      <div class="trainer-item">
+        <img class="trainer-photo" src="ASSETS/ODC.png" alt="Orange Digital Center">
+        <div class="trainer-name">Orange Digital Center</div>
+        <div class="trainer-description">
+          Orange Digital Center est un centre d'innovation qui accompagne les jeunes dans le développement de compétences en numérique, en particulier dans le domaine de l'entrepreneuriat digital.
+        </div>
+        <a class="trainer-link" href="https://www.orange.digital.center" target="_blank">Visiter leur site</a>
+      </div>
+
+      <!-- Formateur 8 - Fab Lab Solidarity -->
+      <div class="trainer-item">
+        <img class="trainer-photo" src="ASSETS/fab lab.png" alt="Fab Lab Solidarity">
+        <div class="trainer-name">Fab Lab Solidarity</div>
+        <div class="trainer-description">
+          Fab Lab Solidarity est un espace de fabrication collaborative dédié aux projets innovants dans les domaines du numérique, de l'innovation sociale et de l'entrepreneuriat.
+        </div>
+        <a class="trainer-link" href="https://www.fablab-solidarity.org" target="_blank">Visiter leur site</a>
+      </div>
     </div>
-    <div class="hero-illustration">
-        <img src="files/ChatGPT Image 1 juil. 2025, 03_24_36.png" alt="Apprentissage">
-    </div>
-</section>
-  <h1>Zone de commentaires - IDA COURS</h1>
-
-  <!-- Formulaire de connexion / inscription -->
-  <form id="authForm">
-    <h2>Connexion / Inscription</h2>
-    <input type="email" id="email" placeholder="Email" required>
-    <input type="password" id="password" placeholder="Mot de passe" required>
-    <button type="submit">Se connecter / S'inscrire</button>
-  </form>
-
-  <!-- Déconnexion -->
-  <div class="comment-section" id="userSection" style="display:none;">
-    <p>Connecté en tant que : <span id="userEmail"></span></p>
-    <button class="logout-btn" id="logoutBtn">Se déconnecter</button>
-
-    <!-- Formulaire de commentaire -->
-    <form id="commentForm">
-      <textarea id="commentaire" placeholder="Votre commentaire..." required></textarea>
-      <button type="submit">Envoyer le commentaire</button>
-    </form>
   </div>
-
-  <!-- Affichage des commentaires -->
-  <div>
-    <h2>Commentaires récents:</h2>
-    <ul id="listeCommentaires"></ul>
-  </div>
-
-  <!-- Firebase SDK -->
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-    import { getFirestore, collection, addDoc, getDocs, query, orderBy, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-
-    const firebaseConfig = {
-      apiKey: "AIzaSyDDKOVv1A8eXDK6_uDTvEp3eBBgfIGzYPo",
-      authDomain: "ida-cours.firebaseapp.com",
-      projectId: "ida-cours",
-      storageBucket: "ida-cours.firebasestorage.app",
-      messagingSenderId: "158609791870",
-      appId: "1:158609791870:web:795a994a441c0dfadf312f",
-      measurementId: "G-M9JC11KTP2"
-    };
-
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-    const db = getFirestore(app);
-
-    const authForm = document.getElementById("authForm");
-    const commentForm = document.getElementById("commentForm");
-    const emailInput = document.getElementById("email");
-    const passwordInput = document.getElementById("password");
-    const commentaireInput = document.getElementById("commentaire");
-    const userSection = document.getElementById("userSection");
-    const userEmailDisplay = document.getElementById("userEmail");
-    const logoutBtn = document.getElementById("logoutBtn");
-    const listeCommentaires = document.getElementById("listeCommentaires");
-
-    // Auth: inscription ou connexion
-    authForm.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const email = emailInput.value;
-      const password = passwordInput.value;
-
-      try {
-        // Essaye de se connecter
-        await signInWithEmailAndPassword(auth, email, password);
-      } catch (err1) {
-        try {
-          // Sinon, crée un compte
-          await createUserWithEmailAndPassword(auth, email, password);
-        } catch (err2) {
-          alert("Erreur : " + err2.message); // Affiche l'erreur à l'utilisateur
-        }
-      }
-    });
-
-    // Déconnexion
-    logoutBtn.addEventListener("click", () => {
-      signOut(auth);
-    });
-
-    // Quand l'utilisateur est connecté/déconnecté
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        userSection.style.display = "block";
-        authForm.style.display = "none";
-        userEmailDisplay.textContent = user.email;
-        chargerCommentaires();
-      } else {
-        userSection.style.display = "none";
-        authForm.style.display = "block";
-        listeCommentaires.innerHTML = "";
-      }
-    });
-
-    // Ajout de commentaire
-    commentForm.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const texte = commentaireInput.value;
-      const user = auth.currentUser;
-
-      if (!texte || !user) return;
-
-      try {
-        await addDoc(collection(db, "commentaires"), {
-          email: user.email,
-          texte: texte,
-          date: serverTimestamp()
-        });
-        commentaireInput.value = "";
-        chargerCommentaires();
-      } catch (err) {
-        alert("Erreur lors de l'envoi du commentaire : " + err.message);
-      }
-    });
-
-    // Chargement des commentaires
-    async function chargerCommentaires() {
-      listeCommentaires.innerHTML = "";
-      const commentairesRef = collection(db, "commentaires");
-      const q = query(commentairesRef, orderBy("date", "desc"));
-      const querySnapshot = await getDocs(q);
-
-      querySnapshot.forEach(async (doc) => {
-        const data = doc.data();
-        const li = document.createElement("li");
-        li.innerHTML = `
-          <span class="email">${data.email} :</span><br>${data.texte}
-          <div>
-            <button class="reply-btn" data-id="${doc.id}">Répondre</button>
-            <div class="reply-form" style="display:none;">
-              <textarea placeholder="Votre réponse..." class="reply-text"></textarea>
-              <button class="send-reply">Envoyer</button>
-            </div>
-            <ul class="replies" id="replies-${doc.id}"></ul>
-          </div>
-        `;
-
-        listeCommentaires.appendChild(li);
-
-        // Réponses à ce commentaire
-        const repliesUl = li.querySelector(`#replies-${doc.id}`);
-        const repliesRef = collection(db, "commentaires", doc.id, "reponses");
-        const repliesSnapshot = await getDocs(query(repliesRef, orderBy("date", "asc")));
-        repliesSnapshot.forEach(replyDoc => {
-          const replyData = replyDoc.data();
-          const replyLi = document.createElement("li");
-          replyLi.innerHTML = `<span class="email">${replyData.email} :</span><br>${replyData.texte}`;
-          repliesUl.appendChild(replyLi);
-        });
-
-        // Gestion du bouton "Répondre"
-        const replyBtn = li.querySelector(".reply-btn");
-        const replyForm = li.querySelector(".reply-form");
-        const replyText = li.querySelector(".reply-text");
-        const sendReply = li.querySelector(".send-reply");
-
-        replyBtn.addEventListener("click", () => {
-          replyForm.style.display = replyForm.style.display === "none" ? "block" : "none";
-        });
-
-        sendReply.addEventListener("click", async () => {
-          const user = auth.currentUser;
-          const texte = replyText.value;
-          if (!texte || !user) return;
-
-          await addDoc(collection(db, "commentaires", doc.id, "reponses"), {
-            email: user.email,
-            texte: texte,
-            date: serverTimestamp()
-          });
-
-          replyText.value = "";
-          chargerCommentaires(); // Recharger les commentaires pour voir la réponse
-        });
-      });
-    }
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
    <footer class="modern-footer">
     <div class="footer-wave"></div>
     <div class="footer-content">
@@ -303,13 +263,14 @@
                     <a href="politique_confidentialite.html">politique_confidentialite</a>
                     <a href="condition_d'utilisation.html">condition_d'utilisation</a>
                 </div>
-    <div class="footer-bottom">
+    
+<div class="footer-bottom">
         <p>&copy; 2025 IDA COURS. Plateforme réalisée par Seydou Bakhayokho.</p>
     </div>
-    </footer>
-    <script src="main.js"></script>
-    <script>
-      // protection.js - Code de protection contre l'inspection
+</footer>
+  <script src="main.js"></script>
+  <script>
+    // protection.js - Code de protection contre l'inspection
 document.addEventListener('DOMContentLoaded', function() {
     'use strict';
     
@@ -540,7 +501,7 @@ document.addEventListener('DOMContentLoaded', function() {
         set: function() { /* bloqué */ }
     });
 })();
-    </script>
+  </script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
