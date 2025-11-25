@@ -1,0 +1,22 @@
+# INSTRUCTIONS ICÔNES PWA
+
+Votre icône principale a été détectée: icon.jpg
+
+Pour compléter la configuration PWA, vous devez créer les fichiers suivants 
+dans ce dossier 'icons/' :
+
+- icon-72x72.jpg    (72x72 pixels)
+- icon-96x96.jpg    (96x96 pixels)
+- icon-128x128.jpg  (128x128 pixels)
+- icon-144x144.jpg  (144x144 pixels)
+- icon-152x152.jpg  (152x152 pixels)
+- icon-192x192.jpg  (192x192 pixels)
+- icon-384x384.jpg  (384x384 pixels)
+- icon-512x512.jpg  (512x512 pixels)
+
+Vous pouvez :
+1. Renommer et redimensionner manuellement votre icon.jpg
+2. Utiliser un outil en ligne comme : https://www.pwabuilder.com/imageGenerator
+3. Installer PIL: pip install Pillow
+
+Votre PWA fonctionnera une fois ces fichiers créés.

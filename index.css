@@ -1,4 +1,4 @@
-/* ====== Variables et palette ====== */
+/*  Variables et palette  */
 :root {
   --main-bg: linear-gradient(135deg, #e0f7fa 0%, #bacdcf 100%);
   --primary: #0d6efd;
@@ -90,7 +90,7 @@ body {
     }
 
 
-/* ====== Navbar ====== */
+/* Navbar */
 .navbar {
   background: #fff;
   box-shadow: var(--shadow);
@@ -144,7 +144,7 @@ body {
   cursor: pointer;
 }
 
-/* ====== Hero Section ====== */
+/*  Hero Section */
 .hero-section {
   display: flex;
   flex-wrap: wrap;
@@ -222,7 +222,7 @@ body {
   to { opacity: 1; transform: translateX(0); }
 }
 
-/* ====== Sections ====== */
+/*  Sections  */
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -295,7 +295,7 @@ main {
 
 
 
-/* ====== Vidéos ====== */
+/*  Vidéos  */
 .videos-list {
   display: flex;
   flex-wrap: wrap;
@@ -342,7 +342,7 @@ main {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* ====== Video Thumbnail ====== */
+/*  Video Thumbnail  */
 .video-thumbnail {
   position: relative;
   cursor: pointer;
@@ -394,7 +394,7 @@ main {
   background: rgba(0, 0, 0, 0.8);
 }
 
-/* ====== Section PHP ====== */
+/*  Section PHP  */
 .videos-matiere h2 i.fab.fa-php {
   color: #8993be; /* Couleur spécifique pour PHP */
 }
@@ -460,7 +460,7 @@ main {
   margin-top: 10px;
 }
 
-/* ====== TD, TC, PDF ====== */
+/*  TD, TC, PDF  */
 .td-list, .tc-list, .pdf-list {
   list-style: none;
   padding: 0;
@@ -488,7 +488,7 @@ main {
   background: #e3f0fc;
 }
 
-/* ====== Quiz/Exercices ====== */
+/*  Quiz/Exercices  */
 .quiz-list {
   display: flex;
   flex-wrap: wrap;
@@ -526,7 +526,7 @@ main {
   transform: scale(1.08);
 }
 
-/* ====== Commentaires (amélioré & responsive) ====== */
+/*  Commentaires (amélioré & responsive) */
 .comment-section, form#authForm {
   background: #fff;
   border-radius: 18px;
@@ -705,7 +705,7 @@ button:hover, .reply-btn:hover, .send-reply:hover, .logout-btn:hover {
   }
 }
 
-/* ====== Footer ====== */
+/*  Footer */
 footer {
   background: var(--light);
   border-radius: var(--radius) var(--radius) 0 0;
@@ -749,7 +749,7 @@ footer {
   transform: scale(1.15);
 }
 
-/* ====== Responsive ====== */
+/*  Responsive  */
 @media (max-width: 900px) {
   .hero-section {
     flex-direction: column;
@@ -977,7 +977,7 @@ footer {
   }
 }
 
-/* ====== Section Matières stylisée ====== */
+/*  Section Matières stylisée */
 .matieres {
   display: flex;
   flex-wrap: wrap;
@@ -1056,7 +1056,7 @@ footer {
   }
 }
 
-/* === Footer Moderne (issu de bibliotheques.html) === */
+/*  Footer Moderne (issu de bibliotheques.html)  */
 .modern-footer {
             background: linear-gradient(135deg, #1a1c20 0%, #2c3e50 100%);
             color: #fff;
