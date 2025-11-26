@@ -2,1492 +2,2155 @@
 <html lang="fr">
 <head>
     <!-- ads.txt: google.com, pub-3830476419469874, DIRECT, f08c47fec0942fa0 -->
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3830476419469874"
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3830476419469874"
      crossorigin="anonymous"></script>
 
-<script async custom-element="amp-auto-ads"
+    <script async custom-element="amp-auto-ads"
         src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
-</script>
+    </script>
 
-  <meta charset="UTF-8">
-  <meta name="google-site-verification" content="8WaeKM-mQAcuLhGP1eHzoO1Gr0IX9lq_NoNGavj0fB8" />
-<title>Vidéos de cours</title>
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3830476419469874"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="8WaeKM-mQAcuLhGP1eHzoO1Gr0IX9lq_NoNGavj0fB8" />
+    <title>Vidéos de cours | IDA COURS</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3830476419469874"
      crossorigin="anonymous"></script>
+    <meta name="google-adsense-account" content="ca-pub-3942650991755175">
 
-<meta name="google-adsense-account" content="ca-pub-3942650991755175">
+    <style>
+        /*  VARIABLES ET RESET */
+        :root {
+            --main-bg: linear-gradient(135deg, #e0f7fa 0%, #bacdcf 100%);
+            --primary: #0d6efd;
+            --secondary: #6c757d;
+            --accent: #00b894;
+            --light: #f8f9fa;
+            --dark: #222;
+            --radius: 16px;
+            --shadow: 0 4px 24px rgba(0,0,0,0.08);
+            --transition: 0.3s cubic-bezier(.4,2,.6,1);
+            --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --background-color: #f8f9fa;
+            --text-color: #2c3e50;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --gradient-primary: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
+            --gradient-accent: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+            --header-height: 70px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background: var(--main-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /*  NAVBAR CHIC ET RESPONSIVE  */
+        .navbar {
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+            height: var(--header-height);
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+
+        .container-nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            height: 100%;
+        }
+
+        .logo-nav {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transition: var(--transition);
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover::before,
+        .nav-link.active::before {
+            width: 80%;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary);
+            background: rgba(13, 110, 253, 0.1);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+            background: none;
+            border: none;
+            padding: 0.5rem;
+        }
+
+        /* MAIN CONTENT  */
+        main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+            min-height: calc(100vh - var(--header-height) - 400px);
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section-divider {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+            margin: 3rem 0;
+        }
+
+        /* SECTIONS STYLÉES  */
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-align: center;
+            margin: 3rem 0 2rem 0;
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+        }
+
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .video-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gradient-primary);
+            transition: var(--transition);
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+        }
+
+        .video-card:hover::before {
+            width: 6px;
+        }
+
+        .video-thumbnail {
+            position: relative;
+            border-radius: calc(var(--radius) - 4px);
+            overflow: hidden;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            aspect-ratio: 16/9;
+        }
+
+        .video-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .video-card:hover .video-thumbnail img {
+            transform: scale(1.05);
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .play-button::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 15px solid white;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            margin-left: 5px;
+        }
+
+        .video-card:hover .play-button {
+            background: var(--accent);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .video-info {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .video-title {
+            font-weight: 600;
+            color: var(--primary-color);
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        .video-matiere {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
+
+        .video-matiere i {
+            color: var(--primary);
+        }
+
+        /*  MODAL VIDEO */
+        .video-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            padding: 2rem;
+        }
+
+        .video-modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            background: black;
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+
+        .modal-iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            z-index: 10001;
+        }
+
+        .modal-close:hover {
+            background: var(--accent-color);
+        }
+
+        /* FILTRES  */
+        .filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            padding: 0.8rem 1.5rem;
+            background: var(--card-bg);
+            border: 2px solid transparent;
+            border-radius: var(--radius);
+            color: var(--text-color);
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--gradient-primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /*  FOOTER MODERNE ET RESPONSIVE */
+        .modern-footer {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+            color: white;
+            position: relative;
+            margin-top: 4rem;
+        }
+
+        .footer-wave {
+            position: absolute;
+            top: -2px;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z' fill='%23f8f9fa'/%3E%3C/svg%3E");
+            background-size: cover;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        .footer-logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            object-fit: cover;
+        }
+
+        .footer-section p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+
+        .social-icon:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .footer-contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .contact-item i {
+            color: var(--accent);
+            width: 20px;
+        }
+
+        .legal-links {
+            text-align: center;
+            padding: 2rem 0 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 0 2rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .legal-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .legal-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(0, 0, 0, 0.2);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        /*  RESPONSIVE DESIGN  */
+        @media (max-width: 1024px) {
+            .videos-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container-nav {
+                padding: 0 1rem;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: var(--header-height);
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - var(--header-height));
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 2rem;
+                transition: var(--transition);
+                gap: 1rem;
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            main {
+                padding: 1rem;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .videos-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+
+            .modal-iframe {
+                height: 300px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 3rem 1rem 1rem;
+            }
+
+            .footer-section {
+                text-align: center;
+            }
+
+            .footer-section h3::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .footer-social {
+                justify-content: center;
+            }
+
+            .legal-links {
+                margin: 0 1rem;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-nav {
+                font-size: 1.4rem;
+            }
+
+            .page-title {
+                font-size: 1.6rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .videos-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filters {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .filter-btn {
+                width: 100%;
+                max-width: 200px;
+            }
+
+            .footer-content {
+                padding: 2rem 1rem 1rem;
+            }
+        }
+
+        /*  ANIMATIONS */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .video-card {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .video-card:nth-child(even) {
+            animation-delay: 0.1s;
+        }
+
+        .video-card:nth-child(odd) {
+            animation-delay: 0.2s;
+        }
+
+        /* ===== ACCESSIBILITÉ  */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Focus visible pour l'accessibilité */
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        /* Mode sombre automatique */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --main-bg: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+                --card-bg: rgba(30, 30, 46, 0.95);
+                --text-color: #e2e8f0;
+                --light: #2d3748;
+            }
+
+            .navbar {
+                background: rgba(26, 32, 44, 0.95);
+                border-bottom-color: rgba(255, 255, 255, 0.1);
+            }
+        }
+    </style>
 </head>
 <body>
-<amp-auto-ads type="adsense"
+    <amp-auto-ads type="adsense"
         data-ad-client="ca-pub-3942650991755175">
-</amp-auto-ads>
+    </amp-auto-ads>
 
-  <nav class="navbar">
-    <div class="container-nav">
-      <div class="logo-nav">SDBSN-CODE</div>
-      <ul class="nav-links">
-        <li><a href="index.html" class="nav-link">Accueil</a></li>
-        <li><a href="videos.html" class="nav-link active">Vidéos</a></li>
-        <li><a href="L1.html" class="nav-link">Licence 1</a></li>
-        <li><a href="L2.html" class="nav-link">licence 2</a></li>
-        <li><a href="L3.html" class="nav-link">licence 3</a></li>
-        <li><a href="pdftuto.html" class="nav-link">Annexe informative</a></li>
-        <li><a href="#commentaires" class="nav-link">Commentaires</a></li>
-      </ul>
-      <div class="menu-toggle"><i class="fas fa-bars"></i></div>
-    </div>
-  </nav>
-  <main>
-    <h1 style="margin-bottom:2rem;">Vidéos de cours par matière</h1>
-    <!-- Exemple pour 3 matières, à dupliquer pour toutes -->
-    <section class="videos-matiere section visible" id="html">
-      <h2><i class="fab fa-html5"></i> HTML</h2>
-      <div class="videos-list">
-        <div class="video-card" data-video-id="oEAuNzWXRjM" data-matiere="html">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/oEAuNzWXRjM/hqdefault.jpg" alt="HTML Vidéo 1">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>HTML Vidéo 1</p>
-        </div>
-        <div class="video-card" data-video-id="XRoFTzGcCsw" data-matiere="html">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/XRoFTzGcCsw/hqdefault.jpg" alt="HTML Vidéo 2">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>HTML Vidéo 2</p>
-        </div>
-        <div class="video-card" data-video-id="Kd4jtZq2x0I" data-matiere="html">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/Kd4jtZq2x0I/hqdefault.jpg" alt="HTML Vidéo 3">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>HTML Vidéo 3</p>
-        </div>
-        <div class="video-card" data-video-id="yr0xmQ9vezo" data-matiere="html">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/yr0xmQ9vezo/hqdefault.jpg" alt="HTML Vidéo 4">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>HTML Vidéo 4</p>
-        </div>
-        <div class="video-card" data-video-id="AH-LTjLCXXI" data-matiere="html">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/AH-LTjLCXXI/hqdefault.jpg" alt="HTML Vidéo 5">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>HTML Vidéo 5</p>
-        </div>
-        <div class="video-card" data-video-id="Iu8YpBnhWm4" data-matiere="html">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/Iu8YpBnhWm4/hqdefault.jpg" alt="HTML Vidéo 6">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>HTML Vidéo 6</p>
-        </div>
-        <div class="video-card" data-video-id="LkZ-KqxgVQ4" data-matiere="html">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/LkZ-KqxgVQ4/hqdefault.jpg" alt="HTML Vidéo 7">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>HTML Vidéo 7</p>
-        </div>
-        <div class="video-card" data-video-id="gJ_G-gxQRRk" data-matiere="html">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/gJ_G-gxQRRk/hqdefault.jpg" alt="HTML Vidéo 8">
-           
-            <div class="play-button"></div>
-          </div>
-          <p>HTML Vidéo 8</p>
-        </div>
-        <div class="video-card" data-video-id="7T9H-P45REg" data-matiere="html">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/7T9H-P45REg/hqdefault.jpg" alt="HTML Vidéo 9">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>HTML Vidéo 9</p>
-        </div>
-        <div class="video-card" data-video-id="g_u3U2BtK88" data-matiere="html">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/g_u3U2BtK88/hqdefault.jpg" alt="HTML Vidéo 10">
-           
-            <div class="play-button"></div>
-          </div>
-          <p>HTML Vidéo 10</p>
-        </div>
-        <div class="video-card" data-video-id="BURRD_nWJh0" data-matiere="html">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/BURRD_nWJh0/hqdefault.jpg" alt="HTML Vidéo 11">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>HTML Vidéo 11</p>
-        </div>
-        <div class="video-card" data-video-id="M34IhS0Pfj8" data-matiere="html">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/M34IhS0Pfj8/hqdefault.jpg" alt="HTML Vidéo 12">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>HTML Vidéo 12</p>
-        </div>
-        <div class="video-card" data-video-id="VXNw-elEFlo" data-matiere="html">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/VXNw-elEFlo/hqdefault.jpg" alt="HTML Vidéo 13">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>HTML Vidéo 13</p>
-        </div>
-        <div class="video-card" data-video-id="oV964Z6P9_c" data-matiere="html">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/oV964Z6P9_c/hqdefault.jpg" alt="HTML Vidéo 14">
-           
-            <div class="play-button"></div>
-          </div>
-          <p>HTML Vidéo 14</p>
-        </div>
-        <div class="video-card" data-video-id="r-X7DutXeIY" data-matiere="html">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/r-X7DutXeIY/hqdefault.jpg" alt="HTML Vidéo 15">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>HTML Vidéo 15</p>
-        </div>
-        <div class="video-card" data-video-id="vj-5-_h_E8w" data-matiere="html">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/vj-5-_h_E8w/hqdefault.jpg" alt="HTML Vidéo 16">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>HTML Vidéo 16</p>
-        </div>
-        <div class="video-card" data-video-id="0AqDNXDd_Mk" data-matiere="html">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/0AqDNXDd_Mk/hqdefault.jpg" alt="HTML Vidéo 17">
-           
-            <div class="play-button"></div>
-          </div>
-          <p>HTML Vidéo 17</p>
-        </div>
-        <!-- ...jusqu'à 15 vidéos... -->
-      </div>
-    </section>
-    <section class="videos-matiere section visible" id="css">
-      <h2><i class="fab fa-css3-alt"></i> CSS</h2>
-      <div class="videos-list">
-        <div class="video-card" data-video-id="PE8FQ6zihhw" data-matiere="css">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/PE8FQ6zihhw/hqdefault.jpg" alt="CSS Vidéo 1">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>CSS Vidéo 1</p>
-        </div>
-        <div class="video-card" data-video-id="EM8UlPeBfuk" data-matiere="css">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/EM8UlPeBfuk/hqdefault.jpg" alt="CSS Vidéo 2">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>CSS Vidéo 2</p>
-        </div>
-        <div class="video-card" data-video-id="k1ID41O4FNM" data-matiere="css">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/k1ID41O4FNM/hqdefault.jpg" alt="CSS Vidéo 3">
-           
-            <div class="play-button"></div>
-          </div>
-          <p>CSS Vidéo 3</p>
-        </div>
-        <div class="video-card" data-video-id="-uuk57Tu9ds" data-matiere="css">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/-uuk57Tu9ds/hqdefault.jpg" alt="CSS Vidéo 4">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>CSS Vidéo 4</p>
-        </div>
-        <div class="video-card" data-video-id="e-GTdjI6vC4" data-matiere="css">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/e-GTdjI6vC4/hqdefault.jpg" alt="CSS Vidéo 5">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>CSS Vidéo 5</p>
-        </div>
-        <div class="video-card" data-video-id="UA1bPCEEo8M" data-matiere="css">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/UA1bPCEEo8M/hqdefault.jpg" alt="CSS Vidéo 6">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>CSS Vidéo 6</p>
-        </div>
-        <div class="video-card" data-video-id="YGm1T7bVmJQ" data-matiere="css">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/YGm1T7bVmJQ/hqdefault.jpg" alt="CSS Vidéo 7">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>CSS Vidéo 7</p>
-        </div>
-        <div class="video-card" data-video-id="hfykeYvwZXs" data-matiere="css">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/hfykeYvwZXs/hqdefault.jpg" alt="CSS Vidéo 8">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>CSS Vidéo 8</p>
-        </div>
-        <div class="video-card" data-video-id="LNqBKTeeiWo" data-matiere="css">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/LNqBKTeeiWo/hqdefault.jpg" alt="CSS Vidéo 9">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>CSS Vidéo 9</p>
-        </div>
-        <div class="video-card" data-video-id="OV0bOifr8AE" data-matiere="css">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/OV0bOifr8AE/hqdefault.jpg" alt="CSS Vidéo 10">
-           
-            <div class="play-button"></div>
-          </div>
-          <p>CSS Vidéo 10</p>
-        </div>
-        <div class="video-card" data-video-id="uCJxtO5b7Mw" data-matiere="css">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/uCJxtO5b7Mw/hqdefault.jpg" alt="CSS Vidéo 11">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>CSS Vidéo 11</p>
-        </div>
-        <div class="video-card" data-video-id="T7U_WuaeVaQ" data-matiere="css">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/T7U_WuaeVaQ/hqdefault.jpg" alt="CSS Vidéo 12">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>CSS Vidéo 12</p>
-        </div>
-        <div class="video-card" data-video-id="4T4vRdhkCxw" data-matiere="css">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/4T4vRdhkCxw/hqdefault.jpg" alt="CSS Vidéo 13">
-            <img class="matiere-logo" src="ASSETS/css-logo.png" alt="CSS Logo">
-            <div class="play-button"></div>
-          </div>
-          <p>CSS Vidéo 13</p>
-        </div>
-        <div class="video-card" data-video-id="iZe6211H14w" data-matiere="css">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/iZe6211H14w/hqdefault.jpg" alt="CSS Vidéo 14">
-           
-            <div class="play-button"></div>
-          </div>
-          <p>CSS Vidéo 14</p>
-        </div>
-        <div class="video-card" data-video-id="rEMVFPyoxDY" data-matiere="css">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/rEMVFPyoxDY/hqdefault.jpg" alt="CSS Vidéo 15">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>CSS Vidéo 15</p>
-        </div>
-        <div class="video-card" data-video-id="89TfBQd3dII" data-matiere="css">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/89TfBQd3dII/hqdefault.jpg" alt="CSS Vidéo 16">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>CSS Vidéo 16</p>
-        </div>
-        <div class="video-card" data-video-id="jQG3hAbXQVY" data-matiere="css">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/jQG3hAbXQVY/hqdefault.jpg" alt="CSS Vidéo 17">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>CSS Vidéo 17</p>
-        </div>
-        <div class="video-card" data-video-id="JOBlm6kWsMM" data-matiere="css">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/JOBlm6kWsMM/hqdefault.jpg" alt="CSS Vidéo 18">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>CSS Vidéo 18</p>
-        </div>
-        <div class="video-card" data-video-id="wu1Sk8iOPnE" data-matiere="css">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/wu1Sk8iOPnE/hqdefault.jpg" alt="CSS Vidéo 19">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>CSS Vidéo 19</p>
-        </div>
-        <div class="video-card" data-video-id="h7KjDZLeSRY" data-matiere="css">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/h7KjDZLeSRY/hqdefault.jpg" alt="CSS Vidéo 20">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>CSS Vidéo 20</p>
-        </div>
-        <!-- ...jusqu'à 20 vidéos... -->
-      </div>
-    </section>
-    <section class="videos-matiere section visible" id="js">
-      <h2><i class="fab fa-js-square"></i> JavaScript</h2>
-      <div class="videos-list">
-        <div class="video-card" data-video-id="asToYAq0F-I" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/asToYAq0F-I/hqdefault.jpg" alt="JS Vidéo 1">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 1</p>
-        </div>
-        <div class="video-card" data-video-id="gUYfRJ-v_1Y" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/gUYfRJ-v_1Y/hqdefault.jpg" alt="JS Vidéo 2">
-           
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 2</p>
-        </div>
-        <div class="video-card" data-video-id="GU8kxJ3P67I" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/GU8kxJ3P67I/hqdefault.jpg" alt="JS Vidéo 3">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 3</p>
-        </div>
-        <div class="video-card" data-video-id="zwLmRotDdu8" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/zwLmRotDdu8/hqdefault.jpg" alt="JS Vidéo 4">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 4</p>
-        </div>
-        <div class="video-card" data-video-id="qYuvcK8QU4c" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/qYuvcK8QU4c/hqdefault.jpg" alt="JS Vidéo 5">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 5</p>
-        </div>
-        <div class="video-card" data-video-id="kLdQAsrcyvk" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/kLdQAsrcyvk/hqdefault.jpg" alt="JS Vidéo 6">
-           
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 6</p>
-        </div>
-        <div class="video-card" data-video-id="EvHAiskwHvE" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/EvHAiskwHvE/hqdefault.jpg" alt="JS Vidéo 7">
-           
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 7</p>
-        </div>
-        <div class="video-card" data-video-id="wVuJTS8aQyA" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/wVuJTS8aQyA/hqdefault.jpg" alt="JS Vidéo 8">
-           
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 8</p>
-        </div>
-        <div class="video-card" data-video-id="2HAPViIAYjc" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/2HAPViIAYjc/hqdefault.jpg" alt="JS Vidéo 9">
-           
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 9</p>
-        </div>
-        <div class="video-card" data-video-id="6tC4tv9MlkI" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/6tC4tv9MlkI/hqdefault.jpg" alt="JS Vidéo 10">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 10</p>
-        </div>
-        <div class="video-card" data-video-id="OSHPfiuDbqM" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/OSHPfiuDbqM/hqdefault.jpg" alt="JS Vidéo 11">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 11</p>
-        </div>
-        <div class="video-card" data-video-id="ZocfMM0qofA" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/ZocfMM0qofA/hqdefault.jpg" alt="JS Vidéo 12">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 12</p>
-        </div>
-        <div class="video-card" data-video-id="Qvr6Nh7rtAI" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/Qvr6Nh7rtAI/hqdefault.jpg" alt="JS Vidéo 13">
-           
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 13</p>
-        </div>
-        <div class="video-card" data-video-id="kwcFfskBaag" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/kwcFfskBaag/hqdefault.jpg" alt="JS Vidéo 14">
-           
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 14</p>
-        </div>
-        <div class="video-card" data-video-id="05mKXSdkCJg" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/05mKXSdkCJg/hqdefault.jpg" alt="JS Vidéo 15">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 15</p>
-        </div>
-        <div class="video-card" data-video-id="z9pcgJX1DdY" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/z9pcgJX1DdY/hqdefault.jpg" alt="JS Vidéo 16">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 16</p>
-        </div>
-        <div class="video-card" data-video-id="DJewHNOFqD0" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/DJewHNOFqD0/hqdefault.jpg" alt="JS Vidéo 17">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 17</p>
-        </div>
-        <div class="video-card" data-video-id="9U-RgCzN9mI" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/9U-RgCzN9mI/hqdefault.jpg" alt="JS Vidéo 18">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 18</p>
-        </div>
-        <div class="video-card" data-video-id="AD28PddTwEE" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/AD28PddTwEE/hqdefault.jpg" alt="JS Vidéo 19">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 19</p>
-        </div>
-        <div class="video-card" data-video-id="O41U3fOOhvA" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/O41U3fOOhvA/hqdefault.jpg" alt="JS Vidéo 20">
-           
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 20</p>
-        </div>
-        <div class="video-card" data-video-id="Kh0drIcQ2UI" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/Kh0drIcQ2UI/hqdefault.jpg" alt="JS Vidéo 21">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 21</p>
-        </div>
-        <div class="video-card" data-video-id="sXwPfnsKGiE" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/sXwPfnsKGiE/hqdefault.jpg" alt="JS Vidéo 22">
-           
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 22</p>
-        </div>
-        <div class="video-card" data-video-id="Rm8kxBf5Eoc" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/Rm8kxBf5Eoc/hqdefault.jpg" alt="JS Vidéo 23">
-           
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 23</p>
-        </div>
-        <div class="video-card" data-video-id="55EXq7ZjL4Q" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/55EXq7ZjL4Q/hqdefault.jpg" alt="JS Vidéo 24">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>JS video 24</p>
-        </div>
-        <div class="video-card" data-video-id="TicxcEDiP3U" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/TicxcEDiP3U/hqdefault.jpg" alt="JS Vidéo 25">
-           
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 25</p>
-        </div>
-        <div class="video-card" data-video-id="7e4EMDOeiYE" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/7e4EMDOeiYE/hqdefault.jpg" alt="JS Vidéo 26">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 26</p>
-        </div>
-        <div class="video-card" data-video-id="PmrHg7q5raw" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/PmrHg7q5raw/hqdefault.jpg" alt="JS Vidéo 27">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 27</p>
-        </div>
-        <div class="video-card" data-video-id="9AdBFTM2lVM" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/9AdBFTM2lVM/hqdefault.jpg" alt="JS Vidéo 28">
-           
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 28</p>
-        </div>
-        <div class="video-card" data-video-id="rcShQM00mIM" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/rcShQM00mIM/hqdefault.jpg" alt="JS Vidéo 29">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 29</p>
-        </div>
-        <div class="video-card" data-video-id="p2UW7Wptlow" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/p2UW7Wptlow/hqdefault.jpg" alt="JS Vidéo 30">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 30</p>
-        </div>
-        <div class="video-card" data-video-id="N3l-kV4nczo" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/N3l-kV4nczo/hqdefault.jpg" alt="JS Vidéo 31">
-           
-            <div class="play-button"></div>
-          </div>
-          <p>JS Vidéo 31</p>
-        </div>
-        <div class="video-card" data-video-id="3Hrhuz8-w2M" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/3Hrhuz8-w2M/hqdefault.jpg" alt="JS Vidéo 32">
-            
-            <div class="play-button"></div> 
-          </div>
-          <p>JS video 32</p>
-        </div>
-        <div class="video-card" data-video-id="__3lzaZS3yc" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/__3lzaZS3yc/hqdefault.jpg" alt="JS Vidéo 33">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>JS video 33</p>
-        </div>
-        <div class="video-card" data-video-id="1hHVvuShsGo" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/1hHVvuShsGo/hqdefault.jpg" alt="JS Vidéo 34">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>JS video 34</p>
-        </div>
-        <div class="video-card" data-video-id="WXaDeTmZTgk" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/WXaDeTmZTgk/hqdefault.jpg" alt="JS Vidéo 35">
-            
-            <div class="play-button"></div>
-            <p>JS video 35</p>
-          </div>
-        </div>
-        <div class="video-card" data-video-id="eBiNsThWR70" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/eBiNsThWR70/hqdefault.jpg" alt="JS Vidéo 36">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>JS video 36</p>
-        </div>
-        <div class="video-card" data-video-id="jAYyeRjQJdQ" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/jAYyeRjQJdQ/hqdefault.jpg" alt="JS Vidéo 37">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>JS video 37</p>
-        </div>
-        <div class="video-card" data-video-id="o5UAtZUx7l0" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/o5UAtZUx7l0/hqdefault.jpg" alt="JS Vidéo 38">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>JS cote serveur video 38</p>
-        </div>
-        <div class="video-card" data-video-id="bunBbhY4da4" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/bunBbhY4da4/hqdefault.jpg" alt="JS Vidéo 39">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>JS cote serveur video 39</p>
-        </div>
-        <div class="video-card" data-video-id="g01qBs1CpAc" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/g01qBs1CpAc/hqdefault.jpg" alt="JS Vidéo 40">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>JS cote serveur video 40</p>
-        </div>
-        <div class="video-card" data-video-id="cT6b6_XzFmI" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/cT6b6_XzFmI/hqdefault.jpg" alt="JS Vidéo 41">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>JS cote serveur video 41</p>
-        </div>
-        <div class="video-card" data-video-id="O2v_ghJlVAA" data-matiere="js">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/O2v_ghJlVAA/hqdefault.jpg" alt="JS Vidéo 42">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>JS cote serveur video 42</p>
-        </div>
-               <!-- ...jusqu'à 42 vidéos... -->
-
-      </div>
-    </section>
-    <section class="videos-matiere section visible" id="php">
-      <h2><i class="fab fa-php"></i> PHP </h2>
-      <div class="videos-list">
-        <!-- Chapitre 1 : Présentation de PHP -->
-        <div class="video-card" data-video-id="QYDHjY18CQg" data-matiere="php">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/QYDHjY18CQg/hqdefault.jpg" alt="PHP - Chapitre 1 : Présentation de PHP">
-            <div class="play-button"></div>
-          </div>
-          <p>Chapitre 1 - Présentation de PHP</p>
-        </div>
-
-        <!-- Les variables -->
-        <div class="video-card" data-video-id="qZ2U-tHyieU" data-matiere="php">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/qZ2U-tHyieU/hqdefault.jpg" alt="PHP - Les variables">
-            <div class="play-button"></div>
-          </div>
-          <p>Chapitre 2 - Les variables</p>
-        </div>
-
-        <!-- Les conditions -->
-        <div class="video-card" data-video-id="kO765hqvlYA" data-matiere="php">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/kO765hqvlYA/hqdefault.jpg" alt="PHP - Les conditions">
-            <div class="play-button"></div>
-          </div>
-          <p>Chapitre 3 - Les conditions</p>
-        </div>
-
-        <!-- Les tableaux -->
-        <div class="video-card" data-video-id="EI475KTOTsg" data-matiere="php">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/EI475KTOTsg/hqdefault.jpg" alt="PHP - Les tableaux">
-            <div class="play-button"></div>
-          </div>
-          <p>Chapitre 4 - Les tableaux</p>
-        </div>
-
-        <!-- Les boucles -->
-        <div class="video-card" data-video-id="l9DP1roPHxw" data-matiere="php">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/l9DP1roPHxw/hqdefault.jpg" alt="PHP - Les boucles">
-            <div class="play-button"></div>
-          </div>
-          <p>Chapitre 5 - Les boucles</p>
-        </div>
-
-        <!-- Les fonctions -->
-        <div class="video-card" data-video-id="KN7COUTTUYs" data-matiere="php">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/KN7COUTTUYs/hqdefault.jpg" alt="PHP - Les fonctions">
-            <div class="play-button"></div>
-          </div>
-          <p>Chapitre 6 - Les fonctions</p>
-        </div>
-      </div>
-    </section>
-    <section class="videos-matiere section visible" id="python">
-      <h2><i class="fab fa-python"></i> Python </h2>
-      <div class="videos-list">
-        <!-- Chapitre 1 : Présentation de Python -->
-        <div class="video-card" data-video-id="oUJolR5bX6g" data-matiere="python">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/oUJolR5bX6g/hqdefault.jpg" alt="Python - Chapitre 1 : Présentation">
-            <div class="play-button"></div>
-          </div>
-          <p>Chapitre 1 - Présentation</p>
-        </div>
-
-        <!-- Chapitre 2 -->
-        <div class="video-card" data-video-id="ZcjAw3uEZYw" data-matiere="python">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/ZcjAw3uEZYw/hqdefault.jpg" alt="Python - Chapitre 2">
-            <div class="play-button"></div>
-          </div>
-          <p>Chapitre 2</p>
-        </div>
-
-        <!-- Chapitre 3 -->
-        <div class="video-card" data-video-id="1NUkHC-Fzx4" data-matiere="python">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/1NUkHC-Fzx4/hqdefault.jpg" alt="Python - Chapitre 3">
-            <div class="play-button"></div>
-          </div>
-          <p>Chapitre 3</p>
-        </div>
-
-        <!-- Chapitre 4 -->
-        <div class="video-card" data-video-id="5vX6oiVLza4" data-matiere="python">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/5vX6oiVLza4/hqdefault.jpg" alt="Python - Chapitre 4">
-            <div class="play-button"></div>
-          </div>
-          <p>Chapitre 4</p>
-        </div>
-
-        <!-- Chapitre 5 -->
-        <div class="video-card" data-video-id="Y-wXK0Wu5pc" data-matiere="python">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/Y-wXK0Wu5pc/hqdefault.jpg" alt="Python - Chapitre 5">
-            <div class="play-button"></div>
-          </div>
-          <p>Chapitre 5</p>
-        </div>
-
-        <!-- Chapitre 6 -->
-        <div class="video-card" data-video-id="ztEx9p1u9SY" data-matiere="python">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/ztEx9p1u9SY/hqdefault.jpg" alt="Python - Chapitre 6">
-            <div class="play-button"></div>
-          </div>
-          <p>Chapitre 6</p>
-        </div>
-      </div>
-    </section>
-    <section class="videos-matiere section visible" id="vuejs">
-      <h2><i class="fab fa-vuejs"></i> Vue.js</h2>
-      <div class="videos-list">
-        <div class="video-card" data-video-id="DpVdkIz_fQo" data-matiere="vuejs">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/DpVdkIz_fQo/hqdefault.jpg" alt="Vue.js Vidéo 1">
-            <img class="matiere-logo" src="ASSETS/vuejs-logo.png" alt="Vue.js Logo">
-            <div class="play-button"></div>
-          </div>
-          <p>Vue.js Vidéo 1</p>
-        </div>
-        <div class="video-card" data-video-id="IHMLPQcHma8" data-matiere="vuejs">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/IHMLPQcHma8/hqdefault.jpg" alt="Vue.js Vidéo 2">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>Vue.js Vidéo 2</p>
-        </div>
-        <div class="video-card" data-video-id="uwmh8hc0qDQ" data-matiere="vuejs">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/uwmh8hc0qDQ/hqdefault.jpg" alt="Vue.js Vidéo 3">
-           
-            <div class="play-button"></div>
-          </div>
-          <p>Vue.js Vidéo 3</p>
-        </div>
-        <div class="video-card" data-video-id="JUSjju1Y1Ds" data-matiere="vuejs">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/JUSjju1Y1Ds/hqdefault.jpg" alt="Vue.js Vidéo 4">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>Vue.js Vidéo 4</p>
-        </div>
-        <div class="video-card" data-video-id="mDnahxy80KY" data-matiere="vuejs">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/mDnahxy80KY/hqdefault.jpg" alt="Vue.js Vidéo 5">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>Vue.js Vidéo 5</p>
-        </div>
-        <div class="video-card" data-video-id="IPkvHlI2L4A" data-matiere="vuejs">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/IPkvHlI2L4A/hqdefault.jpg" alt="Vue.js Vidéo 6">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>Vue.js Vidéo 6</p>
-        </div>
-        <div class="video-card" data-video-id="MnDe0DufM9k" data-matiere="vuejs">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/MnDe0DufM9k/hqdefault.jpg" alt="Vue.js Vidéo 7">
-           
-            <div class="play-button"></div>
-          </div>
-          <p>Vue.js Vidéo 7</p>
-        </div>
-        <div class="video-card" data-video-id="uMisPCh3Yh0" data-matiere="vuejs">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/uMisPCh3Yh0/hqdefault.jpg" alt="Vue.js Vidéo 8">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>Vue.js Vidéo 8</p>
-        </div>
-        <div class="video-card" data-video-id="xNFSu1hsZqI" data-matiere="vuejs">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/xNFSu1hsZqI/hqdefault.jpg" alt="Vue.js Vidéo 9">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>Vue.js Vidéo 9</p>
-        </div>
-        <div class="video-card" data-video-id="pdO0RT8Li5w" data-matiere="vuejs">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/pdO0RT8Li5w/hqdefault.jpg" alt="Vue.js Vidéo 10">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>Vue.js Vidéo 10</p>
-        </div>
-        <div class="video-card" data-video-id="n5T6xZ_C3nU" data-matiere="vuejs">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/n5T6xZ_C3nU/hqdefault.jpg" alt="Vue.js Vidéo 11">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>Vue.js Vidéo 11</p>
-        </div>
-        <div class="video-card" data-video-id="RJSybqQZJCA" data-matiere="vuejs">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/RJSybqQZJCA/hqdefault.jpg" alt="Vue.js Vidéo 12">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>Vue.js Vidéo 12</p>
-        </div>
-        <div class="video-card" data-video-id="DmYRjT9HD0s" data-matiere="vuejs">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/DmYRjT9HD0s/hqdefault.jpg" alt="Vue.js Vidéo 13">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>Vue.js Vidéo 13</p>
-        </div>
-        <div class="video-card" data-video-id="-GjLleJguUg" data-matiere="vuejs">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/-GjLleJguUg/hqdefault.jpg" alt="Vue.js Vidéo 14">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>Vue.js Vidéo 14</p>
-        </div>
-        <div class="video-card" data-video-id="m8SYO0UVmfo" data-matiere="vuejs">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/m8SYO0UVmfo/hqdefault.jpg" alt="Vue.js Vidéo 15">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>Vue.js Vidéo 15</p>
-        </div>
-        <div class="video-card" data-video-id="fvr1E8SWFrg" data-matiere="vuejs">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/fvr1E8SWFrg/hqdefault.jpg" alt="Vue.js Vidéo 16">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>Vue.js Vidéo 16</p>
-        </div>
-        <div class="video-card" data-video-id="sM1_0iXjnkE" data-matiere="vuejs">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/sM1_0iXjnkE/hqdefault.jpg" alt="Vue.js Vidéo 17">
-           
-            <div class="play-button"></div>
-          </div>
-          <p>Vue.js Vidéo 17</p>
-        </div>
-        <div class="video-card" data-video-id="-G5vcQE5OZI" data-matiere="vuejs">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/-G5vcQE5OZI/hqdefault.jpg" alt="Vue.js Vidéo 18">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>Vue.js Vidéo 18</p>
-        </div>
-        <div class="video-card" data-video-id="UqUsbf9zQ30" data-matiere="vuejs">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/UqUsbf9zQ30/hqdefault.jpg" alt="Vue.js Vidéo 19">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>Vue.js Vidéo 19</p>
-        </div>
-        <div class="video-card" data-video-id="UASNCWe7WcE" data-matiere="vuejs">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/UASNCWe7WcE/hqdefault.jpg" alt="Vue.js Vidéo 20">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>Vue.js Vidéo 20</p>
-        </div>
-        <div class="video-card" data-video-id="myL61ZyqujM" data-matiere="vuejs">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/myL61ZyqujM/hqdefault.jpg" alt="Vue.js Vidéo 21">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>Vue.js Vidéo 21</p>
-        </div>
-      </div>
-    </section>
-    <section class="videos-matiere section visible" id="angular">
-      <h2><i class="fab fa-angular"></i> Angular</h2>
-      <div class="videos-list">
-        <div class="video-card" data-video-id="aBE0St5yI7U" data-matiere="angular">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/aBE0St5yI7U/hqdefault.jpg" alt="Angular Vidéo 1">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>Angular Vidéo 1</p>
-        </div>
-        <div class="video-card" data-video-id="fOuKMuaGJ54" data-matiere="angular">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/fOuKMuaGJ54/hqdefault.jpg" alt="Angular Vidéo 2">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>Angular Vidéo 2</p>
-        </div>
-        <div class="video-card" data-video-id="uJkuw0baJlw" data-matiere="angular">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/uJkuw0baJlw/hqdefault.jpg" alt="Angular Vidéo 3">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>Angular Vidéo 3</p>
-        </div>
-        <div class="video-card" data-video-id="dM166xJUZ6Y" data-matiere="angular">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/dM166xJUZ6Y/hqdefault.jpg" alt="Angular Vidéo 4">
-           
-            <div class="play-button"></div>
-          </div>
-          <p>Angular Vidéo 4</p>
-        </div>
-        <div class="video-card" data-video-id="kFl1wrSZ4sQ" data-matiere="angular">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/kFl1wrSZ4sQ/hqdefault.jpg" alt="Angular Vidéo 5">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>Angular Vidéo 5</p>
-        </div>
-        <div class="video-card" data-video-id="FRaVbFHRc7w" data-matiere="angular">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/FRaVbFHRc7w/hqdefault.jpg" alt="Angular Vidéo 6">
-           
-            <div class="play-button"></div>
-          </div>
-          <p>Angular Vidéo 6</p>
-        </div>
-        <div class="video-card" data-video-id="kMFnhKru2o0" data-matiere="angular">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/kMFnhKru2o0/hqdefault.jpg" alt="Angular Vidéo 7">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>Angular Vidéo 7</p>
-        </div>
-        <div class="video-card" data-video-id="-1lLCIGTfJc" data-matiere="angular">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/-1lLCIGTfJc/hqdefault.jpg" alt="Angular Vidéo 8">
-           
-            <div class="play-button"></div>
-          </div>
-          <p>Angular Vidéo 8</p>
-        </div>
-        <div class="video-card" data-video-id="cEJ7NVXCYsU" data-matiere="angular">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/cEJ7NVXCYsU/hqdefault.jpg" alt="Angular Vidéo 9">
-            <img class="matiere-logo" src="ASSETS/angular-logo.png" alt="Angular Logo">
-            <div class="play-button"></div>
-          </div>
-          <p>Angular Vidéo 9</p>
-        </div>
-        <div class="video-card" data-video-id="G_lcwCu_9IE" data-matiere="angular">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/G_lcwCu_9IE/hqdefault.jpg" alt="Angular Vidéo 10">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>Angular Vidéo 10</p>
-        </div>
-        <div class="video-card" data-video-id="WrqOB0r2svY" data-matiere="angular">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/WrqOB0r2svY/hqdefault.jpg" alt="Angular Vidéo 11">
-            
-            <div class="play-button"></div>
-          </div>
-          <p>Angular Vidéo 11</p>
-        </div>
-        
-      </div>
-    </section>
-  </main>
-  <footer class="modern-footer">
-    <div class="footer-wave"></div>
-    <div class="footer-content">
-        <div class="footer-section">
-            <img src="ASSETS/téléchargement (2).jpg" alt="Logo IDA COURS" class="footer-logo">
-            <p>Votre partenaire de confiance pour une formation en ligne de qualité. Développez vos compétences et construisez votre avenir avec nous.</p>
-            <div class="footer-social">
-                <a href="https://www.instagram.com/princeseydoubhk" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://twitter.com/Sdbsntech" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/seydou-bakhayokho-864070343" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.youtube.com/channel/UCCZJBOaAPdAoTiD-iJ2ftkg" class="social-icon" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a href="https://github.com/Sdbsntech" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
-            </div>
-        </div>
-
-        <div class="footer-section">
-            <h3>Liens Rapides</h3>
-            <ul class="footer-links">
-                <li><a href="index.html"><i class="fas fa-chevron-right"></i> Accueil</a></li>
-                <li><a href="pdftuto.html"><i class="fas fa-chevron-right"></i> Annexe informative</a></li>
-                <li><a href="videos.html"><i class="fas fa-chevron-right"></i> Vidéos</a></li>
-                <li><a href="L1.html"><i class="fas fa-chevron-right"></i> Licence 1</a></li>
-                <li><a href="L2.html"><i class="fas fa-chevron-right"></i> Licence 2</a></li>
-                <li><a href="L3.html"><i class="fas fa-chevron-right"></i> Licence 3</a></li>
-                <li><a href="commentaire.html"><i class="fas fa-chevron-right"></i> Commentaires</a></li>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container-nav">
+            <div class="logo-nav">SDBSN-CODE</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="videos.html" class="nav-link active">Vidéos</a></li>
+                <li><a href="L1.html" class="nav-link">Licence 1</a></li>
+                <li><a href="L2.html" class="nav-link">Licence 2</a></li>
+                <li><a href="L3.html" class="nav-link">Licence 3</a></li>
+                <li><a href="pdftuto.html" class="nav-link">Annexe informative</a></li>
+                <li><a href="commentaire.html" class="nav-link">Commentaires</a></li>
             </ul>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
         </div>
+    </nav>
 
-        <div class="footer-section">
-            <h3>Ressources</h3>
-            <ul class="footer-links">
-                <li><a href="bibliotheques.html"><i class="fas fa-book"></i> Bibliothèque</a></li>
-                <li><a href="#calendrier"><i class="fas fa-calendar-alt"></i> Calendrier</a></li>
-                <li><a href="FAQ.HTML"><i class="fas fa-question-circle"></i> FAQ</a></li>
-                <li><a href="https://grafikart.fr/"><i class="fas fa-user-graduate"></i>Liens-utiles</a></li>
-                <li><a href="formateur.html"><i class="fas fa-chalkboard-teacher"></i> Nos Formateurs</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h3>Contact</h3>
-            <div class="footer-contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>DAKAR, PIKINE, DALIFORT</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+221 77 362 45 39</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>sdbsntech1@gmail.com</span>
-                </div>
-            </div>
+    <!-- Modal Video -->
+    <div class="video-modal" id="videoModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <iframe class="modal-iframe" id="videoIframe" allowfullscreen></iframe>
         </div>
     </div>
-    <div class="legal-links">
-                    <a href="mention_legale.html">mention_legale.</a>
-                    <a href="politique_confidentialite.html">politique_confidentialite</a>
-                    <a href="condition_d'utilisation.html">condition_d'utilisation</a>
+
+    <!-- Contenu principal -->
+    <main>
+        <section class="page-header">
+            <h1 class="page-title">VIDÉOS DE COURS PAR MATIÈRE</h1>
+            <p class="page-subtitle">Découvrez notre collection complète de tutoriels vidéos organisés par technologies</p>
+        </section>
+
+        <!-- Filtres -->
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Toutes les vidéos</button>
+            <button class="filter-btn" data-filter="html">HTML</button>
+            <button class="filter-btn" data-filter="css">CSS</button>
+            <button class="filter-btn" data-filter="js">JavaScript</button>
+            <button class="filter-btn" data-filter="php">PHP</button>
+            <button class="filter-btn" data-filter="python">Python</button>
+            <button class="filter-btn" data-filter="vuejs">Vue.js</button>
+            <button class="filter-btn" data-filter="angular">Angular</button>
+        </div>
+
+        <hr class="section-divider">
+
+        <!-- Grille de vidéos -->
+        <div class="videos-grid" id="videosContainer">
+            <!-- HTML Videos -->
+            <div class="video-card" data-matiere="html">
+                <div class="video-thumbnail" data-video-id="oEAuNzWXRjM">
+                    <img src="https://img.youtube.com/vi/oEAuNzWXRjM/hqdefault.jpg" alt="HTML Vidéo 1">
+                    <div class="play-button"></div>
                 </div>
-    
-<div class="footer-bottom">
-        <p>&copy; 2025 IDA COURS. Plateforme réalisée par Seydou Bakhayokho.</p>
-    </div>
-</footer>
-  <script src="main.js"></script>
-  <script>
-    document.querySelectorAll('.video-card').forEach(card => {
-      card.querySelector('.video-thumbnail').addEventListener('click', function() {
-        const videoId = card.getAttribute('data-video-id');
-        const iframe = document.createElement('iframe');
-        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-        iframe.allowFullscreen = true;
-        this.replaceWith(iframe);
-      });
-    });
-  </script>
-  <script>
-    // protection.js - Code de protection contre l'inspection
-document.addEventListener('DOMContentLoaded', function() {
-    'use strict';
-    
-    // Configuration
-    const config = {
-        disableRightClick: true,
-        disableDevTools: true,
-        disableKeyboardShortcuts: true,
-        showWarning: true,
-        warningMessage: "Cette action n'est pas autorisée sur ce site."
-    };
-    
-    // 🔒 Empêcher le clic droit
-    if (config.disableRightClick) {
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            if (config.showWarning) {
-                showWarning(config.warningMessage);
-            }
-            return false;
-        });
-    }
-    
-    // ⌨️ Empêcher les raccourcis clavier
-    if (config.disableKeyboardShortcuts) {
-        document.addEventListener('keydown', function(e) {
-            // F12 - DevTools
-            if (e.key === 'F12' || e.keyCode === 123) {
-                e.preventDefault();
-                if (config.showWarning) {
-                    showWarning("L'ouverture des outils de développement est désactivée.");
-                }
-                return false;
-            }
-            
-            // Ctrl+Shift+I / Cmd+Opt+I
-            if ((e.ctrlKey && e.shiftKey && e.key === 'I') || 
-                (e.metaKey && e.altKey && e.key === 'I')) {
-                e.preventDefault();
-                if (config.showWarning) {
-                    showWarning("L'inspection du code est désactivée.");
-                }
-                return false;
-            }
-            
-            // Ctrl+U / Cmd+U - View Source
-            if ((e.ctrlKey && e.key === 'u') || (e.metaKey && e.key === 'u')) {
-                e.preventDefault();
-                if (config.showWarning) {
-                    showWarning("La visualisation du code source est désactivée.");
-                }
-                return false;
-            }
-            
-            // Ctrl+Shift+C / Cmd+Shift+C - Inspect Element
-            if ((e.ctrlKey && e.shiftKey && e.key === 'C') || 
-                (e.metaKey && e.shiftKey && e.key === 'C')) {
-                e.preventDefault();
-                if (config.showWarning) {
-                    showWarning("L'inspection d'élément est désactivée.");
-                }
-                return false;
-            }
-            
-            // Ctrl+S / Cmd+S - Save Page
-            if ((e.ctrlKey && e.key === 's') || (e.metaKey && e.key === 's')) {
-                e.preventDefault();
-                if (config.showWarning) {
-                    showWarning("La sauvegarde de la page est désactivée.");
-                }
-                return false;
-            }
-        });
-    }
-    
-    // 🛠️ Détection avancée des DevTools
-    if (config.disableDevTools) {
-        detectDevTools();
-    }
-    
-    // Fonction pour afficher les avertissements
-    function showWarning(message) {
-        // Créer ou mettre à jour l'élément d'avertissement
-        let warning = document.getElementById('protection-warning');
-        if (!warning) {
-            warning = document.createElement('div');
-            warning.id = 'protection-warning';
-            warning.style.cssText = `
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                background: #ff4757;
-                color: white;
-                padding: 15px 20px;
-                border-radius: 8px;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-                z-index: 10000;
-                font-family: Arial, sans-serif;
-                font-size: 14px;
-                max-width: 300px;
-                animation: slideIn 0.3s ease;
-            `;
-            document.body.appendChild(warning);
-            
-            // Ajouter l'animation CSS
-            const style = document.createElement('style');
-            style.textContent = `
-                @keyframes slideIn {
-                    from { transform: translateX(100%); opacity: 0; }
-                    to { transform: translateX(0); opacity: 1; }
-                }
-            `;
-            document.head.appendChild(style);
-        }
-        
-        warning.textContent = message;
-        warning.style.display = 'block';
-        
-        // Masquer après 3 secondes
-        setTimeout(() => {
-            warning.style.display = 'none';
-        }, 3000);
-    }
-    
-    // Fonction de détection des DevTools
-    function detectDevTools() {
-        const threshold = 160;
-        const checkDevTools = function() {
-            const widthThreshold = window.outerWidth - window.innerWidth > threshold;
-            const heightThreshold = window.outerHeight - window.innerHeight > threshold;
-            
-            if (widthThreshold || heightThreshold) {
-                // DevTools détecté
-                document.body.innerHTML = `
-                    <div style="
-                        position: fixed;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                        color: white;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        font-family: Arial, sans-serif;
-                        text-align: center;
-                        z-index: 9999;
-                    ">
-                        <div>
-                            <h1 style="font-size: 2em; margin-bottom: 20px;">🚫 Accès Restreint</h1>
-                            <p style="font-size: 1.2em; margin-bottom: 30px;">
-                                Les outils de développement sont désactivés sur ce site.<br>
-                                Veuillez fermer les DevTools pour continuer.
-                            </p>
-                            <button onclick="location.reload()" style="
-                                background: white;
-                                color: #667eea;
-                                border: none;
-                                padding: 12px 24px;
-                                border-radius: 5px;
-                                font-size: 1em;
-                                cursor: pointer;
-                                font-weight: bold;
-                            ">
-                                Recharger la page
-                            </button>
-                        </div>
+                <div class="video-info">
+                    <h3 class="video-title">HTML - Introduction complète</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML</span>
                     </div>
-                `;
-            }
-        };
+                </div>
+            </div>
+
+            <div class="video-card" data-matiere="html">
+                <div class="video-thumbnail" data-video-id="oEAuNzWXRjM">
+                     <img src="https://img.youtube.com/vi/oEAuNzWXRjM/hqdefault.jpg" alt="HTML Vidéo 1">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">HTML - Introduction complète</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card" data-matiere="html">
+                <div class="video-thumbnail" data-video-id="XRoFTzGcCsw">
+                    <img src="https://img.youtube.com/vi/XRoFTzGcCsw/hqdefault.jpg" alt="HTML Vidéo 2">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">HTML - video 2</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="video-card" data-matiere="html">
+                <div class="video-thumbnail" data-video-id="XRoFTzGcCsw">
+                   <img src="https://img.youtube.com/vi/Kd4jtZq2x0I/hqdefault.jpg" alt="HTML Vidéo 3">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">HTML - video 3</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="video-card" data-matiere="html">
+                <div class="video-thumbnail" data-video-id="XRoFTzGcCsw">
+                   <img src="https://img.youtube.com/vi/yr0xmQ9vezo/hqdefault.jpg" alt="HTML Vidéo 4">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">HTML - video 4</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML</span>
+                    </div>
+                </div>
+            </div>
+
+
+             <div class="video-card" data-matiere="html">
+                <div class="video-thumbnail" data-video-id="XRoFTzGcCsw">
+                   <img src="https://img.youtube.com/vi/AH-LTjLCXXI/hqdefault.jpg" alt="HTML Vidéo 5">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">HTML - video 5</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML</span>
+                    </div>
+                </div>
+            </div>
+
+             <div class="video-card" data-matiere="html">
+                <div class="video-thumbnail" data-video-id="XRoFTzGcCsw">
+                   <img src="https://img.youtube.com/vi/Iu8YpBnhWm4/hqdefault.jpg" alt="HTML Vidéo 6">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">HTML - video 6</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="video-card" data-matiere="html">
+                <div class="video-thumbnail" data-video-id="XRoFTzGcCsw">
+                   <img src="https://img.youtube.com/vi/LkZ-KqxgVQ4/hqdefault.jpg" alt="HTML Vidéo 7">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">HTML - video 7</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML</span>
+                    </div>
+                </div>
+            </div>
+
+             <div class="video-card" data-matiere="html">
+                <div class="video-thumbnail" data-video-id="XRoFTzGcCsw">
+                  <img src="https://img.youtube.com/vi/gJ_G-gxQRRk/hqdefault.jpg" alt="HTML Vidéo 8">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">HTML - video 8</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML</span>
+                    </div>
+                </div>
+            </div>
+
+
+             <div class="video-card" data-matiere="html">
+                <div class="video-thumbnail" data-video-id="XRoFTzGcCsw">
+                  <img src="https://img.youtube.com/vi/7T9H-P45REg/hqdefault.jpg" alt="HTML Vidéo 9">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">HTML - video 9</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML</span>
+                    </div>
+                </div>
+            </div>
+
+
+             <div class="video-card" data-matiere="html">
+                <div class="video-thumbnail" data-video-id="XRoFTzGcCsw">
+                  <img src="https://img.youtube.com/vi/g_u3U2BtK88/hqdefault.jpg" alt="HTML Vidéo 10">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">HTML - video 10</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- CSS Videos -->
+            <div class="video-card" data-matiere="css">
+                <div class="video-thumbnail" data-video-id="PE8FQ6zihhw">
+                   <img src="https://img.youtube.com/vi/PE8FQ6zihhw/hqdefault.jpg" alt="CSS Vidéo 1">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">CSS - Les bases fondamentales</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+             <div class="video-card" data-matiere="css">
+                <div class="video-thumbnail" data-video-id="PE8FQ6zihhw">
+                     <img src="https://img.youtube.com/vi/EM8UlPeBfuk/hqdefault.jpg" alt="CSS Vidéo 2">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">CSS - video 2</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+             <div class="video-card" data-matiere="css">
+                <div class="video-thumbnail" data-video-id="PE8FQ6zihhw">
+                   <img src="https://img.youtube.com/vi/k1ID41O4FNM/hqdefault.jpg" alt="CSS Vidéo 3">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">CSS - video 3</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+             <div class="video-card" data-matiere="css">
+                <div class="video-thumbnail" data-video-id="PE8FQ6zihhw">
+                    <img src="https://img.youtube.com/vi/-uuk57Tu9ds/hqdefault.jpg" alt="CSS Vidéo 4">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">CSS - video 4</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card" data-matiere="css">
+                <div class="video-thumbnail" data-video-id="EM8UlPeBfuk">
+                    <img src="https://img.youtube.com/vi/e-GTdjI6vC4/hqdefault.jpg" alt="CSS Vidéo 5">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">CSS -video 5</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+             <div class="video-card" data-matiere="css">
+                <div class="video-thumbnail" data-video-id="EM8UlPeBfuk">
+                    <img src="https://img.youtube.com/vi/UA1bPCEEo8M/hqdefault.jpg" alt="CSS Vidéo 6">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">CSS -video 6</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+             <div class="video-card" data-matiere="css">
+                <div class="video-thumbnail" data-video-id="EM8UlPeBfuk">
+                     <img src="https://img.youtube.com/vi/YGm1T7bVmJQ/hqdefault.jpg" alt="CSS Vidéo 7">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">CSS -video 7</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="video-card" data-matiere="css">
+                <div class="video-thumbnail" data-video-id="EM8UlPeBfuk">
+                     <img src="https://img.youtube.com/vi/hfykeYvwZXs/hqdefault.jpg" alt="CSS Vidéo 8">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">CSS -video 8</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="video-card" data-matiere="css">
+                <div class="video-thumbnail" data-video-id="EM8UlPeBfuk">
+                     <img src="https://img.youtube.com/vi/LNqBKTeeiWo/hqdefault.jpg" alt="CSS Vidéo 9">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">CSS -video 9</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="video-card" data-matiere="css">
+                <div class="video-thumbnail" data-video-id="EM8UlPeBfuk">
+                     <img src="https://img.youtube.com/vi/OV0bOifr8AE/hqdefault.jpg" alt="CSS Vidéo 10">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">CSS -video 10</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JavaScript Videos -->
+            <div class="video-card" data-matiere="js">
+                <div class="video-thumbnail" data-video-id="asToYAq0F-I">
+                   <img src="https://img.youtube.com/vi/asToYAq0F-I/hqdefault.jpg" alt="JS Vidéo 1">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">JavaScript - Introduction</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-js-square"></i>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="video-card" data-matiere="js">
+                <div class="video-thumbnail" data-video-id="asToYAq0F-I">
+                     <img src="https://img.youtube.com/vi/gUYfRJ-v_1Y/hqdefault.jpg" alt="JS Vidéo 2">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">JavaScript - video 2</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-js-square"></i>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="video-card" data-matiere="js">
+                <div class="video-thumbnail" data-video-id="asToYAq0F-I">
+                     <img src="https://img.youtube.com/vi/GU8kxJ3P67I/hqdefault.jpg" alt="JS Vidéo 3">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">JavaScript - video 3</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-js-square"></i>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card" data-matiere="js">
+                <div class="video-thumbnail" data-video-id="gUYfRJ-v_1Y">
+                      <img src="https://img.youtube.com/vi/zwLmRotDdu8/hqdefault.jpg" alt="JS Vidéo 4">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">JavaScript - video 4</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-js-square"></i>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="video-card" data-matiere="js">
+                <div class="video-thumbnail" data-video-id="gUYfRJ-v_1Y">
+                      <img src="https://img.youtube.com/vi/qYuvcK8QU4c/hqdefault.jpg" alt="JS Vidéo 5">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">JavaScript - video 5</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-js-square"></i>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card" data-matiere="js">
+                <div class="video-thumbnail" data-video-id="gUYfRJ-v_1Y">
+                       <img src="https://img.youtube.com/vi/kLdQAsrcyvk/hqdefault.jpg" alt="JS Vidéo 6">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">JavaScript - video 6</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-js-square"></i>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="video-card" data-matiere="js">
+                <div class="video-thumbnail" data-video-id="gUYfRJ-v_1Y">
+                      <img src="https://img.youtube.com/vi/EvHAiskwHvE/hqdefault.jpg" alt="JS Vidéo 7">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">JavaScript - video 7</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-js-square"></i>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="video-card" data-matiere="js">
+                <div class="video-thumbnail" data-video-id="gUYfRJ-v_1Y">
+                     <img src="https://img.youtube.com/vi/wVuJTS8aQyA/hqdefault.jpg" alt="JS Vidéo 8">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">JavaScript - video 8</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-js-square"></i>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="video-card" data-matiere="js">
+                <div class="video-thumbnail" data-video-id="gUYfRJ-v_1Y">
+                      <img src="https://img.youtube.com/vi/2HAPViIAYjc/hqdefault.jpg" alt="JS Vidéo 9">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">JavaScript - video 9</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-js-square"></i>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="video-card" data-matiere="js">
+                <div class="video-thumbnail" data-video-id="gUYfRJ-v_1Y">
+                        <img src="https://img.youtube.com/vi/6tC4tv9MlkI/hqdefault.jpg" alt="JS Vidéo 10">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">JavaScript - video 10</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-js-square"></i>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHP Videos -->
+            <div class="video-card" data-matiere="php">
+                <div class="video-thumbnail" data-video-id="QYDHjY18CQg">
+                      <img src="https://img.youtube.com/vi/QYDHjY18CQg/hqdefault.jpg" alt="PHP - Chapitre 1 : Présentation de PHP">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">PHP - Présentation complète</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-php"></i>
+                        <span>PHP</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card" data-matiere="php">
+                <div class="video-thumbnail" data-video-id="qZ2U-tHyieU">
+                   <img src="https://img.youtube.com/vi/qZ2U-tHyieU/hqdefault.jpg" alt="PHP - Les variables">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">PHP - video 2</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-php"></i>
+                        <span>PHP</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+         <div class="video-card" data-matiere="php">
+                <div class="video-thumbnail" data-video-id="qZ2U-tHyieU">
+                  <img src="https://img.youtube.com/vi/kO765hqvlYA/hqdefault.jpg" alt="PHP - Les conditions">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">PHP - video 3</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-php"></i>
+                        <span>PHP</span>
+                    </div>
+                </div>
+            </div>
+
+             <div class="video-card" data-matiere="php">
+                <div class="video-thumbnail" data-video-id="qZ2U-tHyieU">
+                   <img src="https://img.youtube.com/vi/EI475KTOTsg/hqdefault.jpg" alt="PHP - Les tableaux">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">PHP - video 4</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-php"></i>
+                        <span>PHP</span>
+                    </div>
+                </div>
+            </div>
+
+
+             <div class="video-card" data-matiere="php">
+                <div class="video-thumbnail" data-video-id="qZ2U-tHyieU">
+                  <img src="https://img.youtube.com/vi/l9DP1roPHxw/hqdefault.jpg" alt="PHP - Les boucles">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">PHP - video 5</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-php"></i>
+                        <span>PHP</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="video-card" data-matiere="php">
+                <div class="video-thumbnail" data-video-id="qZ2U-tHyieU">
+                 <img src="https://img.youtube.com/vi/KN7COUTTUYs/hqdefault.jpg" alt="PHP - Les fonctions">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">PHP - video 6</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-php"></i>
+                        <span>PHP</span>
+                    </div>
+                </div>
+            </div>
+
+
+            
+
+
+            <!-- Python Videos -->
+            <div class="video-card" data-matiere="python">
+                <div class="video-thumbnail" data-video-id="oUJolR5bX6g">
+                   <img src="https://img.youtube.com/vi/oUJolR5bX6g/hqdefault.jpg" alt="Python - Chapitre 1 : Présentation">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Python - Introduction</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Python Videos -->
+            <div class="video-card" data-matiere="python">
+                <div class="video-thumbnail" data-video-id="oUJolR5bX6g">
+                   <img src="https://img.youtube.com/vi/ZcjAw3uEZYw/hqdefault.jpg" alt="Python - Chapitre 2">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Python - video 2</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Python Videos -->
+            <div class="video-card" data-matiere="python">
+                <div class="video-thumbnail" data-video-id="oUJolR5bX6g">
+                     <img src="https://img.youtube.com/vi/1NUkHC-Fzx4/hqdefault.jpg" alt="Python - Chapitre 3">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Python - video 3</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Python Videos -->
+            <div class="video-card" data-matiere="python">
+                <div class="video-thumbnail" data-video-id="oUJolR5bX6g">
+                     <img src="https://img.youtube.com/vi/5vX6oiVLza4/hqdefault.jpg" alt="Python - Chapitre 4">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Python - video 4</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Python Videos -->
+            <div class="video-card" data-matiere="python">
+                <div class="video-thumbnail" data-video-id="oUJolR5bX6g">
+                     <img src="https://img.youtube.com/vi/Y-wXK0Wu5pc/hqdefault.jpg" alt="Python - Chapitre 5">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Python - video 5</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Python Videos -->
+            <div class="video-card" data-matiere="python">
+                <div class="video-thumbnail" data-video-id="oUJolR5bX6g">
+                      <img src="https://img.youtube.com/vi/ztEx9p1u9SY/hqdefault.jpg" alt="Python - Chapitre 6">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Python - video 6</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                </div>
+            </div>
+
+
+           
+
+            <!-- Vue.js Videos -->
+            <div class="video-card" data-matiere="vuejs">
+                <div class="video-thumbnail" data-video-id="DpVdkIz_fQo">
+                     <img src="https://img.youtube.com/vi/DpVdkIz_fQo/hqdefault.jpg" alt="Vue.js Vidéo 1">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Vue.js - Les bases</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-vuejs"></i>
+                        <span>Vue.js</span>
+                    </div>
+                </div>
+            </div>
+
+
+              <!-- Vue.js Videos -->
+            <div class="video-card" data-matiere="vuejs">
+                <div class="video-thumbnail" data-video-id="DpVdkIz_fQo">
+                      <img src="https://img.youtube.com/vi/IHMLPQcHma8/hqdefault.jpg" alt="Vue.js Vidéo 2">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Vue.js - video 2</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-vuejs"></i>
+                        <span>Vue.js</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+              <!-- Vue.js Videos -->
+            <div class="video-card" data-matiere="vuejs">
+                <div class="video-thumbnail" data-video-id="DpVdkIz_fQo">
+                     <img src="https://img.youtube.com/vi/uwmh8hc0qDQ/hqdefault.jpg" alt="Vue.js Vidéo 3">
+           
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Vue.js - video 3</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-vuejs"></i>
+                        <span>Vue.js</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+                <!-- Vue.js Videos -->
+            <div class="video-card" data-matiere="vuejs">
+                <div class="video-thumbnail" data-video-id="DpVdkIz_fQo">
+                   <img src="https://img.youtube.com/vi/JUSjju1Y1Ds/hqdefault.jpg" alt="Vue.js Vidéo 4">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Vue.js - video 4</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-vuejs"></i>
+                        <span>Vue.js</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+              <!-- Vue.js Videos -->
+            <div class="video-card" data-matiere="vuejs">
+                <div class="video-thumbnail" data-video-id="DpVdkIz_fQo">
+                    <img src="https://img.youtube.com/vi/mDnahxy80KY/hqdefault.jpg" alt="Vue.js Vidéo 5">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Vue.js - video 5</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-vuejs"></i>
+                        <span>Vue.js</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="video-card" data-matiere="vuejs">
+                <div class="video-thumbnail" data-video-id="DpVdkIz_fQo">
+                     <img src="https://img.youtube.com/vi/IPkvHlI2L4A/hqdefault.jpg" alt="Vue.js Vidéo 6">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Vue.js - video 6</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-vuejs"></i>
+                        <span>Vue.js</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="video-card" data-matiere="vuejs">
+                <div class="video-thumbnail" data-video-id="DpVdkIz_fQo">
+                   <img src="https://img.youtube.com/vi/MnDe0DufM9k/hqdefault.jpg" alt="Vue.js Vidéo 7">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Vue.js - video 7</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-vuejs"></i>
+                        <span>Vue.js</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="video-card" data-matiere="vuejs">
+                <div class="video-thumbnail" data-video-id="DpVdkIz_fQo">
+                    <img src="https://img.youtube.com/vi/uMisPCh3Yh0/hqdefault.jpg" alt="Vue.js Vidéo 8">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Vue.js - video 8</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-vuejs"></i>
+                        <span>Vue.js</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="video-card" data-matiere="vuejs">
+                <div class="video-thumbnail" data-video-id="DpVdkIz_fQo">
+                  <img src="https://img.youtube.com/vi/xNFSu1hsZqI/hqdefault.jpg" alt="Vue.js Vidéo 9">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Vue.js - video 9</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-vuejs"></i>
+                        <span>Vue.js</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="video-card" data-matiere="vuejs">
+                <div class="video-thumbnail" data-video-id="DpVdkIz_fQo">
+                    <img src="https://img.youtube.com/vi/pdO0RT8Li5w/hqdefault.jpg" alt="Vue.js Vidéo 10">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Vue.js - video 10</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-vuejs"></i>
+                        <span>Vue.js</span>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <!-- Angular Videos -->
+            <div class="video-card" data-matiere="angular">
+                <div class="video-thumbnail" data-video-id="aBE0St5yI7U">
+                     <img src="https://img.youtube.com/vi/aBE0St5yI7U/hqdefault.jpg" alt="Angular Vidéo 1">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Angular - Introduction</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-angular"></i>
+                        <span>Angular</span>
+                    </div>
+                </div>
+            </div>
+
+
+             <div class="video-card" data-matiere="angular">
+                <div class="video-thumbnail" data-video-id="aBE0St5yI7U">
+                     <img src="https://img.youtube.com/vi/fOuKMuaGJ54/hqdefault.jpg" alt="Angular Vidéo 2">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Angular - video 2</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-angular"></i>
+                        <span>Angular</span>
+                    </div>
+                </div>
+            </div>
+
+
+             <div class="video-card" data-matiere="angular">
+                <div class="video-thumbnail" data-video-id="aBE0St5yI7U">
+                     
+            <img src="https://img.youtube.com/vi/uJkuw0baJlw/hqdefault.jpg" alt="Angular Vidéo 3">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Angular - video 3</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-angular"></i>
+                        <span>Angular</span>
+                    </div>
+                </div>
+            </div>
+
+
+             <div class="video-card" data-matiere="angular">
+                <div class="video-thumbnail" data-video-id="aBE0St5yI7U">
+                      <img src="https://img.youtube.com/vi/dM166xJUZ6Y/hqdefault.jpg" alt="Angular Vidéo 4">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Angular - video 4</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-angular"></i>
+                        <span>Angular</span>
+                    </div>
+                </div>
+            </div>
+
+             <div class="video-card" data-matiere="angular">
+                <div class="video-thumbnail" data-video-id="aBE0St5yI7U">
+                     <img src="https://img.youtube.com/vi/kFl1wrSZ4sQ/hqdefault.jpg" alt="Angular Vidéo 5">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Angular - video 5</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-angular"></i>
+                        <span>Angular</span>
+                    </div>
+                </div>
+            </div>
+
+             <div class="video-card" data-matiere="angular">
+                <div class="video-thumbnail" data-video-id="aBE0St5yI7U">
+                      <img src="https://img.youtube.com/vi/FRaVbFHRc7w/hqdefault.jpg" alt="Angular Vidéo 6">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Angular - video 6</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-angular"></i>
+                        <span>Angular</span>
+                    </div>
+                </div>
+            </div>
+
+
+             <div class="video-card" data-matiere="angular">
+                <div class="video-thumbnail" data-video-id="aBE0St5yI7U">
+                      <img src="https://img.youtube.com/vi/kMFnhKru2o0/hqdefault.jpg" alt="Angular Vidéo 7">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Angular - video 7</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-angular"></i>
+                        <span>Angular</span>
+                    </div>
+                </div>
+            </div>
+
+             <div class="video-card" data-matiere="angular">
+                <div class="video-thumbnail" data-video-id="aBE0St5yI7U">
+                     <img src="https://img.youtube.com/vi/-1lLCIGTfJc/hqdefault.jpg" alt="Angular Vidéo 8">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Angular -video 8</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-angular"></i>
+                        <span>Angular</span>
+                    </div>
+                </div>
+            </div>
+
+             <div class="video-card" data-matiere="angular">
+                <div class="video-thumbnail" data-video-id="aBE0St5yI7U">
+                     <img src="https://img.youtube.com/vi/cEJ7NVXCYsU/hqdefault.jpg" alt="Angular Vidéo 9">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Angular - video 9</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-angular"></i>
+                        <span>Angular</span>
+                    </div>
+                </div>
+            </div>
+
+             <div class="video-card" data-matiere="angular">
+                <div class="video-thumbnail" data-video-id="aBE0St5yI7U">
+                      <img src="https://img.youtube.com/vi/G_lcwCu_9IE/hqdefault.jpg" alt="Angular Vidéo 10">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Angular - video 10</h3>
+                    <div class="video-matiere">
+                        <i class="fab fa-angular"></i>
+                        <span>Angular</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <!-- Ajoutez ici toutes les autres vidéos avec la même structure -->
+            <!-- Vous pouvez ajouter jusqu'à 42 vidéos JavaScript, 20 CSS, etc. -->
+            
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="modern-footer">
+        <div class="footer-wave"></div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="ASSETS/téléchargement (2).jpg" alt="Logo IDA COURS" class="footer-logo">
+                <p>Votre partenaire de confiance pour une formation en ligne de qualité. Développez vos compétences et construisez votre avenir avec nous.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/princeseydoubhk" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/Sdbsntech" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/seydou-bakhayokho-864070343" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/channel/UCCZJBOaAPdAoTiD-iJ2ftkg" class="social-icon" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://github.com/Sdbsntech" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Liens Rapides</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+                    <li><a href="pdftuto.html"><i class="fas fa-chevron-right"></i> Annexe informative</a></li>
+                    <li><a href="videos.html"><i class="fas fa-chevron-right"></i> Vidéos</a></li>
+                    <li><a href="L1.html"><i class="fas fa-chevron-right"></i> Licence 1</a></li>
+                    <li><a href="L2.html"><i class="fas fa-chevron-right"></i> Licence 2</a></li>
+                    <li><a href="L3.html"><i class="fas fa-chevron-right"></i> Licence 3</a></li>
+                    <li><a href="commentaire.html"><i class="fas fa-chevron-right"></i> Commentaires</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Ressources</h3>
+                <ul class="footer-links">
+                    <li><a href="bibliotheques.html"><i class="fas fa-book"></i> Bibliothèque</a></li>
+                    <li><a href="#calendrier"><i class="fas fa-calendar-alt"></i> Calendrier</a></li>
+                    <li><a href="FAQ.HTML"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    <li><a href="https://grafikart.fr/"><i class="fas fa-user-graduate"></i>Liens-utiles</a></li>
+                    <li><a href="formateur.html"><i class="fas fa-chalkboard-teacher"></i> Nos Formateurs</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <div class="footer-contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>DAKAR, PIKINE, DALIFORT</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+221 77 362 45 39</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>sdbsntech1@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="legal-links">
+            <a href="mention_legale.html">mention_legale.</a>
+            <a href="politique_confidentialite.html">politique_confidentialite</a>
+            <a href="condition_d'utilisation.html">condition_d'utilisation</a>
+        </div>
         
-        // Vérifier périodiquement
-        setInterval(checkDevTools, 1000);
-        
-        // Événement de redimensionnement
-        window.addEventListener('resize', checkDevTools);
-    }
-    
-    // Protection supplémentaire contre la sélection de texte
-    document.addEventListener('selectstart', function(e) {
-        e.preventDefault();
-        return false;
-    });
-    
-    // Protection contre le drag & drop d'images
-    document.addEventListener('dragstart', function(e) {
-        if (e.target.tagName === 'IMG') {
-            e.preventDefault();
-            return false;
-        }
-    });
-    
-    console.log('🔒 Protection activée - IDA Cours');
-});
+        <div class="footer-bottom">
+            <p>&copy; 2025 IDA COURS. Plateforme réalisée par Seydou Bakhayokho.</p>
+        </div>
+    </footer>
 
-// Protection avancée contre la console
-(function() {
-    'use strict';
-    
-    // Rediriger la console
-    const originalConsole = {
-        log: console.log,
-        warn: console.warn,
-        error: console.error,
-        info: console.info
-    };
-    
-    // Redéfinir les méthodes de la console
-    ['log', 'warn', 'error', 'info'].forEach(method => {
-        console[method] = function() {
-            // Vous pouvez choisir de ne rien faire ou d'afficher un message
-            originalConsole.log(`🚫 Console.${method} est surveillée - IDA Cours`);
-        };
-    });
-    
-    // Empêcher l'accès aux propriétés sensibles
-    Object.defineProperty(window, 'console', {
-        get: function() {
-            return {
-                log: function() { /* bloqué */ },
-                warn: function() { /* bloqué */ },
-                error: function() { /* bloqué */ },
-                info: function() { /* bloqué */ }
-            };
-        },
-        set: function() { /* bloqué */ }
-    });
-})();
-  </script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Bloquer le clic droit
-    document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-        return false;
-    });
-
-    // Bloquer copier/coller/couper
-    ['copy', 'cut', 'paste'].forEach(function(evt) {
-        document.addEventListener(evt, function(e) {
-            e.preventDefault();
-            return false;
+    <script>
+        // Menu mobile
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
         });
-    });
 
-    // Bloquer raccourcis DevTools et code source
-    document.addEventListener('keydown', function(e) {
-        // F12
-        if (e.key === 'F12' || e.keyCode === 123) {
-            e.preventDefault();
-            return false;
-        }
-        // Ctrl+Shift+I / Cmd+Opt+I
-        if ((e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') ||
-            (e.metaKey && e.altKey && e.key.toLowerCase() === 'i')) {
-            e.preventDefault();
-            return false;
-        }
-        // Ctrl+U / Cmd+U
-        if ((e.ctrlKey && e.key.toLowerCase() === 'u') ||
-            (e.metaKey && e.key.toLowerCase() === 'u')) {
-            e.preventDefault();
-            return false;
-        }
-    });
+        // Filtrage des vidéos
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Retirer la classe active de tous les boutons
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                // Ajouter la classe active au bouton cliqué
+                this.classList.add('active');
+                
+                const filter = this.getAttribute('data-filter');
+                const videos = document.querySelectorAll('.video-card');
+                
+                videos.forEach(video => {
+                    if (filter === 'all' || video.getAttribute('data-matiere') === filter) {
+                        video.style.display = 'flex';
+                    } else {
+                        video.style.display = 'none';
+                    }
+                });
+            });
+        });
 
-    // Détection DevTools par resize
-    setInterval(function() {
-        if (window.outerWidth - window.innerWidth > 160 ||
-            window.outerHeight - window.innerHeight > 160) {
-            document.body.innerHTML = '<h1 style="color:red;text-align:center;margin-top:20vh;">Accès restreint : DevTools détecté !</h1>';
-        }
-    }, 1000);
-});
-</script>
+        // Modal video
+        const videoModal = document.getElementById('videoModal');
+        const videoIframe = document.getElementById('videoIframe');
+        const modalClose = document.getElementById('modalClose');
 
+        document.querySelectorAll('.video-thumbnail').forEach(thumbnail => {
+            thumbnail.addEventListener('click', function() {
+                const videoId = this.getAttribute('data-video-id');
+                videoIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+                videoModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Bloquer le clic droit
-    document.addEventListener('contextmenu', function(e) { e.preventDefault(); return false; });
+        modalClose.addEventListener('click', function() {
+            videoModal.classList.remove('active');
+            videoIframe.src = '';
+            document.body.style.overflow = 'auto';
+        });
 
-    // Bloquer copier/couper/coller
-    ['copy', 'cut', 'paste'].forEach(function(evt) {
-        document.addEventListener(evt, function(e) { e.preventDefault(); return false; });
-    });
+        videoModal.addEventListener('click', function(e) {
+            if (e.target === videoModal) {
+                videoModal.classList.remove('active');
+                videoIframe.src = '';
+                document.body.style.overflow = 'auto';
+            }
+        });
 
-    // Bloquer la sélection de texte
-    document.addEventListener('selectstart', function(e) { e.preventDefault(); return false; });
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                document.querySelector('.navbar').classList.add('scrolled');
+            } else {
+                document.querySelector('.navbar').classList.remove('scrolled');
+            }
+        });
 
-    // Bloquer le drag & drop d'images
-    document.addEventListener('dragstart', function(e) {
-        if (e.target.tagName === 'IMG') { e.preventDefault(); return false; }
-    });
+        // Animation d'apparition des cartes
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-    // Bloquer toutes les touches F1 à F12 et autres combinaisons
-    document.addEventListener('keydown', function(e) {
-        // Bloquer touches F1 à F12
-        if (e.key.match(/^F[1-9]$|^F1[0-2]$/) || (e.keyCode >= 112 && e.keyCode <= 123)) {
-            e.preventDefault(); return false;
-        }
-        // Ctrl+U, Ctrl+Shift+I, Ctrl+Shift+C, Ctrl+S, Ctrl+Alt+I, Ctrl+Alt+J, Ctrl+Alt+C
-        if (
-            (e.ctrlKey && e.key.toLowerCase() === 'u') ||
-            (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') ||
-            (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'c') ||
-            (e.ctrlKey && e.key.toLowerCase() === 's') ||
-            (e.ctrlKey && e.altKey && e.key.toLowerCase() === 'i') ||
-            (e.ctrlKey && e.altKey && e.key.toLowerCase() === 'j') ||
-            (e.ctrlKey && e.altKey && e.key.toLowerCase() === 'c')
-        ) {
-            e.preventDefault(); return false;
-        }
-    });
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
 
-    // Détection DevTools par resize
-    setInterval(function() {
-        if (window.outerWidth - window.innerWidth > 160 ||
-            window.outerHeight - window.innerHeight > 160) {
-            document.body.innerHTML = '<h1 style="color:red;text-align:center;margin-top:20vh;">Accès restreint : DevTools détecté !</h1>';
-        }
-    }, 1000);
-});
-</script>
+        document.querySelectorAll('.video-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
 
+    <script>
+        // Protection contre l'inspection
+        document.addEventListener('DOMContentLoaded', function() {
+            'use strict';
+            
+            // Configuration
+            const config = {
+                disableRightClick: true,
+                disableDevTools: true,
+                disableKeyboardShortcuts: true,
+                showWarning: true,
+                warningMessage: "Cette action n'est pas autorisée sur ce site."
+            };
+            
+            // 🔒 Empêcher le clic droit
+            if (config.disableRightClick) {
+                document.addEventListener('contextmenu', function(e) {
+                    e.preventDefault();
+                    if (config.showWarning) {
+                        showWarning(config.warningMessage);
+                    }
+                    return false;
+                });
+            }
+            
+            // ⌨️ Empêcher les raccourcis clavier
+            if (config.disableKeyboardShortcuts) {
+                document.addEventListener('keydown', function(e) {
+                    // F12 - DevTools
+                    if (e.key === 'F12' || e.keyCode === 123) {
+                        e.preventDefault();
+                        if (config.showWarning) {
+                            showWarning("L'ouverture des outils de développement est désactivée.");
+                        }
+                        return false;
+                    }
+                    
+                    // Ctrl+Shift+I / Cmd+Opt+I
+                    if ((e.ctrlKey && e.shiftKey && e.key === 'I') || 
+                        (e.metaKey && e.altKey && e.key === 'I')) {
+                        e.preventDefault();
+                        if (config.showWarning) {
+                            showWarning("L'inspection du code est désactivée.");
+                        }
+                        return false;
+                    }
+                    
+                    // Ctrl+U / Cmd+U - View Source
+                    if ((e.ctrlKey && e.key === 'u') || (e.metaKey && e.key === 'u')) {
+                        e.preventDefault();
+                        if (config.showWarning) {
+                            showWarning("La visualisation du code source est désactivée.");
+                        }
+                        return false;
+                    }
+                    
+                    // Ctrl+Shift+C / Cmd+Shift+C - Inspect Element
+                    if ((e.ctrlKey && e.shiftKey && e.key === 'C') || 
+                        (e.metaKey && e.shiftKey && e.key === 'C')) {
+                        e.preventDefault();
+                        if (config.showWarning) {
+                            showWarning("L'inspection d'élément est désactivée.");
+                        }
+                        return false;
+                    }
+                    
+                    // Ctrl+S / Cmd+S - Save Page
+                    if ((e.ctrlKey && e.key === 's') || (e.metaKey && e.key === 's')) {
+                        e.preventDefault();
+                        if (config.showWarning) {
+                            showWarning("La sauvegarde de la page est désactivée.");
+                        }
+                        return false;
+                    }
+                });
+            }
+            
+            // 🛠️ Détection avancée des DevTools
+            if (config.disableDevTools) {
+                detectDevTools();
+            }
+            
+            // Fonction pour afficher les avertissements
+            function showWarning(message) {
+                let warning = document.getElementById('protection-warning');
+                if (!warning) {
+                    warning = document.createElement('div');
+                    warning.id = 'protection-warning';
+                    warning.style.cssText = `
+                        position: fixed;
+                        top: 20px;
+                        right: 20px;
+                        background: #ff4757;
+                        color: white;
+                        padding: 15px 20px;
+                        border-radius: 8px;
+                        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                        z-index: 10000;
+                        font-family: Arial, sans-serif;
+                        font-size: 14px;
+                        max-width: 300px;
+                        animation: slideIn 0.3s ease;
+                    `;
+                    document.body.appendChild(warning);
+                    
+                    const style = document.createElement('style');
+                    style.textContent = `
+                        @keyframes slideIn {
+                            from { transform: translateX(100%); opacity: 0; }
+                            to { transform: translateX(0); opacity: 1; }
+                        }
+                    `;
+                    document.head.appendChild(style);
+                }
+                
+                warning.textContent = message;
+                warning.style.display = 'block';
+                
+                setTimeout(() => {
+                    warning.style.display = 'none';
+                }, 3000);
+            }
+            
+            // Fonction de détection des DevTools
+            function detectDevTools() {
+                const threshold = 160;
+                const checkDevTools = function() {
+                    const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+                    const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+                    
+                    if (widthThreshold || heightThreshold) {
+                        document.body.innerHTML = `
+                            <div style="
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                                color: white;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                font-family: Arial, sans-serif;
+                                text-align: center;
+                                z-index: 9999;
+                            ">
+                                <div>
+                                    <h1 style="font-size: 2em; margin-bottom: 20px;">🚫 Accès Restreint</h1>
+                                    <p style="font-size: 1.2em; margin-bottom: 30px;">
+                                        Les outils de développement sont désactivés sur ce site.<br>
+                                        Veuillez fermer les DevTools pour continuer.
+                                    </p>
+                                    <button onclick="location.reload()" style="
+                                        background: white;
+                                        color: #667eea;
+                                        border: none;
+                                        padding: 12px 24px;
+                                        border-radius: 5px;
+                                        font-size: 1em;
+                                        cursor: pointer;
+                                        font-weight: bold;
+                                    ">
+                                        Recharger la page
+                                    </button>
+                                </div>
+                            </div>
+                        `;
+                    }
+                };
+                
+                setInterval(checkDevTools, 1000);
+                window.addEventListener('resize', checkDevTools);
+            }
+            
+            // Protection supplémentaire contre la sélection de texte
+            document.addEventListener('selectstart', function(e) {
+                e.preventDefault();
+                return false;
+            });
+            
+            // Protection contre le drag & drop d'images
+            document.addEventListener('dragstart', function(e) {
+                if (e.target.tagName === 'IMG') {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+        });
 
+        // Protection avancée contre la console
+        (function() {
+            'use strict';
+            
+            const originalConsole = {
+                log: console.log,
+                warn: console.warn,
+                error: console.error,
+                info: console.info
+            };
+            
+            ['log', 'warn', 'error', 'info'].forEach(method => {
+                console[method] = function() {
+                    originalConsole.log(`🚫 Console.${method} est surveillée - IDA Cours`);
+                };
+            });
+        })();
+    </script>
 </body>
 </html>

@@ -12,594 +12,947 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Plateforme d'apprentissage moderne et interactive.">
-    <meta name="keywords" content="cours, apprentissage, vidéos, exercices, pdf, td, tc, forum">
+    <meta name="description" content="Nos formateurs experts - IDA COURS">
+    <meta name="keywords" content="cours, formateurs, experts, développement, informatique">
     <meta name="author" content="IDA COURS">
-
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="favicon.png" sizes="180x180">
+    <link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="favicon.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <meta name="google-site-verification" content="8WaeKM-mQAcuLhGP1eHzoO1Gr0IX9lq_NoNGavj0fB8" />
 <title>Nos Formateurs - IDA COURS</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* Style global */
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            margin: 0;
-            padding: 2rem;
-            color: #333;
-        }
-
-        .trainers-container {
-            max-width: 1200px;
-            margin: auto;
-            background: white;
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            text-align: center;
-            color: #1a237e;
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
-        }
-
-        .trainer-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .trainer-item {
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            padding: 1.5rem;
-            border: 1px solid #ddd;
-            text-align: center;
-            transition: 0.3s;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .trainer-item:hover {
-            background-color: #eef6ff;
-            border-color: #3399ff;
-            transform: translateY(-5px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .trainer-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 1rem;
-            border: 3px solid #3498db;
-        }
-
-        .trainer-name {
-            font-weight: bold;
-            color: #1a237e;
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
-
-        .trainer-description {
-            color: #555;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            line-height: 1.5;
-        }
-
-        .trainer-link {
-            color: #007bff;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        .trainer-link:hover {
-            text-decoration: underline;
-            color: #0056b3;
-        }
-
-        
-    </style>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3830476419469874"
      crossorigin="anonymous"></script>
 
 <meta name="google-adsense-account" content="ca-pub-3942650991755175">
+
+<style>
+    /* ===== VARIABLES ET RESET ===== */
+    :root {
+        --main-bg: linear-gradient(135deg, #e0f7fa 0%, #bacdcf 100%);
+        --primary: #0d6efd;
+        --secondary: #6c757d;
+        --accent: #00b894;
+        --light: #f8f9fa;
+        --dark: #222;
+        --radius: 16px;
+        --shadow: 0 4px 24px rgba(0,0,0,0.08);
+        --transition: 0.3s cubic-bezier(.4,2,.6,1);
+        --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        --primary-color: #2c3e50;
+        --secondary-color: #3498db;
+        --accent-color: #e74c3c;
+        --background-color: #f8f9fa;
+        --text-color: #2c3e50;
+        --card-bg: rgba(255, 255, 255, 0.95);
+        --gradient-primary: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
+        --gradient-accent: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+        --header-height: 70px;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        font-size: 16px;
+    }
+
+    body {
+        font-family: var(--font-main);
+        background: var(--main-bg);
+        color: var(--text-color);
+        line-height: 1.6;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+
+    /* ===== NAVBAR CHIC ET RESPONSIVE ===== */
+    .navbar {
+        background: rgba(255, 255, 255, 0.97);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: var(--shadow);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        transition: var(--transition);
+        height: var(--header-height);
+    }
+
+    .navbar.scrolled {
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    }
+
+    .container-nav {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+        height: 100%;
+    }
+
+    .logo-nav {
+        font-size: 1.8rem;
+        font-weight: 700;
+        background: var(--gradient-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        transition: var(--transition);
+        white-space: nowrap;
+    }
+
+    .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .nav-link {
+        text-decoration: none;
+        color: var(--primary-color);
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: var(--radius);
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .nav-link::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: var(--gradient-primary);
+        transition: var(--transition);
+        transform: translateX(-50%);
+    }
+
+    .nav-link:hover::before,
+    .nav-link.active::before {
+        width: 80%;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        color: var(--primary);
+        background: rgba(13, 110, 253, 0.1);
+    }
+
+    .menu-toggle {
+        display: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--primary-color);
+        background: none;
+        border: none;
+        padding: 0.5rem;
+    }
+
+    /* ===== MAIN CONTENT ===== */
+    main {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 2rem;
+        min-height: calc(100vh - var(--header-height) - 400px);
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+        padding: 4rem 0;
+        margin-bottom: 3rem;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+        background: var(--gradient-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .hero-slogan {
+        font-size: 1.3rem;
+        color: var(--secondary);
+        line-height: 1.6;
+    }
+
+    .btn-cta {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: var(--gradient-primary);
+        color: white;
+        text-decoration: none;
+        border-radius: var(--radius);
+        font-weight: 600;
+        transition: var(--transition);
+        text-align: center;
+        width: fit-content;
+        box-shadow: var(--shadow);
+    }
+
+    .btn-cta:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(13, 110, 253, 0.3);
+    }
+
+    .hero-illustration {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-illustration img {
+        max-width: 100%;
+        height: auto;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+    }
+
+    /* ===== FORMATEURS SECTION ===== */
+    .formateurs-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        text-align: center;
+        margin: 3rem 0 2rem 0;
+        background: var(--gradient-accent);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        position: relative;
+        padding-bottom: 1rem;
+    }
+
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background: var(--gradient-accent);
+        border-radius: 2px;
+    }
+
+    .formateur-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .formateur-card {
+        background: var(--card-bg);
+        backdrop-filter: blur(10px);
+        border-radius: var(--radius);
+        padding: 2rem;
+        box-shadow: var(--shadow);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        transition: var(--transition);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .formateur-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: var(--gradient-primary);
+        transition: var(--transition);
+    }
+
+    .formateur-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+    }
+
+    .formateur-card:hover::before {
+        height: 6px;
+    }
+
+    .formateur-photo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1.5rem;
+        border: 4px solid transparent;
+        background: var(--gradient-primary);
+        padding: 3px;
+        transition: var(--transition);
+    }
+
+    .formateur-card:hover .formateur-photo {
+        transform: scale(1.05);
+        border-color: var(--primary);
+    }
+
+    .formateur-name {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+    }
+
+    .formateur-description {
+        color: var(--secondary);
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    .formateur-link {
+        display: inline-block;
+        padding: 0.8rem 1.5rem;
+        background: var(--gradient-accent);
+        color: white;
+        text-decoration: none;
+        border-radius: var(--radius);
+        font-weight: 500;
+        transition: var(--transition);
+        box-shadow: var(--shadow);
+    }
+
+    .formateur-link:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 184, 148, 0.3);
+    }
+
+    /* ===== FOOTER MODERNE ET RESPONSIVE ===== */
+    .modern-footer {
+        background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+        color: white;
+        position: relative;
+        margin-top: 4rem;
+    }
+
+    .footer-wave {
+        position: absolute;
+        top: -2px;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z' fill='%23f8f9fa'/%3E%3C/svg%3E");
+        background-size: cover;
+    }
+
+    .footer-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 4rem 2rem 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 3rem;
+    }
+
+    .footer-section h3 {
+        color: white;
+        margin-bottom: 1.5rem;
+        font-size: 1.3rem;
+        position: relative;
+        padding-bottom: 0.5rem;
+    }
+
+    .footer-section h3::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 2px;
+        background: var(--accent);
+    }
+
+    .footer-logo {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+        object-fit: cover;
+    }
+
+    .footer-section p {
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .social-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        color: white;
+        text-decoration: none;
+        transition: var(--transition);
+        backdrop-filter: blur(10px);
+    }
+
+    .social-icon:hover {
+        background: var(--accent);
+        transform: translateY(-3px);
+    }
+
+    .footer-links {
+        list-style: none;
+    }
+
+    .footer-links li {
+        margin-bottom: 0.8rem;
+    }
+
+    .footer-links a {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        transition: var(--transition);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .footer-links a:hover {
+        color: white;
+        transform: translateX(5px);
+    }
+
+    .footer-contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .contact-item i {
+        color: var(--accent);
+        width: 20px;
+    }
+
+    .legal-links {
+        text-align: center;
+        padding: 2rem 0 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin: 0 2rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .legal-links a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: var(--transition);
+    }
+
+    .legal-links a:hover {
+        color: white;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding: 1.5rem;
+        background: rgba(0, 0, 0, 0.2);
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.9rem;
+    }
+
+    /* ===== RESPONSIVE DESIGN ===== */
+    @media (max-width: 1024px) {
+        .hero-section {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        .formateur-list {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container-nav {
+            padding: 0 1rem;
+        }
+
+        .nav-links {
+            position: fixed;
+            top: var(--header-height);
+            left: -100%;
+            width: 100%;
+            height: calc(100vh - var(--header-height));
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 2rem;
+            transition: var(--transition);
+            gap: 1rem;
+            z-index: 999;
+        }
+
+        .nav-links.active {
+            left: 0;
+        }
+
+        .menu-toggle {
+            display: block;
+        }
+
+        main {
+            padding: 1rem;
+        }
+
+        .hero-title {
+            font-size: 2rem;
+        }
+
+        .hero-section {
+            padding: 2rem 0;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+        }
+
+        .formateur-card {
+            padding: 1.5rem;
+        }
+
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            padding: 3rem 1rem 1rem;
+        }
+
+        .footer-section {
+            text-align: center;
+        }
+
+        .footer-section h3::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .footer-social {
+            justify-content: center;
+        }
+
+        .legal-links {
+            margin: 0 1rem;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .logo-nav {
+            font-size: 1.4rem;
+        }
+
+        .hero-title {
+            font-size: 1.6rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+        }
+
+        .formateur-list {
+            grid-template-columns: 1fr;
+        }
+
+        .formateur-photo {
+            width: 120px;
+            height: 120px;
+        }
+
+        .footer-content {
+            padding: 2rem 1rem 1rem;
+        }
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .formateur-card {
+        animation: fadeInUp 0.6s ease-out;
+    }
+
+    .formateur-card:nth-child(even) {
+        animation-delay: 0.1s;
+    }
+
+    .formateur-card:nth-child(odd) {
+        animation-delay: 0.2s;
+    }
+
+    /* ===== ACCESSIBILITÉ ===== */
+    @media (prefers-reduced-motion: reduce) {
+        * {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+
+    /* Focus visible pour l'accessibilité */
+    a:focus-visible,
+    button:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 2px;
+    }
+
+    /* Mode sombre automatique */
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --main-bg: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            --card-bg: rgba(30, 30, 46, 0.95);
+            --text-color: #e2e8f0;
+            --light: #2d3748;
+        }
+
+        .navbar {
+            background: rgba(26, 32, 44, 0.95);
+            border-bottom-color: rgba(255, 255, 255, 0.1);
+        }
+    }
+</style>
 </head>
 <body>
 <amp-auto-ads type="adsense"
         data-ad-client="ca-pub-3942650991755175">
 </amp-auto-ads>
 
-  <div class="trainers-container">
-    <h2>Nos Formateurs</h2>
-
-    <div class="trainer-list">
-      <!-- Formateur 1 - Grafikart -->
-      <div class="trainer-item">
-        <img class="trainer-photo" src="ASSETS/Grafikart.jpeg" alt="Grafikart">
-        <div class="trainer-name">Grafikart</div>
-        <div class="trainer-description">
-          Grafikart est un formateur expert en développement web, avec des années d'expérience dans la création de tutoriels et de formations en ligne.
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container-nav">
+            <div class="logo-nav">SDBSN-CODE</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="videos.html" class="nav-link">Vidéos</a></li>
+                <li><a href="L1.html" class="nav-link">Licence 1</a></li>
+                <li><a href="L2.html" class="nav-link">Licence 2</a></li>
+                <li><a href="L3.html" class="nav-link">Licence 3</a></li>
+                <li><a href="pdftuto.html" class="nav-link">Annexe informative</a></li>
+                <li><a href="commentaire.html" class="nav-link">Commentaires</a></li>
+                <li><a href="formateur.html" class="nav-link active">Nos Formateurs</a></li>
+            </ul>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
         </div>
-        <a class="trainer-link" href="https://www.grafikart.fr" target="_blank">Visiter son site</a>
-      </div>
+    </nav>
 
-      <!-- Formateur 2 - UVS -->
-      <div class="trainer-item">
-        <img class="trainer-photo" src="ASSETS/uvs.png" alt="UVS">
-        <div class="trainer-name">Université Virtuelle du Sénégal (UVS)</div>
-        <div class="trainer-description">
-          L'UVS est une université en ligne qui propose des formations de qualité dans divers domaines, y compris l'informatique et le développement web.
-        </div>
-        <a class="trainer-link" href="https://www.uvs.sn" target="_blank">Visiter leur site</a>
-      </div>
-
-      <!-- Formateur 3 - Force-N -->
-      <div class="trainer-item">
-        <img class="trainer-photo" src="ASSETS/force n.jpeg" alt="Force-N">
-        <div class="trainer-name">Force-N</div>
-        <div class="trainer-description">
-          Force-N est une organisation de formation et de développement technologique qui propose des cours en informatique et en intelligence artificielle.
-        </div>
-        <a class="trainer-link" href="https://www.force-n.com" target="_blank">Visiter leur site</a>
-      </div>
-
-      <!-- Formateur 4 - Coursera -->
-      <div class="trainer-item">
-        <img class="trainer-photo" src="ASSETS/coursera.png" alt="Coursera">
-        <div class="trainer-name">Coursera</div>
-        <div class="trainer-description">
-          Coursera est une plateforme en ligne de cours qui propose des formations de qualité, souvent dispensées par des universités et institutions prestigieuses.
-        </div>
-        <a class="trainer-link" href="https://www.coursera.org" target="_blank">Visiter leur site</a>
-      </div>
-
-      <!-- Formateur 5 - Udemy -->
-      <div class="trainer-item">
-        <img class="trainer-photo" src="ASSETS/udemy.png" alt="Udemy">
-        <div class="trainer-name">Udemy</div>
-        <div class="trainer-description">
-          Udemy est une plateforme d'apprentissage en ligne qui propose une large variété de cours, notamment dans les domaines du développement web, du marketing et plus encore.
-        </div>
-        <a class="trainer-link" href="https://www.udemy.com" target="_blank">Visiter leur site</a>
-      </div>
-
-      <!-- Formateur 6 - OpenClassrooms -->
-      <div class="trainer-item">
-        <img class="trainer-photo" src="ASSETS/openclasroom.png" alt="OpenClassrooms">
-        <div class="trainer-name">OpenClassrooms</div>
-        <div class="trainer-description">
-          OpenClassrooms est une plateforme d'enseignement en ligne qui propose des formations en développement web, data science et plus encore.
-        </div>
-        <a class="trainer-link" href="https://www.openclassrooms.com" target="_blank">Visiter leur site</a>
-      </div>
-
-      <!-- Formateur 7 - Orange Digital Center -->
-      <div class="trainer-item">
-        <img class="trainer-photo" src="ASSETS/ODC.png" alt="Orange Digital Center">
-        <div class="trainer-name">Orange Digital Center</div>
-        <div class="trainer-description">
-          Orange Digital Center est un centre d'innovation qui accompagne les jeunes dans le développement de compétences en numérique, en particulier dans le domaine de l'entrepreneuriat digital.
-        </div>
-        <a class="trainer-link" href="https://www.orange.digital.center" target="_blank">Visiter leur site</a>
-      </div>
-
-      <!-- Formateur 8 - Fab Lab Solidarity -->
-      <div class="trainer-item">
-        <img class="trainer-photo" src="ASSETS/fab lab.png" alt="Fab Lab Solidarity">
-        <div class="trainer-name">Fab Lab Solidarity</div>
-        <div class="trainer-description">
-          Fab Lab Solidarity est un espace de fabrication collaborative dédié aux projets innovants dans les domaines du numérique, de l'innovation sociale et de l'entrepreneuriat.
-        </div>
-        <a class="trainer-link" href="https://www.fablab-solidarity.org" target="_blank">Visiter leur site</a>
-      </div>
-    </div>
-  </div>
-   <footer class="modern-footer">
-    <div class="footer-wave"></div>
-    <div class="footer-content">
-        <div class="footer-section">
-            <img src="ASSETS/téléchargement (2).jpg" alt="Logo IDA COURS" class="footer-logo">
-            <p>Votre partenaire de confiance pour une formation en ligne de qualité. Développez vos compétences et construisez votre avenir avec nous.</p>
-            <div class="footer-social">
-                <a href="https://www.instagram.com/princeseydoubhk" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://twitter.com/Sdbsntech" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/seydou-bakhayokho-864070343" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.youtube.com/channel/UCCZJBOaAPdAoTiD-iJ2ftkg" class="social-icon" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a href="https://github.com/Sdbsntech" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Nos Formateurs Experts</h1>
+                <p class="hero-slogan">"Découvrez les meilleurs experts qui vous accompagnent dans votre apprentissage"</p>
+                <a href="#formateurs" class="btn-cta">Découvrir les formateurs &darr;</a>
             </div>
-        </div>
+            <div class="hero-illustration">
+                <img src="files/ChatGPT Image 1 juil. 2025, 03_24_36.png" alt="Formateurs experts">
+            </div>
+        </section>
 
-        <div class="footer-section">
-            <h3>Liens Rapides</h3>
-            <ul class="footer-links">
-                <li><a href="index.html"><i class="fas fa-chevron-right"></i> Accueil</a></li>
-                <li><a href="pdftuto.html"><i class="fas fa-chevron-right"></i> Annexe informative</a></li>
-                <li><a href="videos.html"><i class="fas fa-chevron-right"></i> Vidéos</a></li>
-                <li><a href="L1.html"><i class="fas fa-chevron-right"></i> Licence 1</a></li>
-                <li><a href="L2.html"><i class="fas fa-chevron-right"></i> Licence 2</a></li>
-                <li><a href="L3.html"><i class="fas fa-chevron-right"></i> Licence 3</a></li>
-                <li><a href="commentaire.html"><i class="fas fa-chevron-right"></i> Commentaires</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h3>Ressources</h3>
-            <ul class="footer-links">
-                <li><a href="bibliotheques.html"><i class="fas fa-book"></i> Bibliothèque</a></li>
-                <li><a href="#calendrier"><i class="fas fa-calendar-alt"></i> Calendrier</a></li>
-                <li><a href="FAQ.HTML"><i class="fas fa-question-circle"></i> FAQ</a></li>
-                <li><a href="https://grafikart.fr/"><i class="fas fa-user-graduate"></i>Liens-utiles</a></li>
-                <li><a href="formateur.html"><i class="fas fa-chalkboard-teacher"></i> Nos Formateurs</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h3>Contact</h3>
-            <div class="footer-contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>DAKAR, PIKINE, DALIFORT</span>
+        <!-- Formateurs Section -->
+        <section id="formateurs" class="formateurs-container">
+            <h2 class="section-title">Nos Partenaires Formateurs</h2>
+            
+            <div class="formateur-list">
+                <!-- Formateur 1 - Grafikart -->
+                <div class="formateur-card">
+                    <img class="formateur-photo" src="ASSETS/Grafikart.jpeg" alt="Grafikart">
+                    <h3 class="formateur-name">Grafikart</h3>
+                    <p class="formateur-description">
+                        Grafikart est un formateur expert en développement web, avec des années d'expérience dans la création de tutoriels et de formations en ligne.
+                    </p>
+                    <a class="formateur-link" href="https://www.grafikart.fr" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Visiter son site
+                    </a>
                 </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+221 77 362 45 39</span>
+
+                <!-- Formateur 2 - UVS -->
+                <div class="formateur-card">
+                    <img class="formateur-photo" src="ASSETS/uvs.png" alt="UVS">
+                    <h3 class="formateur-name">Université Virtuelle du Sénégal (UVS)</h3>
+                    <p class="formateur-description">
+                        L'UVS est une université en ligne qui propose des formations de qualité dans divers domaines, y compris l'informatique et le développement web.
+                    </p>
+                    <a class="formateur-link" href="https://www.uvs.sn" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Visiter leur site
+                    </a>
                 </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>sdbsntech1@gmail.com</span>
+
+                <!-- Formateur 3 - Force-N -->
+                <div class="formateur-card">
+                    <img class="formateur-photo" src="ASSETS/force n.jpeg" alt="Force-N">
+                    <h3 class="formateur-name">Force-N</h3>
+                    <p class="formateur-description">
+                        Force-N est une organisation de formation et de développement technologique qui propose des cours en informatique et en intelligence artificielle.
+                    </p>
+                    <a class="formateur-link" href="https://www.force-n.com" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Visiter leur site
+                    </a>
+                </div>
+
+                <!-- Formateur 4 - Coursera -->
+                <div class="formateur-card">
+                    <img class="formateur-photo" src="ASSETS/coursera.png" alt="Coursera">
+                    <h3 class="formateur-name">Coursera</h3>
+                    <p class="formateur-description">
+                        Coursera est une plateforme en ligne de cours qui propose des formations de qualité, souvent dispensées par des universités et institutions prestigieuses.
+                    </p>
+                    <a class="formateur-link" href="https://www.coursera.org" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Visiter leur site
+                    </a>
+                </div>
+
+                <!-- Formateur 5 - Udemy -->
+                <div class="formateur-card">
+                    <img class="formateur-photo" src="ASSETS/udemy.png" alt="Udemy">
+                    <h3 class="formateur-name">Udemy</h3>
+                    <p class="formateur-description">
+                        Udemy est une plateforme d'apprentissage en ligne qui propose une large variété de cours, notamment dans les domaines du développement web, du marketing et plus encore.
+                    </p>
+                    <a class="formateur-link" href="https://www.udemy.com" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Visiter leur site
+                    </a>
+                </div>
+
+                <!-- Formateur 6 - OpenClassrooms -->
+                <div class="formateur-card">
+                    <img class="formateur-photo" src="ASSETS/openclasroom.png" alt="OpenClassrooms">
+                    <h3 class="formateur-name">OpenClassrooms</h3>
+                    <p class="formateur-description">
+                        OpenClassrooms est une plateforme d'enseignement en ligne qui propose des formations en développement web, data science et plus encore.
+                    </p>
+                    <a class="formateur-link" href="https://www.openclassrooms.com" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Visiter leur site
+                    </a>
+                </div>
+
+                <!-- Formateur 7 - Orange Digital Center -->
+                <div class="formateur-card">
+                    <img class="formateur-photo" src="ASSETS/ODC.png" alt="Orange Digital Center">
+                    <h3 class="formateur-name">Orange Digital Center</h3>
+                    <p class="formateur-description">
+                        Orange Digital Center est un centre d'innovation qui accompagne les jeunes dans le développement de compétences en numérique, en particulier dans le domaine de l'entrepreneuriat digital.
+                    </p>
+                    <a class="formateur-link" href="https://www.orange.digital.center" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Visiter leur site
+                    </a>
+                </div>
+
+                <!-- Formateur 8 - Fab Lab Solidarity -->
+                <div class="formateur-card">
+                    <img class="formateur-photo" src="ASSETS/fab lab.png" alt="Fab Lab Solidarity">
+                    <h3 class="formateur-name">Fab Lab Solidarity</h3>
+                    <p class="formateur-description">
+                        Fab Lab Solidarity est un espace de fabrication collaborative dédié aux projets innovants dans les domaines du numérique, de l'innovation sociale et de l'entrepreneuriat.
+                    </p>
+                    <a class="formateur-link" href="https://www.fablab-solidarity.org" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Visiter leur site
+                    </a>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="legal-links">
-                    <a href="mention_legale.html">mention_legale.</a>
-                    <a href="politique_confidentialite.html">politique_confidentialite</a>
-                    <a href="condition_d'utilisation.html">condition_d'utilisation</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="modern-footer">
+        <div class="footer-wave"></div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="ASSETS/téléchargement (2).jpg" alt="Logo IDA COURS" class="footer-logo">
+                <p>Votre partenaire de confiance pour une formation en ligne de qualité. Développez vos compétences et construisez votre avenir avec nous.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/princeseydoubhk" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/Sdbsntech" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/seydou-bakhayokho-864070343" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/channel/UCCZJBOaAPdAoTiD-iJ2ftkg" class="social-icon" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://github.com/Sdbsntech" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
-    
-<div class="footer-bottom">
-        <p>&copy; 2025 IDA COURS. Plateforme réalisée par Seydou Bakhayokho.</p>
-    </div>
-</footer>
-  <script src="main.js"></script>
-  <script>
-    // protection.js - Code de protection contre l'inspection
-document.addEventListener('DOMContentLoaded', function() {
-    'use strict';
-    
-    // Configuration
-    const config = {
-        disableRightClick: true,
-        disableDevTools: true,
-        disableKeyboardShortcuts: true,
-        showWarning: true,
-        warningMessage: "Cette action n'est pas autorisée sur ce site."
-    };
-    
-    // 🔒 Empêcher le clic droit
-    if (config.disableRightClick) {
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            if (config.showWarning) {
-                showWarning(config.warningMessage);
-            }
-            return false;
-        });
-    }
-    
-    // ⌨️ Empêcher les raccourcis clavier
-    if (config.disableKeyboardShortcuts) {
-        document.addEventListener('keydown', function(e) {
-            // F12 - DevTools
-            if (e.key === 'F12' || e.keyCode === 123) {
-                e.preventDefault();
-                if (config.showWarning) {
-                    showWarning("L'ouverture des outils de développement est désactivée.");
-                }
-                return false;
-            }
-            
-            // Ctrl+Shift+I / Cmd+Opt+I
-            if ((e.ctrlKey && e.shiftKey && e.key === 'I') || 
-                (e.metaKey && e.altKey && e.key === 'I')) {
-                e.preventDefault();
-                if (config.showWarning) {
-                    showWarning("L'inspection du code est désactivée.");
-                }
-                return false;
-            }
-            
-            // Ctrl+U / Cmd+U - View Source
-            if ((e.ctrlKey && e.key === 'u') || (e.metaKey && e.key === 'u')) {
-                e.preventDefault();
-                if (config.showWarning) {
-                    showWarning("La visualisation du code source est désactivée.");
-                }
-                return false;
-            }
-            
-            // Ctrl+Shift+C / Cmd+Shift+C - Inspect Element
-            if ((e.ctrlKey && e.shiftKey && e.key === 'C') || 
-                (e.metaKey && e.shiftKey && e.key === 'C')) {
-                e.preventDefault();
-                if (config.showWarning) {
-                    showWarning("L'inspection d'élément est désactivée.");
-                }
-                return false;
-            }
-            
-            // Ctrl+S / Cmd+S - Save Page
-            if ((e.ctrlKey && e.key === 's') || (e.metaKey && e.key === 's')) {
-                e.preventDefault();
-                if (config.showWarning) {
-                    showWarning("La sauvegarde de la page est désactivée.");
-                }
-                return false;
-            }
-        });
-    }
-    
-    // 🛠️ Détection avancée des DevTools
-    if (config.disableDevTools) {
-        detectDevTools();
-    }
-    
-    // Fonction pour afficher les avertissements
-    function showWarning(message) {
-        // Créer ou mettre à jour l'élément d'avertissement
-        let warning = document.getElementById('protection-warning');
-        if (!warning) {
-            warning = document.createElement('div');
-            warning.id = 'protection-warning';
-            warning.style.cssText = `
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                background: #ff4757;
-                color: white;
-                padding: 15px 20px;
-                border-radius: 8px;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-                z-index: 10000;
-                font-family: Arial, sans-serif;
-                font-size: 14px;
-                max-width: 300px;
-                animation: slideIn 0.3s ease;
-            `;
-            document.body.appendChild(warning);
-            
-            // Ajouter l'animation CSS
-            const style = document.createElement('style');
-            style.textContent = `
-                @keyframes slideIn {
-                    from { transform: translateX(100%); opacity: 0; }
-                    to { transform: translateX(0); opacity: 1; }
-                }
-            `;
-            document.head.appendChild(style);
-        }
-        
-        warning.textContent = message;
-        warning.style.display = 'block';
-        
-        // Masquer après 3 secondes
-        setTimeout(() => {
-            warning.style.display = 'none';
-        }, 3000);
-    }
-    
-    // Fonction de détection des DevTools
-    function detectDevTools() {
-        const threshold = 160;
-        const checkDevTools = function() {
-            const widthThreshold = window.outerWidth - window.innerWidth > threshold;
-            const heightThreshold = window.outerHeight - window.innerHeight > threshold;
-            
-            if (widthThreshold || heightThreshold) {
-                // DevTools détecté
-                document.body.innerHTML = `
-                    <div style="
-                        position: fixed;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                        color: white;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        font-family: Arial, sans-serif;
-                        text-align: center;
-                        z-index: 9999;
-                    ">
-                        <div>
-                            <h1 style="font-size: 2em; margin-bottom: 20px;">🚫 Accès Restreint</h1>
-                            <p style="font-size: 1.2em; margin-bottom: 30px;">
-                                Les outils de développement sont désactivés sur ce site.<br>
-                                Veuillez fermer les DevTools pour continuer.
-                            </p>
-                            <button onclick="location.reload()" style="
-                                background: white;
-                                color: #667eea;
-                                border: none;
-                                padding: 12px 24px;
-                                border-radius: 5px;
-                                font-size: 1em;
-                                cursor: pointer;
-                                font-weight: bold;
-                            ">
-                                Recharger la page
-                            </button>
-                        </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Liens Rapides</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+                    <li><a href="pdftuto.html"><i class="fas fa-chevron-right"></i> Annexe informative</a></li>
+                    <li><a href="videos.html"><i class="fas fa-chevron-right"></i> Vidéos</a></li>
+                    <li><a href="L1.html"><i class="fas fa-chevron-right"></i> Licence 1</a></li>
+                    <li><a href="L2.html"><i class="fas fa-chevron-right"></i> Licence 2</a></li>
+                    <li><a href="L3.html"><i class="fas fa-chevron-right"></i> Licence 3</a></li>
+                    <li><a href="commentaire.html"><i class="fas fa-chevron-right"></i> Commentaires</a></li>
+                    <li><a href="formateur.html"><i class="fas fa-chevron-right"></i> Nos Formateurs</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Ressources</h3>
+                <ul class="footer-links">
+                    <li><a href="bibliotheques.html"><i class="fas fa-book"></i> Bibliothèque</a></li>
+                    <li><a href="#calendrier"><i class="fas fa-calendar-alt"></i> Calendrier</a></li>
+                    <li><a href="FAQ.HTML"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    <li><a href="https://grafikart.fr/"><i class="fas fa-user-graduate"></i> Liens utiles</a></li>
+                    <li><a href="formateur.html"><i class="fas fa-chalkboard-teacher"></i> Nos Formateurs</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <div class="footer-contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>DAKAR, PIKINE, DALIFORT</span>
                     </div>
-                `;
-            }
-        };
-        
-        // Vérifier périodiquement
-        setInterval(checkDevTools, 1000);
-        
-        // Événement de redimensionnement
-        window.addEventListener('resize', checkDevTools);
-    }
-    
-    // Protection supplémentaire contre la sélection de texte
-    document.addEventListener('selectstart', function(e) {
-        e.preventDefault();
-        return false;
-    });
-    
-    // Protection contre le drag & drop d'images
-    document.addEventListener('dragstart', function(e) {
-        if (e.target.tagName === 'IMG') {
-            e.preventDefault();
-            return false;
-        }
-    });
-    
-    console.log('🔒 Protection activée - IDA Cours');
-});
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+221 77 362 45 39</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>sdbsntech1@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="legal-links">
+            <a href="mention_legale.html">Mentions légales</a>
+            <a href="politique_confidentialite.html">Politique de confidentialité</a>
+            <a href="condition_d'utilisation.html">Conditions d'utilisation</a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 IDA COURS. Plateforme réalisée par Seydou Bakhayokho.</p>
+        </div>
+    </footer>
 
-// Protection avancée contre la console
-(function() {
-    'use strict';
-    
-    // Rediriger la console
-    const originalConsole = {
-        log: console.log,
-        warn: console.warn,
-        error: console.error,
-        info: console.info
-    };
-    
-    // Redéfinir les méthodes de la console
-    ['log', 'warn', 'error', 'info'].forEach(method => {
-        console[method] = function() {
-            // Vous pouvez choisir de ne rien faire ou d'afficher un message
-            originalConsole.log(`🚫 Console.${method} est surveillée - IDA Cours`);
-        };
-    });
-    
-    // Empêcher l'accès aux propriétés sensibles
-    Object.defineProperty(window, 'console', {
-        get: function() {
-            return {
-                log: function() { /* bloqué */ },
-                warn: function() { /* bloqué */ },
-                error: function() { /* bloqué */ },
-                info: function() { /* bloqué */ }
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Menu mobile
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = menuToggle.querySelector('i');
+                if (icon.classList.contains('fa-bars')) {
+                    icon.classList.replace('fa-bars', 'fa-times');
+                } else {
+                    icon.classList.replace('fa-times', 'fa-bars');
+                }
+            });
+
+            // Navbar scroll effect
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // Animation des cartes au scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
             };
-        },
-        set: function() { /* bloqué */ }
-    });
-})();
-  </script>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Bloquer le clic droit
-    document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-        return false;
-    });
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
 
-    // Bloquer copier/coller/couper
-    ['copy', 'cut', 'paste'].forEach(function(evt) {
-        document.addEventListener(evt, function(e) {
-            e.preventDefault();
-            return false;
+            // Observer toutes les cartes de formateurs
+            document.querySelectorAll('.formateur-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+
+            // Fermer le menu mobile en cliquant sur un lien
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    menuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                });
+            });
+
+            // Fermer le menu mobile en cliquant à l'extérieur
+            document.addEventListener('click', (e) => {
+                if (!navbar.contains(e.target) && navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    menuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                }
+            });
         });
-    });
-
-    // Bloquer raccourcis DevTools et code source
-    document.addEventListener('keydown', function(e) {
-        // F12
-        if (e.key === 'F12' || e.keyCode === 123) {
-            e.preventDefault();
-            return false;
-        }
-        // Ctrl+Shift+I / Cmd+Opt+I
-        if ((e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') ||
-            (e.metaKey && e.altKey && e.key.toLowerCase() === 'i')) {
-            e.preventDefault();
-            return false;
-        }
-        // Ctrl+U / Cmd+U
-        if ((e.ctrlKey && e.key.toLowerCase() === 'u') ||
-            (e.metaKey && e.key.toLowerCase() === 'u')) {
-            e.preventDefault();
-            return false;
-        }
-    });
-
-    // Détection DevTools par resize
-    setInterval(function() {
-        if (window.outerWidth - window.innerWidth > 160 ||
-            window.outerHeight - window.innerHeight > 160) {
-            document.body.innerHTML = '<h1 style="color:red;text-align:center;margin-top:20vh;">Accès restreint : DevTools détecté !</h1>';
-        }
-    }, 1000);
-});
-</script>
-
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Bloquer le clic droit
-    document.addEventListener('contextmenu', function(e) { e.preventDefault(); return false; });
-
-    // Bloquer copier/couper/coller
-    ['copy', 'cut', 'paste'].forEach(function(evt) {
-        document.addEventListener(evt, function(e) { e.preventDefault(); return false; });
-    });
-
-    // Bloquer la sélection de texte
-    document.addEventListener('selectstart', function(e) { e.preventDefault(); return false; });
-
-    // Bloquer le drag & drop d'images
-    document.addEventListener('dragstart', function(e) {
-        if (e.target.tagName === 'IMG') { e.preventDefault(); return false; }
-    });
-
-    // Bloquer toutes les touches F1 à F12 et autres combinaisons
-    document.addEventListener('keydown', function(e) {
-        // Bloquer touches F1 à F12
-        if (e.key.match(/^F[1-9]$|^F1[0-2]$/) || (e.keyCode >= 112 && e.keyCode <= 123)) {
-            e.preventDefault(); return false;
-        }
-        // Ctrl+U, Ctrl+Shift+I, Ctrl+Shift+C, Ctrl+S, Ctrl+Alt+I, Ctrl+Alt+J, Ctrl+Alt+C
-        if (
-            (e.ctrlKey && e.key.toLowerCase() === 'u') ||
-            (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') ||
-            (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'c') ||
-            (e.ctrlKey && e.key.toLowerCase() === 's') ||
-            (e.ctrlKey && e.altKey && e.key.toLowerCase() === 'i') ||
-            (e.ctrlKey && e.altKey && e.key.toLowerCase() === 'j') ||
-            (e.ctrlKey && e.altKey && e.key.toLowerCase() === 'c')
-        ) {
-            e.preventDefault(); return false;
-        }
-    });
-
-    // Détection DevTools par resize
-    setInterval(function() {
-        if (window.outerWidth - window.innerWidth > 160 ||
-            window.outerHeight - window.innerHeight > 160) {
-            document.body.innerHTML = '<h1 style="color:red;text-align:center;margin-top:20vh;">Accès restreint : DevTools détecté !</h1>';
-        }
-    }, 1000);
-});
-</script>
-
+    </script>
 </body>
 </html>

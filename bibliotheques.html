@@ -12,645 +12,1050 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Plateforme d'apprentissage moderne et interactive.">
-    <meta name="keywords" content="cours, apprentissage, vidéos, exercices, pdf, td, tc, forum">
-    <meta name="author" content="IDA COURS">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="index.css">
+  <meta name="description" content="Bibliothèque informatique en ligne - IDA COURS">
+  <meta name="keywords" content="cours, bibliothèque, livres, informatique, ressources">
+  <meta name="author" content="IDA COURS">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="favicon.png" sizes="180x180">
+  <link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="favicon.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <meta name="google-site-verification" content="8WaeKM-mQAcuLhGP1eHzoO1Gr0IX9lq_NoNGavj0fB8" />
-<title>Bibliothèque Informatique</title>
-  <style>
-    /* Style global */
-    body {
-        font-family: Arial, sans-serif;
-        background: #f4f4f4;
-        margin: 0;
-        padding: 2rem;
-        color: #333;
-    }
+<title>Bibliothèque Informatique - IDA COURS</title>
 
-    .library-container {
-        max-width: 1000px;
-        margin: auto;
-        background: white;
-        border-radius: 12px;
-        padding: 1.5rem;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    h2 {
-        text-align: center;
-        color: #1a237e;
-        margin-bottom: 1.5rem;
-        font-size: 2rem;
-    }
-
-    #searchInput {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 20px;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        font-size: 1rem;
-    }
-
-    .book-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1.5rem;
-    }
-
-    .book-item {
-        background-color: #f9f9f9;
-        border-radius: 8px;
-        padding: 1rem;
-        border: 1px solid #ddd;
-        transition: 0.3s;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .book-item:hover {
-        background-color: #eef6ff;
-        border-color: #3399ff;
-        transform: translateY(-5px);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .book-title {
-        font-weight: bold;
-        color: #1a237e;
-        margin-bottom: 0.5rem;
-        font-size: 1.2rem;
-    }
-
-    .book-author {
-        color: #555;
-        margin-bottom: 0.5rem;
-        font-size: 0.9rem;
-    }
-
-    .book-link {
-        color: #007bff;
-        text-decoration: none;
-        font-size: 0.9rem;
-        font-weight: bold;
-    }
-
-    .book-link:hover {
-        text-decoration: underline;
-        color: #0056b3;
-    }
-  </style>
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3830476419469874"
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3942650991755175"
      crossorigin="anonymous"></script>
 
 <meta name="google-adsense-account" content="ca-pub-3942650991755175">
+
+<style>
+    /* ===== VARIABLES ET RESET ===== */
+    :root {
+        --main-bg: linear-gradient(135deg, #e0f7fa 0%, #bacdcf 100%);
+        --primary: #0d6efd;
+        --secondary: #6c757d;
+        --accent: #00b894;
+        --light: #f8f9fa;
+        --dark: #222;
+        --radius: 16px;
+        --shadow: 0 4px 24px rgba(0,0,0,0.08);
+        --transition: 0.3s cubic-bezier(.4,2,.6,1);
+        --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        --primary-color: #2c3e50;
+        --secondary-color: #3498db;
+        --accent-color: #e74c3c;
+        --background-color: #f8f9fa;
+        --text-color: #2c3e50;
+        --card-bg: rgba(255, 255, 255, 0.95);
+        --gradient-primary: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
+        --gradient-accent: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+        --header-height: 70px;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        font-size: 16px;
+    }
+
+    body {
+        font-family: var(--font-main);
+        background: var(--main-bg);
+        color: var(--text-color);
+        line-height: 1.6;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+
+    /* ===== NAVBAR CHIC ET RESPONSIVE ===== */
+    .navbar {
+        background: rgba(255, 255, 255, 0.97);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: var(--shadow);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        transition: var(--transition);
+        height: var(--header-height);
+    }
+
+    .navbar.scrolled {
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    }
+
+    .container-nav {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+        height: 100%;
+    }
+
+    .logo-nav {
+        font-size: 1.8rem;
+        font-weight: 700;
+        background: var(--gradient-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        transition: var(--transition);
+        white-space: nowrap;
+    }
+
+    .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .nav-link {
+        text-decoration: none;
+        color: var(--primary-color);
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: var(--radius);
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .nav-link::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: var(--gradient-primary);
+        transition: var(--transition);
+        transform: translateX(-50%);
+    }
+
+    .nav-link:hover::before,
+    .nav-link.active::before {
+        width: 80%;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        color: var(--primary);
+        background: rgba(13, 110, 253, 0.1);
+    }
+
+    .menu-toggle {
+        display: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--primary-color);
+        background: none;
+        border: none;
+        padding: 0.5rem;
+    }
+
+    /* ===== MAIN CONTENT ===== */
+    main {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 2rem;
+        min-height: calc(100vh - var(--header-height) - 400px);
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+        padding: 4rem 0;
+        margin-bottom: 3rem;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+        background: var(--gradient-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .hero-slogan {
+        font-size: 1.3rem;
+        color: var(--secondary);
+        line-height: 1.6;
+    }
+
+    .btn-cta {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: var(--gradient-primary);
+        color: white;
+        text-decoration: none;
+        border-radius: var(--radius);
+        font-weight: 600;
+        transition: var(--transition);
+        text-align: center;
+        width: fit-content;
+        box-shadow: var(--shadow);
+    }
+
+    .btn-cta:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(13, 110, 253, 0.3);
+    }
+
+    .hero-illustration {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-illustration img {
+        max-width: 100%;
+        height: auto;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+    }
+
+    /* ===== BIBLIOTHEQUE SECTION ===== */
+    .library-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        text-align: center;
+        margin: 3rem 0 2rem 0;
+        background: var(--gradient-accent);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        position: relative;
+        padding-bottom: 1rem;
+    }
+
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background: var(--gradient-accent);
+        border-radius: 2px;
+    }
+
+    .search-container {
+        position: relative;
+        margin-bottom: 2rem;
+    }
+
+    .search-input {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        border: 2px solid rgba(13, 110, 253, 0.2);
+        border-radius: var(--radius);
+        font-size: 1rem;
+        transition: var(--transition);
+        background: var(--card-bg);
+        backdrop-filter: blur(10px);
+        box-shadow: var(--shadow);
+    }
+
+    .search-input:focus {
+        outline: none;
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
+    }
+
+    .search-icon {
+        position: absolute;
+        right: 1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--secondary);
+    }
+
+    .book-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .book-card {
+        background: var(--card-bg);
+        backdrop-filter: blur(10px);
+        border-radius: var(--radius);
+        padding: 2rem;
+        box-shadow: var(--shadow);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .book-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: var(--gradient-primary);
+        transition: var(--transition);
+    }
+
+    .book-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+    }
+
+    .book-card:hover::before {
+        width: 6px;
+    }
+
+    .book-icon {
+        font-size: 2.5rem;
+        color: var(--primary);
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .book-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        line-height: 1.4;
+    }
+
+    .book-author {
+        color: var(--secondary);
+        margin-bottom: 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .book-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.8rem 1.5rem;
+        background: var(--gradient-accent);
+        color: white;
+        text-decoration: none;
+        border-radius: var(--radius);
+        font-weight: 500;
+        transition: var(--transition);
+        width: 100%;
+        justify-content: center;
+        box-shadow: var(--shadow);
+    }
+
+    .book-link:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 184, 148, 0.3);
+    }
+
+    /* ===== FOOTER MODERNE ET RESPONSIVE ===== */
+    .modern-footer {
+        background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+        color: white;
+        position: relative;
+        margin-top: 4rem;
+    }
+
+    .footer-wave {
+        position: absolute;
+        top: -2px;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z' fill='%23f8f9fa'/%3E%3C/svg%3E");
+        background-size: cover;
+    }
+
+    .footer-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 4rem 2rem 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 3rem;
+    }
+
+    .footer-section h3 {
+        color: white;
+        margin-bottom: 1.5rem;
+        font-size: 1.3rem;
+        position: relative;
+        padding-bottom: 0.5rem;
+    }
+
+    .footer-section h3::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 2px;
+        background: var(--accent);
+    }
+
+    .footer-logo {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+        object-fit: cover;
+    }
+
+    .footer-section p {
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .social-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        color: white;
+        text-decoration: none;
+        transition: var(--transition);
+        backdrop-filter: blur(10px);
+    }
+
+    .social-icon:hover {
+        background: var(--accent);
+        transform: translateY(-3px);
+    }
+
+    .footer-links {
+        list-style: none;
+    }
+
+    .footer-links li {
+        margin-bottom: 0.8rem;
+    }
+
+    .footer-links a {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        transition: var(--transition);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .footer-links a:hover {
+        color: white;
+        transform: translateX(5px);
+    }
+
+    .footer-contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .contact-item i {
+        color: var(--accent);
+        width: 20px;
+    }
+
+    .legal-links {
+        text-align: center;
+        padding: 2rem 0 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin: 0 2rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .legal-links a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: var(--transition);
+    }
+
+    .legal-links a:hover {
+        color: white;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding: 1.5rem;
+        background: rgba(0, 0, 0, 0.2);
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.9rem;
+    }
+
+    /* ===== RESPONSIVE DESIGN ===== */
+    @media (max-width: 1024px) {
+        .hero-section {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        .book-grid {
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container-nav {
+            padding: 0 1rem;
+        }
+
+        .nav-links {
+            position: fixed;
+            top: var(--header-height);
+            left: -100%;
+            width: 100%;
+            height: calc(100vh - var(--header-height));
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 2rem;
+            transition: var(--transition);
+            gap: 1rem;
+            z-index: 999;
+        }
+
+        .nav-links.active {
+            left: 0;
+        }
+
+        .menu-toggle {
+            display: block;
+        }
+
+        main {
+            padding: 1rem;
+        }
+
+        .hero-title {
+            font-size: 2rem;
+        }
+
+        .hero-section {
+            padding: 2rem 0;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+        }
+
+        .book-card {
+            padding: 1.5rem;
+        }
+
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            padding: 3rem 1rem 1rem;
+        }
+
+        .footer-section {
+            text-align: center;
+        }
+
+        .footer-section h3::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .footer-social {
+            justify-content: center;
+        }
+
+        .legal-links {
+            margin: 0 1rem;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .logo-nav {
+            font-size: 1.4rem;
+        }
+
+        .hero-title {
+            font-size: 1.6rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+        }
+
+        .book-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .footer-content {
+            padding: 2rem 1rem 1rem;
+        }
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .book-card {
+        animation: fadeInUp 0.6s ease-out;
+    }
+
+    .book-card:nth-child(even) {
+        animation-delay: 0.1s;
+    }
+
+    .book-card:nth-child(odd) {
+        animation-delay: 0.2s;
+    }
+
+    /* ===== ACCESSIBILITÉ ===== */
+    @media (prefers-reduced-motion: reduce) {
+        * {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+
+    /* Focus visible pour l'accessibilité */
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 2px;
+    }
+
+    /* Mode sombre automatique */
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --main-bg: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            --card-bg: rgba(30, 30, 46, 0.95);
+            --text-color: #e2e8f0;
+            --light: #2d3748;
+        }
+
+        .navbar {
+            background: rgba(26, 32, 44, 0.95);
+            border-bottom-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .search-input {
+            background: rgba(45, 55, 72, 0.8);
+            color: var(--text-color);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+    }
+</style>
 </head>
 <body>
 <amp-auto-ads type="adsense"
         data-ad-client="ca-pub-3942650991755175">
 </amp-auto-ads>
 
-  <div class="library-container">
-    <h2>📚 Bibliothèque Informatique en Ligne</h2>
-    <input type="text" id="searchInput" placeholder="Rechercher un livre..." onkeyup="filterBooks()">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container-nav">
+            <div class="logo-nav">SDBSN-CODE</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="videos.html" class="nav-link">Vidéos</a></li>
+                <li><a href="L1.html" class="nav-link">Licence 1</a></li>
+                <li><a href="L2.html" class="nav-link">Licence 2</a></li>
+                <li><a href="L3.html" class="nav-link">Licence 3</a></li>
+                <li><a href="pdftuto.html" class="nav-link">Annexe informative</a></li>
+                <li><a href="commentaire.html" class="nav-link">Commentaires</a></li>
+                <li><a href="bibliotheques.html" class="nav-link active">Bibliothèque</a></li>
+            </ul>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
 
-    <div class="book-list" id="bookList">
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Bibliothèque Informatique</h1>
+                <p class="hero-slogan">"Accédez à une collection complète de ressources pour maîtriser l'informatique et le développement"</p>
+                <a href="#livres" class="btn-cta">Découvrir les livres &darr;</a>
+            </div>
+            <div class="hero-illustration">
+                <img src="files/ChatGPT Image 1 juil. 2025, 03_24_36.png" alt="Bibliothèque">
+            </div>
+        </section>
 
-      <!-- Livres précédents -->
-      <div class="book-item">
-        <div class="book-title">Structure de données et algorithmes</div>
-        <div class="book-author">Auteur : OpenClassrooms</div>
-        <a class="book-link" href="https://openclassrooms.com/fr/courses/2616266-apprenez-a-programmer-en-c" download>Télécharger</a>
-      </div>
+        <!-- Bibliothèque Section -->
+        <section id="livres" class="library-container">
+            <h2 class="section-title">📚 Collection de Livres</h2>
+            
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Rechercher un livre par titre ou auteur...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
 
-      <div class="book-item">
-        <div class="book-title">Apprenez le HTML5 et le CSS3</div>
-        <div class="book-author">Auteur : Mathieu Nebra</div>
-        <a class="book-link" href="https://openclassrooms.com/fr/courses/1946386-apprenez-a-creer-votre-site-web-avec-html5-et-css3" download>Télécharger</a>
-      </div>
+            <div class="book-grid" id="bookList">
+                <!-- Livres précédents -->
+                <div class="book-card">
+                    <div class="book-icon"><i class="fas fa-code"></i></div>
+                    <h3 class="book-title">Structure de données et algorithmes</h3>
+                    <p class="book-author">Auteur : OpenClassrooms</p>
+                    <a class="book-link" href="https://openclassrooms.com/fr/courses/2616266-apprenez-a-programmer-en-c" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Consulter
+                    </a>
+                </div>
 
-      <div class="book-item">
-        <div class="book-title">Python pour les débutants</div>
-        <div class="book-author">Auteur : Michel Buffa</div>
-        <a class="book-link" href="https://python.sdv.univ-paris-diderot.fr/" download>Télécharger</a>
-      </div>
+                <div class="book-card">
+                    <div class="book-icon"><i class="fab fa-html5"></i></div>
+                    <h3 class="book-title">Apprenez le HTML5 et le CSS3</h3>
+                    <p class="book-author">Auteur : Mathieu Nebra</p>
+                    <a class="book-link" href="https://openclassrooms.com/fr/courses/1946386-apprenez-a-creer-votre-site-web-avec-html5-et-css3" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Consulter
+                    </a>
+                </div>
 
-      <div class="book-item">
-        <div class="book-title">Introduction aux bases de données</div>
-        <div class="book-author">Auteur : Didier Lavergne</div>
-        <a class="book-link" href="https://www.lri.fr/~fiorenzi/BD/intro_bd.pdf" download>Télécharger</a>
-      </div>
+                <div class="book-card">
+                    <div class="book-icon"><i class="fab fa-python"></i></div>
+                    <h3 class="book-title">Python pour les débutants</h3>
+                    <p class="book-author">Auteur : Michel Buffa</p>
+                    <a class="book-link" href="https://python.sdv.univ-paris-diderot.fr/" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Consulter
+                    </a>
+                </div>
 
-      <div class="book-item">
-        <div class="book-title">Sécurité informatique</div>
-        <div class="book-author">Auteur : INSA Lyon</div>
-        <a class="book-link" href="https://www.iut-info.univ-paris8.fr/~fbouquet/cours/si.pdf" download>Télécharger</a>
-      </div>
+                <div class="book-card">
+                    <div class="book-icon"><i class="fas fa-database"></i></div>
+                    <h3 class="book-title">Introduction aux bases de données</h3>
+                    <p class="book-author">Auteur : Didier Lavergne</p>
+                    <a class="book-link" href="https://www.lri.fr/~fiorenzi/BD/intro_bd.pdf" target="_blank">
+                        <i class="fas fa-download"></i> Télécharger
+                    </a>
+                </div>
 
-      <div class="book-item">
-        <div class="book-title">Algorithmique et programmation en C</div>
-        <div class="book-author">Auteur : Claude Delannoy</div>
-        <a class="book-link" href="https://www.eyrolles.com/Informatique/Livre/algorithmique-et-programmation-en-c-9782212116530/">Consulter</a>
-      </div>
+                <div class="book-card">
+                    <div class="book-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="book-title">Sécurité informatique</h3>
+                    <p class="book-author">Auteur : INSA Lyon</p>
+                    <a class="book-link" href="https://www.iut-info.univ-paris8.fr/~fbouquet/cours/si.pdf" target="_blank">
+                        <i class="fas fa-download"></i> Télécharger
+                    </a>
+                </div>
 
-      <div class="book-item">
-        <div class="book-title">Développement web avec JavaScript</div>
-        <div class="book-author">Auteur : Mozilla Developer Network</div>
-        <a class="book-link" href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide">Consulter</a>
-      </div>
+                <div class="book-card">
+                    <div class="book-icon"><i class="fas fa-cogs"></i></div>
+                    <h3 class="book-title">Algorithmique et programmation en C</h3>
+                    <p class="book-author">Auteur : Claude Delannoy</p>
+                    <a class="book-link" href="https://www.eyrolles.com/Informatique/Livre/algorithmique-et-programmation-en-c-9782212116530/" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Consulter
+                    </a>
+                </div>
 
-      <div class="book-item">
-        <div class="book-title">Git et GitHub pour les débutants</div>
-        <div class="book-author">Auteur : ProGit Book</div>
-        <a class="book-link" href="https://git-scm.com/book/fr/v2" download>Télécharger</a>
-      </div>
+                <div class="book-card">
+                    <div class="book-icon"><i class="fab fa-js-square"></i></div>
+                    <h3 class="book-title">Développement web avec JavaScript</h3>
+                    <p class="book-author">Auteur : Mozilla Developer Network</p>
+                    <a class="book-link" href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Consulter
+                    </a>
+                </div>
 
-      <div class="book-item">
-        <div class="book-title">Systèmes d'exploitation : concepts fondamentaux</div>
-        <div class="book-author">Auteur : Silberschatz, Galvin & Gagne</div>
-        <a class="book-link" href="https://pages.cs.wisc.edu/~remzi/OSTEP/">Consulter</a>
-      </div>
+                <div class="book-card">
+                    <div class="book-icon"><i class="fab fa-git-alt"></i></div>
+                    <h3 class="book-title">Git et GitHub pour les débutants</h3>
+                    <p class="book-author">Auteur : ProGit Book</p>
+                    <a class="book-link" href="https://git-scm.com/book/fr/v2" target="_blank">
+                        <i class="fas fa-download"></i> Télécharger
+                    </a>
+                </div>
 
-      <!-- Nouveaux livres -->
-      <div class="book-item">
-        <div class="book-title">JavaScript: The Good Parts</div>
-        <div class="book-author">Auteur : Douglas Crockford</div>
-        <a class="book-link" href="https://www.oreilly.com/library/view/javascript-the-good/9780596517748/" download>Télécharger</a>
-      </div>
+                <!-- Nouveaux livres -->
+                <div class="book-card">
+                    <div class="book-icon"><i class="fab fa-js"></i></div>
+                    <h3 class="book-title">JavaScript: The Good Parts</h3>
+                    <p class="book-author">Auteur : Douglas Crockford</p>
+                    <a class="book-link" href="https://www.oreilly.com/library/view/javascript-the-good/9780596517748/" target="_blank">
+                        <i class="fas fa-download"></i> Télécharger
+                    </a>
+                </div>
 
-      <div class="book-item">
-        <div class="book-title">Le C en 21 jours</div>
-        <div class="book-author">Auteur : Peter G. Anderson</div>
-        <a class="book-link" href="https://www.editions-eni.fr" download>Télécharger</a>
-      </div>
+                <div class="book-card">
+                    <div class="book-icon"><i class="fas fa-copyright"></i></div>
+                    <h3 class="book-title">Le C en 21 jours</h3>
+                    <p class="book-author">Auteur : Peter G. Anderson</p>
+                    <a class="book-link" href="https://www.editions-eni.fr" target="_blank">
+                        <i class="fas fa-download"></i> Télécharger
+                    </a>
+                </div>
 
-      <div class="book-item">
-        <div class="book-title">Data Science for Business</div>
-        <div class="book-author">Auteur : Foster Provost</div>
-        <a class="book-link" href="https://www.oreilly.com/library/view/data-science-for/9781449374273/" download>Télécharger</a>
-      </div>
+                <div class="book-card">
+                    <div class="book-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h3 class="book-title">Data Science for Business</h3>
+                    <p class="book-author">Auteur : Foster Provost</p>
+                    <a class="book-link" href="https://www.oreilly.com/library/view/data-science-for/9781449374273/" target="_blank">
+                        <i class="fas fa-download"></i> Télécharger
+                    </a>
+                </div>
 
-      <div class="book-item">
-        <div class="book-title">Learn C the Hard Way</div>
-        <div class="book-author">Auteur : Zed A. Shaw</div>
-        <a class="book-link" href="https://learncodethehardway.org/book/c.html" download>Télécharger</a>
-      </div>
+                <div class="book-card">
+                    <div class="book-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3 class="book-title">Learn C the Hard Way</h3>
+                    <p class="book-author">Auteur : Zed A. Shaw</p>
+                    <a class="book-link" href="https://learncodethehardway.org/book/c.html" target="_blank">
+                        <i class="fas fa-download"></i> Télécharger
+                    </a>
+                </div>
 
-      <div class="book-item">
-        <div class="book-title">Automate the Boring Stuff with Python</div>
-        <div class="book-author">Auteur : Al Sweigart</div>
-        <a class="book-link" href="https://automatetheboringstuff.com/" download>Télécharger</a>
-      </div>
+                <div class="book-card">
+                    <div class="book-icon"><i class="fab fa-python"></i></div>
+                    <h3 class="book-title">Automate the Boring Stuff with Python</h3>
+                    <p class="book-author">Auteur : Al Sweigart</p>
+                    <a class="book-link" href="https://automatetheboringstuff.com/" target="_blank">
+                        <i class="fas fa-download"></i> Télécharger
+                    </a>
+                </div>
 
-      <div class="book-item">
-        <div class="book-title">Introduction to Algorithms</div>
-        <div class="book-author">Auteur : Thomas H. Cormen</div>
-        <a class="book-link" href="https://mitpress.mit.edu/books/introduction-algorithms" download>Télécharger</a>
-      </div>
+                <div class="book-card">
+                    <div class="book-icon"><i class="fas fa-project-diagram"></i></div>
+                    <h3 class="book-title">Introduction to Algorithms</h3>
+                    <p class="book-author">Auteur : Thomas H. Cormen</p>
+                    <a class="book-link" href="https://mitpress.mit.edu/books/introduction-algorithms" target="_blank">
+                        <i class="fas fa-download"></i> Télécharger
+                    </a>
+                </div>
 
-      <div class="book-item">
-        <div class="book-title">Deep Learning with Python</div>
-        <div class="book-author">Auteur : François Chollet</div>
-        <a class="book-link" href="https://www.manning.com/books/deep-learning-with-python" download>Télécharger</a>
-      </div>
+                <div class="book-card">
+                    <div class="book-icon"><i class="fas fa-brain"></i></div>
+                    <h3 class="book-title">Deep Learning with Python</h3>
+                    <p class="book-author">Auteur : François Chollet</p>
+                    <a class="book-link" href="https://www.manning.com/books/deep-learning-with-python" target="_blank">
+                        <i class="fas fa-download"></i> Télécharger
+                    </a>
+                </div>
 
-      <div class="book-item">
-        <div class="book-title">Head First Java</div>
-        <div class="book-author">Auteur : Kathy Sierra</div>
-        <a class="book-link" href="https://www.oreilly.com/library/view/head-first-java/9780596009205/" download>Télécharger</a>
-      </div>
+                <div class="book-card">
+                    <div class="book-icon"><i class="fab fa-java"></i></div>
+                    <h3 class="book-title">Head First Java</h3>
+                    <p class="book-author">Auteur : Kathy Sierra</p>
+                    <a class="book-link" href="https://www.oreilly.com/library/view/head-first-java/9780596009205/" target="_blank">
+                        <i class="fas fa-download"></i> Télécharger
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-      <div class="book-item">
-        <div class="book-title">The Pragmatic Programmer</div>
-        <div class="book-author">Auteur : Andrew Hunt</div>
-        <a class="book-link" href="https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/" download>Télécharger</a>
-      </div>
-
-      <div class="book-item">
-        <div class="book-title">Clean Code</div>
-        <div class="book-author">Auteur : Robert C. Martin</div>
-        <a class="book-link" href="https://www.oreilly.com/library/view/clean-code/9780136083238/" download>Télécharger</a>
-      </div>
-
-      <div class="book-item">
-        <div class="book-title">The Mythical Man-Month</div>
-        <div class="book-author">Auteur : Frederick P. Brooks Jr.</div>
-        <a class="book-link" href="https://www.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959" download>Télécharger</a>
-      </div>
-
-      <div class="book-item">
-        <div class="book-title">Computer Networking: A Top-Down Approach</div>
-        <div class="book-author">Auteur : James Kurose</div>
-        <a class="book-link" href="https://www.pearson.com/store/p/computer-networking/P100000654764" download>Télécharger</a>
-      </div>
-
-      <div class="book-item">
-        <div class="book-title">Design Patterns: Elements of Reusable Object-Oriented Software</div>
-        <div class="book-author">Auteur : Erich Gamma</div>
-        <a class="book-link" href="https://www.oreilly.com/library/view/design-patterns-elements/9780201633610/" download>Télécharger</a>
-      </div>
-    </div>
-  </div>
+    <!-- Footer -->
     <footer class="modern-footer">
-    <div class="footer-wave"></div>
-    <div class="footer-content">
-        <div class="footer-section">
-            <img src="ASSETS/téléchargement (2).jpg" alt="Logo IDA COURS" class="footer-logo">
-            <p>Votre partenaire de confiance pour une formation en ligne de qualité. Développez vos compétences et construisez votre avenir avec nous.</p>
-            <div class="footer-social">
-                <a href="https://www.instagram.com/princeseydoubhk" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://twitter.com/Sdbsntech" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/seydou-bakhayokho-864070343" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.youtube.com/channel/UCCZJBOaAPdAoTiD-iJ2ftkg" class="social-icon" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a href="https://github.com/Sdbsntech" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
-            </div>
-        </div>
-
-        <div class="footer-section">
-            <h3>Liens Rapides</h3>
-            <ul class="footer-links">
-                <li><a href="index.html"><i class="fas fa-chevron-right"></i> Accueil</a></li>
-                <li><a href="pdftuto.html"><i class="fas fa-chevron-right"></i> Annexe informative</a></li>
-                <li><a href="videos.html"><i class="fas fa-chevron-right"></i> Vidéos</a></li>
-                <li><a href="L1.html"><i class="fas fa-chevron-right"></i> Licence 1</a></li>
-                <li><a href="L2.html"><i class="fas fa-chevron-right"></i> Licence 2</a></li>
-                <li><a href="L3.html"><i class="fas fa-chevron-right"></i> Licence 3</a></li>
-                <li><a href="commentaire.html"><i class="fas fa-chevron-right"></i> Commentaires</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h3>Ressources</h3>
-            <ul class="footer-links">
-                <li><a href="bibliotheques.html"><i class="fas fa-book"></i> Bibliothèque</a></li>
-                <li><a href="#calendrier"><i class="fas fa-calendar-alt"></i> Calendrier</a></li>
-                <li><a href="FAQ.HTML"><i class="fas fa-question-circle"></i> FAQ</a></li>
-                <li><a href="https://grafikart.fr/"><i class="fas fa-user-graduate"></i>Liens-utiles</a></li>
-                <li><a href="formateur.html"><i class="fas fa-chalkboard-teacher"></i> Nos Formateurs</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h3>Contact</h3>
-            <div class="footer-contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>DAKAR, PIKINE, DALIFORT</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+221 77 362 45 39</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>sdbsntech1@gmail.com</span>
+        <div class="footer-wave"></div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="ASSETS/téléchargement (2).jpg" alt="Logo IDA COURS" class="footer-logo">
+                <p>Votre partenaire de confiance pour une formation en ligne de qualité. Développez vos compétences et construisez votre avenir avec nous.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/princeseydoubhk" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/Sdbsntech" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/seydou-bakhayokho-864070343" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/channel/UCCZJBOaAPdAoTiD-iJ2ftkg" class="social-icon" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://github.com/Sdbsntech" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="legal-links">
-                    <a href="mention_legale.html">mention_legale.</a>
-                    <a href="politique_confidentialite.html">politique_confidentialite</a>
-                    <a href="condition_d'utilisation.html">condition_d'utilisation</a>
-                </div>
-    
-<div class="footer-bottom">
-        <p>&copy; 2025 IDA COURS. Plateforme réalisée par Seydou Bakhayokho.</p>
-    </div>
-</footer>
-  <script src="main.js"></script>
-  <script>
-    // protection.js - Code de protection contre l'inspection
-document.addEventListener('DOMContentLoaded', function() {
-    'use strict';
-    
-    // Configuration
-    const config = {
-        disableRightClick: true,
-        disableDevTools: true,
-        disableKeyboardShortcuts: true,
-        showWarning: true,
-        warningMessage: "Cette action n'est pas autorisée sur ce site."
-    };
-    
-    // 🔒 Empêcher le clic droit
-    if (config.disableRightClick) {
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            if (config.showWarning) {
-                showWarning(config.warningMessage);
-            }
-            return false;
-        });
-    }
-    
-    // ⌨️ Empêcher les raccourcis clavier
-    if (config.disableKeyboardShortcuts) {
-        document.addEventListener('keydown', function(e) {
-            // F12 - DevTools
-            if (e.key === 'F12' || e.keyCode === 123) {
-                e.preventDefault();
-                if (config.showWarning) {
-                    showWarning("L'ouverture des outils de développement est désactivée.");
-                }
-                return false;
-            }
-            
-            // Ctrl+Shift+I / Cmd+Opt+I
-            if ((e.ctrlKey && e.shiftKey && e.key === 'I') || 
-                (e.metaKey && e.altKey && e.key === 'I')) {
-                e.preventDefault();
-                if (config.showWarning) {
-                    showWarning("L'inspection du code est désactivée.");
-                }
-                return false;
-            }
-            
-            // Ctrl+U / Cmd+U - View Source
-            if ((e.ctrlKey && e.key === 'u') || (e.metaKey && e.key === 'u')) {
-                e.preventDefault();
-                if (config.showWarning) {
-                    showWarning("La visualisation du code source est désactivée.");
-                }
-                return false;
-            }
-            
-            // Ctrl+Shift+C / Cmd+Shift+C - Inspect Element
-            if ((e.ctrlKey && e.shiftKey && e.key === 'C') || 
-                (e.metaKey && e.shiftKey && e.key === 'C')) {
-                e.preventDefault();
-                if (config.showWarning) {
-                    showWarning("L'inspection d'élément est désactivée.");
-                }
-                return false;
-            }
-            
-            // Ctrl+S / Cmd+S - Save Page
-            if ((e.ctrlKey && e.key === 's') || (e.metaKey && e.key === 's')) {
-                e.preventDefault();
-                if (config.showWarning) {
-                    showWarning("La sauvegarde de la page est désactivée.");
-                }
-                return false;
-            }
-        });
-    }
-    
-    // 🛠️ Détection avancée des DevTools
-    if (config.disableDevTools) {
-        detectDevTools();
-    }
-    
-    // Fonction pour afficher les avertissements
-    function showWarning(message) {
-        // Créer ou mettre à jour l'élément d'avertissement
-        let warning = document.getElementById('protection-warning');
-        if (!warning) {
-            warning = document.createElement('div');
-            warning.id = 'protection-warning';
-            warning.style.cssText = `
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                background: #ff4757;
-                color: white;
-                padding: 15px 20px;
-                border-radius: 8px;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-                z-index: 10000;
-                font-family: Arial, sans-serif;
-                font-size: 14px;
-                max-width: 300px;
-                animation: slideIn 0.3s ease;
-            `;
-            document.body.appendChild(warning);
-            
-            // Ajouter l'animation CSS
-            const style = document.createElement('style');
-            style.textContent = `
-                @keyframes slideIn {
-                    from { transform: translateX(100%); opacity: 0; }
-                    to { transform: translateX(0); opacity: 1; }
-                }
-            `;
-            document.head.appendChild(style);
-        }
-        
-        warning.textContent = message;
-        warning.style.display = 'block';
-        
-        // Masquer après 3 secondes
-        setTimeout(() => {
-            warning.style.display = 'none';
-        }, 3000);
-    }
-    
-    // Fonction de détection des DevTools
-    function detectDevTools() {
-        const threshold = 160;
-        const checkDevTools = function() {
-            const widthThreshold = window.outerWidth - window.innerWidth > threshold;
-            const heightThreshold = window.outerHeight - window.innerHeight > threshold;
-            
-            if (widthThreshold || heightThreshold) {
-                // DevTools détecté
-                document.body.innerHTML = `
-                    <div style="
-                        position: fixed;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                        color: white;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        font-family: Arial, sans-serif;
-                        text-align: center;
-                        z-index: 9999;
-                    ">
-                        <div>
-                            <h1 style="font-size: 2em; margin-bottom: 20px;">🚫 Accès Restreint</h1>
-                            <p style="font-size: 1.2em; margin-bottom: 30px;">
-                                Les outils de développement sont désactivés sur ce site.<br>
-                                Veuillez fermer les DevTools pour continuer.
-                            </p>
-                            <button onclick="location.reload()" style="
-                                background: white;
-                                color: #667eea;
-                                border: none;
-                                padding: 12px 24px;
-                                border-radius: 5px;
-                                font-size: 1em;
-                                cursor: pointer;
-                                font-weight: bold;
-                            ">
-                                Recharger la page
-                            </button>
-                        </div>
+
+            <div class="footer-section">
+                <h3>Liens Rapides</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+                    <li><a href="pdftuto.html"><i class="fas fa-chevron-right"></i> Annexe informative</a></li>
+                    <li><a href="videos.html"><i class="fas fa-chevron-right"></i> Vidéos</a></li>
+                    <li><a href="L1.html"><i class="fas fa-chevron-right"></i> Licence 1</a></li>
+                    <li><a href="L2.html"><i class="fas fa-chevron-right"></i> Licence 2</a></li>
+                    <li><a href="L3.html"><i class="fas fa-chevron-right"></i> Licence 3</a></li>
+                    <li><a href="commentaire.html"><i class="fas fa-chevron-right"></i> Commentaires</a></li>
+                    <li><a href="bibliotheques.html"><i class="fas fa-chevron-right"></i> Bibliothèque</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Ressources</h3>
+                <ul class="footer-links">
+                    <li><a href="bibliotheques.html"><i class="fas fa-book"></i> Bibliothèque</a></li>
+                    <li><a href="#calendrier"><i class="fas fa-calendar-alt"></i> Calendrier</a></li>
+                    <li><a href="FAQ.HTML"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    <li><a href="https://grafikart.fr/"><i class="fas fa-user-graduate"></i> Liens utiles</a></li>
+                    <li><a href="formateur.html"><i class="fas fa-chalkboard-teacher"></i> Nos Formateurs</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <div class="footer-contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>DAKAR, PIKINE, DALIFORT</span>
                     </div>
-                `;
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+221 77 362 45 39</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>sdbsntech1@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="legal-links">
+            <a href="mention_legale.html">Mentions légales</a>
+            <a href="politique_confidentialite.html">Politique de confidentialité</a>
+            <a href="condition_d'utilisation.html">Conditions d'utilisation</a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 IDA COURS. Plateforme réalisée par Seydou Bakhayokho.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Menu mobile
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = menuToggle.querySelector('i');
+                if (icon.classList.contains('fa-bars')) {
+                    icon.classList.replace('fa-bars', 'fa-times');
+                } else {
+                    icon.classList.replace('fa-times', 'fa-bars');
+                }
+            });
+
+            // Navbar scroll effect
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // Fonction de recherche
+            function filterBooks() {
+                const input = document.getElementById('searchInput');
+                const filter = input.value.toLowerCase();
+                const bookCards = document.querySelectorAll('.book-card');
+                
+                bookCards.forEach(card => {
+                    const title = card.querySelector('.book-title').textContent.toLowerCase();
+                    const author = card.querySelector('.book-author').textContent.toLowerCase();
+                    
+                    if (title.includes(filter) || author.includes(filter)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
             }
-        };
-        
-        // Vérifier périodiquement
-        setInterval(checkDevTools, 1000);
-        
-        // Événement de redimensionnement
-        window.addEventListener('resize', checkDevTools);
-    }
-    
-    // Protection supplémentaire contre la sélection de texte
-    document.addEventListener('selectstart', function(e) {
-        e.preventDefault();
-        return false;
-    });
-    
-    // Protection contre le drag & drop d'images
-    document.addEventListener('dragstart', function(e) {
-        if (e.target.tagName === 'IMG') {
-            e.preventDefault();
-            return false;
-        }
-    });
-    
-    console.log('🔒 Protection activée - IDA Cours');
-});
 
-// Protection avancée contre la console
-(function() {
-    'use strict';
-    
-    // Rediriger la console
-    const originalConsole = {
-        log: console.log,
-        warn: console.warn,
-        error: console.error,
-        info: console.info
-    };
-    
-    // Redéfinir les méthodes de la console
-    ['log', 'warn', 'error', 'info'].forEach(method => {
-        console[method] = function() {
-            // Vous pouvez choisir de ne rien faire ou d'afficher un message
-            originalConsole.log(`🚫 Console.${method} est surveillée - IDA Cours`);
-        };
-    });
-    
-    // Empêcher l'accès aux propriétés sensibles
-    Object.defineProperty(window, 'console', {
-        get: function() {
-            return {
-                log: function() { /* bloqué */ },
-                warn: function() { /* bloqué */ },
-                error: function() { /* bloqué */ },
-                info: function() { /* bloqué */ }
+            // Événement de recherche
+            document.getElementById('searchInput').addEventListener('input', filterBooks);
+
+            // Animation des cartes au scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
             };
-        },
-        set: function() { /* bloqué */ }
-    });
-})();
-  </script>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Bloquer le clic droit
-    document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-        return false;
-    });
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
 
-    // Bloquer copier/coller/couper
-    ['copy', 'cut', 'paste'].forEach(function(evt) {
-        document.addEventListener(evt, function(e) {
-            e.preventDefault();
-            return false;
+            // Observer toutes les cartes de livres
+            document.querySelectorAll('.book-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+
+            // Fermer le menu mobile en cliquant sur un lien
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    menuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                });
+            });
+
+            // Fermer le menu mobile en cliquant à l'extérieur
+            document.addEventListener('click', (e) => {
+                if (!navbar.contains(e.target) && navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    menuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                }
+            });
         });
-    });
-
-    // Bloquer raccourcis DevTools et code source
-    document.addEventListener('keydown', function(e) {
-        // F12
-        if (e.key === 'F12' || e.keyCode === 123) {
-            e.preventDefault();
-            return false;
-        }
-        // Ctrl+Shift+I / Cmd+Opt+I
-        if ((e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') ||
-            (e.metaKey && e.altKey && e.key.toLowerCase() === 'i')) {
-            e.preventDefault();
-            return false;
-        }
-        // Ctrl+U / Cmd+U
-        if ((e.ctrlKey && e.key.toLowerCase() === 'u') ||
-            (e.metaKey && e.key.toLowerCase() === 'u')) {
-            e.preventDefault();
-            return false;
-        }
-    });
-
-    // Détection DevTools par resize
-    setInterval(function() {
-        if (window.outerWidth - window.innerWidth > 160 ||
-            window.outerHeight - window.innerHeight > 160) {
-            document.body.innerHTML = '<h1 style="color:red;text-align:center;margin-top:20vh;">Accès restreint : DevTools détecté !</h1>';
-        }
-    }, 1000);
-});
-</script>
-
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Bloquer le clic droit
-    document.addEventListener('contextmenu', function(e) { e.preventDefault(); return false; });
-
-    // Bloquer copier/couper/coller
-    ['copy', 'cut', 'paste'].forEach(function(evt) {
-        document.addEventListener(evt, function(e) { e.preventDefault(); return false; });
-    });
-
-    // Bloquer la sélection de texte
-    document.addEventListener('selectstart', function(e) { e.preventDefault(); return false; });
-
-    // Bloquer le drag & drop d'images
-    document.addEventListener('dragstart', function(e) {
-        if (e.target.tagName === 'IMG') { e.preventDefault(); return false; }
-    });
-
-    // Bloquer toutes les touches F1 à F12 et autres combinaisons
-    document.addEventListener('keydown', function(e) {
-        // Bloquer touches F1 à F12
-        if (e.key.match(/^F[1-9]$|^F1[0-2]$/) || (e.keyCode >= 112 && e.keyCode <= 123)) {
-            e.preventDefault(); return false;
-        }
-        // Ctrl+U, Ctrl+Shift+I, Ctrl+Shift+C, Ctrl+S, Ctrl+Alt+I, Ctrl+Alt+J, Ctrl+Alt+C
-        if (
-            (e.ctrlKey && e.key.toLowerCase() === 'u') ||
-            (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') ||
-            (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'c') ||
-            (e.ctrlKey && e.key.toLowerCase() === 's') ||
-            (e.ctrlKey && e.altKey && e.key.toLowerCase() === 'i') ||
-            (e.ctrlKey && e.altKey && e.key.toLowerCase() === 'j') ||
-            (e.ctrlKey && e.altKey && e.key.toLowerCase() === 'c')
-        ) {
-            e.preventDefault(); return false;
-        }
-    });
-
-    // Détection DevTools par resize
-    setInterval(function() {
-        if (window.outerWidth - window.innerWidth > 160 ||
-            window.outerHeight - window.innerHeight > 160) {
-            document.body.innerHTML = '<h1 style="color:red;text-align:center;margin-top:20vh;">Accès restreint : DevTools détecté !</h1>';
-        }
-    }, 1000);
-});
-</script>
-
+    </script>
 </body>
 </html>

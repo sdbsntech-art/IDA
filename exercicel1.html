@@ -2,622 +2,1035 @@
 <html lang="fr">
 <head>
     <!-- ads.txt: google.com, pub-3830476419469874, DIRECT, f08c47fec0942fa0 -->
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3830476419469874"
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3830476419469874"
      crossorigin="anonymous"></script>
 
-<script async custom-element="amp-auto-ads"
+    <script async custom-element="amp-auto-ads"
         src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
-</script>
+    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/fontawesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/brands.min.css">
-    <link rel="stylesheet" href="index.css">
+    <meta name="description" content="Exercices Licence 1 Informatique - IDA COURS">
+    <meta name="keywords" content="exercices, licence 1, informatique, développement, programmation">
+    <meta name="author" content="IDA COURS">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="favicon.png" sizes="180x180">
+    <link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="favicon.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <meta name="google-site-verification" content="8WaeKM-mQAcuLhGP1eHzoO1Gr0IX9lq_NoNGavj0fB8" />
-<title>Exercice Licence 1</title>
+    <title>Exercices Licence 1 - IDA COURS</title>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3830476419469874"
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3942650991755175"
      crossorigin="anonymous"></script>
 
-<meta name="google-adsense-account" content="ca-pub-3942650991755175">
+    <meta name="google-adsense-account" content="ca-pub-3942650991755175">
+
+    <style>
+        /*  VARIABLES ET RESET  */
+        :root {
+            --main-bg: linear-gradient(135deg, #e0f7fa 0%, #bacdcf 100%);
+            --primary: #0d6efd;
+            --secondary: #6c757d;
+            --accent: #00b894;
+            --light: #f8f9fa;
+            --dark: #222;
+            --radius: 16px;
+            --shadow: 0 4px 24px rgba(0,0,0,0.08);
+            --transition: 0.3s cubic-bezier(.4,2,.6,1);
+            --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --background-color: #f8f9fa;
+            --text-color: #2c3e50;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --gradient-primary: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
+            --gradient-accent: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+            --header-height: 70px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background: var(--main-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /*  NAVBAR CHIC ET RESPONSIVE  */
+        .navbar {
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+            height: var(--header-height);
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+
+        .container-nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            height: 100%;
+        }
+
+        .logo-nav {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transition: var(--transition);
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover::before,
+        .nav-link.active::before {
+            width: 80%;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary);
+            background: rgba(13, 110, 253, 0.1);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+            background: none;
+            border: none;
+            padding: 0.5rem;
+        }
+
+        /*  MAIN CONTENT  */
+        main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+            min-height: calc(100vh - var(--header-height) - 400px);
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section-divider {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+            margin: 3rem 0;
+        }
+
+        /* SECTIONS STYLÉES  */
+        .semestre-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-align: center;
+            margin: 3rem 0 2rem 0;
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .semestre-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+        }
+
+        .matieres-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .matiere-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .matiere-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gradient-primary);
+            transition: var(--transition);
+        }
+
+        .matiere-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+        }
+
+        .matiere-card:hover::before {
+            width: 6px;
+        }
+
+        .matiere-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .matiere-icon {
+            font-size: 1.8rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            width: 40px;
+            text-align: center;
+        }
+
+        .matiere-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin: 0;
+        }
+
+        .matiere-list {
+            list-style: none;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .matiere-item {
+            padding: 0.8rem 1rem;
+            background: rgba(248, 249, 250, 0.8);
+            border-radius: calc(var(--radius) - 4px);
+            border-left: 3px solid transparent;
+            transition: var(--transition);
+        }
+
+        .matiere-item:hover {
+            border-left-color: var(--accent);
+            background: rgba(0, 184, 148, 0.1);
+            transform: translateX(5px);
+        }
+
+        .matiere-link {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .matiere-link::before {
+            content: '📄';
+            font-size: 0.9rem;
+        }
+
+        .matiere-link:hover {
+            color: var(--primary);
+        }
+
+        /*  BOUTON VOIR PLUS  */
+        .cta-section {
+            text-align: center;
+            margin: 4rem auto;
+            position: relative;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 2.5rem;
+            background: var(--gradient-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: var(--transition);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(13, 110, 253, 0.4);
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        /*  FOOTER MODERNE ET RESPONSIVE  */
+        .modern-footer {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+            color: white;
+            position: relative;
+            margin-top: 4rem;
+        }
+
+        .footer-wave {
+            position: absolute;
+            top: -2px;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z' fill='%23f8f9fa'/%3E%3C/svg%3E");
+            background-size: cover;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        .footer-logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            object-fit: cover;
+        }
+
+        .footer-section p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+
+        .social-icon:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .footer-contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .contact-item i {
+            color: var(--accent);
+            width: 20px;
+        }
+
+        .legal-links {
+            text-align: center;
+            padding: 2rem 0 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 0 2rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .legal-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .legal-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(0, 0, 0, 0.2);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        /*  RESPONSIVE DESIGN  */
+        @media (max-width: 1024px) {
+            .matieres-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container-nav {
+                padding: 0 1rem;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: var(--header-height);
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - var(--header-height));
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 2rem;
+                transition: var(--transition);
+                gap: 1rem;
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            main {
+                padding: 1rem;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .semestre-title {
+                font-size: 1.8rem;
+            }
+
+            .matiere-card {
+                padding: 1.5rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 3rem 1rem 1rem;
+            }
+
+            .footer-section {
+                text-align: center;
+            }
+
+            .footer-section h3::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .footer-social {
+                justify-content: center;
+            }
+
+            .legal-links {
+                margin: 0 1rem;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-nav {
+                font-size: 1.4rem;
+            }
+
+            .page-title {
+                font-size: 1.6rem;
+            }
+
+            .semestre-title {
+                font-size: 1.5rem;
+            }
+
+            .matieres-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .matiere-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
+            }
+
+            .cta-button {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+
+            .footer-content {
+                padding: 2rem 1rem 1rem;
+            }
+        }
+
+        /*  ANIMATIONS  */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .matiere-card {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .matiere-card:nth-child(even) {
+            animation-delay: 0.1s;
+        }
+
+        .matiere-card:nth-child(odd) {
+            animation-delay: 0.2s;
+        }
+
+        /*  ACCESSIBILITÉ  */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Focus visible pour l'accessibilité */
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        /* Mode sombre automatique */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --main-bg: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+                --card-bg: rgba(30, 30, 46, 0.95);
+                --text-color: #e2e8f0;
+                --light: #2d3748;
+            }
+
+            .navbar {
+                background: rgba(26, 32, 44, 0.95);
+                border-bottom-color: rgba(255, 255, 255, 0.1);
+            }
+
+            .matiere-item {
+                background: rgba(45, 55, 72, 0.8);
+            }
+        }
+    </style>
 </head>
 <body>
-<amp-auto-ads type="adsense"
+    <amp-auto-ads type="adsense"
         data-ad-client="ca-pub-3942650991755175">
-</amp-auto-ads>
+    </amp-auto-ads>
 
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container-nav">
+            <div class="logo-nav">SDBSN-CODE</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="videos.html" class="nav-link">Vidéos</a></li>
+                <li><a href="L1.html" class="nav-link active">Licence 1</a></li>
+                <li><a href="L2.html" class="nav-link">Licence 2</a></li>
+                <li><a href="L3.html" class="nav-link">Licence 3</a></li>
+                <li><a href="pdftuto.html" class="nav-link">Annexe informative</a></li>
+                <li><a href="commentaire.html" class="nav-link">Commentaires</a></li>
+                <li><a href="bibliotheques.html" class="nav-link">Bibliothèque</a></li>
+            </ul>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
     <main>
-        <header>
-            <h1>Exercice Licence 1</h1>
- <section class="tc-matiere section visible">
-      <h2><i class="fab fa-html5"></i> HTML</h2>
-      <ul class="tc-list">
-        <li>
-          <a href="ASSETS/TP 03 INTRODUCTION AUX LANGAGES HTML ET CSS.pdf" target="_blank">TP 03 INTRODUCTION AUX LANGAGES HTML ET CSS (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/TP 04 INTRODUCTION AUX LANGAGES HTML ET CSS.pdf" target="_blank">TP 04 INTRODUCTION AUX LANGAGES HTML ET CSS (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/TP 05 INTRODUCTION AUX LANGAGES HTML ET CSS.pdf" target="_blank">TP 05 INTRODUCTION AUX LANGAGES HTML ET CSS (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/TP 06 INTRODUCTION AUX LANGAGES HTML ET CSS.pdf" target="_blank">TP 06 INTRODUCTION AUX LANGAGES HTML ET CSS (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/TP 07 INTRODUCTION AUX LANGAGES HTML ET CSS.pdf" target="_blank">TP 07 INTRODUCTION AUX LANGAGES HTML ET CSS (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/TP 08 INTRODUCTION AUX LANGAGES HTML ET CSS.pdf" target="_blank">TP 08 INTRODUCTION AUX LANGAGES HTML ET CSS (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/TP 09 INTRODUCTION AUX LANGAGES HTML ET CSS.pdf" target="_blank">TP 09 INTRODUCTION AUX LANGAGES HTML ET CSS (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/Exercices de Travaux Dirigés2 (1).pdf" target="_blank">Exercices de Travaux Dirigés 2 (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/FICHE DE TP DE LA SEQUENCE 04.pdf" target="_blank">FICHE DE TP DE LA SEQUENCE 04 (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/Mini projet_sequence1.pdf" target="_blank">Mini projet sequence 1 (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/TD 03 - LES NOUVEAUX ELEMENTS SEMANTIQUES DE HTML.pdf" target="_blank">TD 03 - LES NOUVEAUX ELEMENTS SEMANTIQUES DE HTML (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/TD_sequence 2.pdf" target="_blank">TD sequence 2 (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/TD2.1.pdf" target="_blank">TD2.1 (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/TD2.s1.pdf" target="_blank">TD2.s1 (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/TD4.pdf" target="_blank">TD4 (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/TP 01.pdf" target="_blank">TP 01 (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/TP 02.pdf" target="_blank">TP 02 (PDF)</a>
-        </li>
-      </ul>
-    </section>
-    <section class="tc-matiere section visible">
-      <h2><i class="fab fa-js"></i> JavaScript</h2>
-      <ul class="tc-list">
-        <li>
-          <a href="ASSETS/js 1.pdf" target="_blank">JS 1 (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/js qcm (1).pdf" target="_blank">JS QCM (1) (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/js qcm.pdf" target="_blank">JS QCM (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/TD1.pdf" target="_blank">TD1 (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/TD2.pdf" target="_blank">TD2 (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/TD3.pdf" target="_blank">TD3 (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/TD4 (1).pdf" target="_blank">TD4 (1) (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/TD5.pdf" target="_blank">TD5 (PDF)</a>
-        </li>
-      </ul>
-    </section>
-        <!-- ...jusqu'à 15 TC... -->
-    <section class="tc-matiere section visible">
-      <h2><i class="fas fa-project-diagram"></i> Programmation</h2>
-      <ul class="tc-list">
-        <li>
-          <a href="ASSETS/Atelier 1.pdf" target="_blank">Atelier 1 (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/Atelier 2.pdf" target="_blank">Atelier 2 (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/Atelier 3.pdf" target="_blank">Atelier 3 (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/TD_Séquence2.pdf" target="_blank">TD Séquence 2 (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/Travaux Dirigés_3.pdf" target="_blank">Travaux Dirigés 3 (PDF)</a>
-        </li>
-      </ul>
-     </section>
-     <section class="tc-matiere section visible">
-      <h2><i class="fas fa-network-wired"></i> Réseau</h2>
-      <ul class="tc-list">
-        <li>
-          <a href="ASSETS/Travaux-Pratiques1-IntroductionAuxReseaux.pdf" target="_blank">Travaux Pratiques 1 - Introduction aux Réseaux (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/Travaux-Pratiques2-1-IntroductionAuxReseaux.pdf" target="_blank">Travaux Pratiques 2-1 - Introduction aux Réseaux (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/Travaux-Pratiques2-2-IntroductionAuxReseaux.pdf" target="_blank">Travaux Pratiques 2-2 - Introduction aux Réseaux (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/Travaux-Pratiques2-3-IntroductionAuxReseaux.pdf" target="_blank">Travaux Pratiques 2-3 - Introduction aux Réseaux (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/Travaux-Pratiques3-1-IntroductionAuxReseaux.pdf" target="_blank">Travaux Pratiques 3-1 - Introduction aux Réseaux (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/Travaux-Pratiques3-2-IntroductionAuxReseaux.pdf" target="_blank">Travaux Pratiques 3-2 - Introduction aux Réseaux (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/Travaux-Pratiques4-IntroductionAuxReseaux.pdf" target="_blank">Travaux Pratiques 4 - Introduction aux Réseaux (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/Travaux-Pratiques5-Introduction aux Reseaux.pdf" target="_blank">Travaux Pratiques 5 - Introduction aux Réseaux (PDF)</a>
-        </li>
-      </ul>
-      </section>
-      <section class="tc-matiere section visible">
-      <h2><i class="fas fa-laptop-code"></i> Language C</h2>
-      <ul class="tc-list">
-        <li>
-          <a href="ASSETS/Exercices de Travaux Dirigés1 (1).pdf" target="_blank">Exercices de Travaux Dirigés 1 (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/Exercices de Travaux Dirigés2 (2).pdf" target="_blank">Exercices de Travaux Dirigés 2 (PDF)</a>
-        </li>
-      </ul>
-      </section>
-      <section class="tc-matiere section visible">
-      <h2><i class="fas fa-project-diagram"></i> Algorithme</h2> 
-      <ul class="tc-list">
-        <li>
-          <a href="ASSETS/Exercices de Travaux Dirigés1.pdf" target="_blank">Exercices de Travaux Dirigés 1 (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/Exercices de Travaux Dirigés2 (1).pdf" target="_blank">Exercices de Travaux Dirigés 2 (1) (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/Exercices de Travaux Dirigés2.pdf" target="_blank">Exercices de Travaux Dirigés 2 (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/TD_Algorithmes_Basique.pdf" target="_blank">TD Algorithmes Basique (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/TD_seq3_algo_ida.pdf" target="_blank">TD Séquence 3 Algorithme IDA (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/TD2.1.pdf" target="_blank">TD2.1 (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/TD2.s1.pdf" target="_blank">TD2.s1 (PDF)</a>
-        </li>
-        <li>
-          <a href="ASSETS/TD4.pdf" target="_blank">TD4 (PDF)</a>
-        </li>
-      </ul>
-      </section>
-      <section class="tc-matiere section visible">
-  <h2><i class="fas fa-file-code"></i> XML</h2>
-  <ul class="tc-list">
-    <li>
-      <a href="ASSETS/TD seance2.pdf" target="_blank">TD Séance 2 (PDF)</a>
-    </li>
-    <li>
-      <a href="ASSETS/td3 (1).pdf" target="_blank">TD 3 (1) (PDF)</a>
-    </li>
-  </ul>
-</section>
-      <hr>
-       <footer class="modern-footer">
-    <div class="footer-wave"></div>
-    <div class="footer-content">
-        <div class="footer-section">
-            <img src="ASSETS/téléchargement (2).jpg" alt="Logo IDA COURS" class="footer-logo">
-            <p>Votre partenaire de confiance pour une formation en ligne de qualité. Développez vos compétences et construisez votre avenir avec nous.</p>
-            <div class="footer-social">
-                <a href="https://www.instagram.com/princeseydoubhk" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://twitter.com/Sdbsntech" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/seydou-bakhayokho-864070343" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.youtube.com/channel/UCCZJBOaAPdAoTiD-iJ2ftkg" class="social-icon" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a href="https://github.com/Sdbsntech" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
-            </div>
+        <header class="page-header">
+            <h1 class="page-title">EXERCICES LICENCE 1</h1>
+            <p class="page-subtitle">Découvrez tous les exercices et travaux pratiques pour votre première année de licence en informatique</p>
+        </header>
+
+        <hr class="section-divider">
+
+        <!-- HTML/CSS -->
+        <h2 class="semestre-title">HTML & CSS</h2>
+        
+        <div class="matieres-grid">
+            <!-- HTML -->
+            <section class="matiere-card">
+                <div class="matiere-header">
+                    <div class="matiere-icon"><i class="fab fa-html5"></i></div>
+                    <h3 class="matiere-title">HTML</h3>
+                </div>
+                <ul class="matiere-list">
+                    <li class="matiere-item"><a href="ASSETS/TP 03 INTRODUCTION AUX LANGAGES HTML ET CSS.pdf" target="_blank" class="matiere-link">TP 03 - Introduction HTML/CSS</a></li>
+                    <li class="matiere-item"><a href="ASSETS/TP 04 INTRODUCTION AUX LANGAGES HTML ET CSS.pdf" target="_blank" class="matiere-link">TP 04 - Introduction HTML/CSS</a></li>
+                    <li class="matiere-item"><a href="ASSETS/TP 05 INTRODUCTION AUX LANGAGES HTML ET CSS.pdf" target="_blank" class="matiere-link">TP 05 - Introduction HTML/CSS</a></li>
+                    <li class="matiere-item"><a href="ASSETS/TP 06 INTRODUCTION AUX LANGAGES HTML ET CSS.pdf" target="_blank" class="matiere-link">TP 06 - Introduction HTML/CSS</a></li>
+                    <li class="matiere-item"><a href="ASSETS/TP 07 INTRODUCTION AUX LANGAGES HTML ET CSS.pdf" target="_blank" class="matiere-link">TP 07 - Introduction HTML/CSS</a></li>
+                    <li class="matiere-item"><a href="ASSETS/TP 08 INTRODUCTION AUX LANGAGES HTML ET CSS.pdf" target="_blank" class="matiere-link">TP 08 - Introduction HTML/CSS</a></li>
+                    <li class="matiere-item"><a href="ASSETS/TP 09 INTRODUCTION AUX LANGAGES HTML ET CSS.pdf" target="_blank" class="matiere-link">TP 09 - Introduction HTML/CSS</a></li>
+                    <li class="matiere-item"><a href="ASSETS/TD 03 - LES NOUVEAUX ELEMENTS SEMANTIQUES DE HTML.pdf" target="_blank" class="matiere-link">TD 03 - Éléments sémantiques HTML</a></li>
+                    <li class="matiere-item"><a href="ASSETS/TD_sequence 2.pdf" target="_blank" class="matiere-link">TD Séquence 2</a></li>
+                    <li class="matiere-item"><a href="ASSETS/TP 01.pdf" target="_blank" class="matiere-link">TP 01</a></li>
+                    <li class="matiere-item"><a href="ASSETS/TP 02.pdf" target="_blank" class="matiere-link">TP 02</a></li>
+                </ul>
+            </section>
+
+            <!-- CSS & Projets -->
+            <section class="matiere-card">
+                <div class="matiere-header">
+                    <div class="matiere-icon"><i class="fab fa-css3-alt"></i></div>
+                    <h3 class="matiere-title">CSS & Projets</h3>
+                </div>
+                <ul class="matiere-list">
+                    <li class="matiere-item"><a href="ASSETS/Exercices de Travaux Dirigés2 (1).pdf" target="_blank" class="matiere-link">Exercices TD 2</a></li>
+                    <li class="matiere-item"><a href="ASSETS/FICHE DE TP DE LA SEQUENCE 04.pdf" target="_blank" class="matiere-link">Fiche TP Séquence 04</a></li>
+                    <li class="matiere-item"><a href="ASSETS/Mini projet_sequence1.pdf" target="_blank" class="matiere-link">Mini projet séquence 1</a></li>
+                    <li class="matiere-item"><a href="ASSETS/TD2.1.pdf" target="_blank" class="matiere-link">TD2.1</a></li>
+                    <li class="matiere-item"><a href="ASSETS/TD2.s1.pdf" target="_blank" class="matiere-link">TD2.s1</a></li>
+                    <li class="matiere-item"><a href="ASSETS/TD4.pdf" target="_blank" class="matiere-link">TD4</a></li>
+                </ul>
+            </section>
         </div>
 
-        <div class="footer-section">
-            <h3>Liens Rapides</h3>
-            <ul class="footer-links">
-                <li><a href="index.html"><i class="fas fa-chevron-right"></i> Accueil</a></li>
-                <li><a href="pdftuto.html"><i class="fas fa-chevron-right"></i> Annexe informative</a></li>
-                <li><a href="videos.html"><i class="fas fa-chevron-right"></i> Vidéos</a></li>
-                <li><a href="L1.html"><i class="fas fa-chevron-right"></i> Licence 1</a></li>
-                <li><a href="L2.html"><i class="fas fa-chevron-right"></i> Licence 2</a></li>
-                <li><a href="L3.html"><i class="fas fa-chevron-right"></i> Licence 3</a></li>
-                <li><a href="commentaire.html"><i class="fas fa-chevron-right"></i> Commentaires</a></li>
-            </ul>
+        <hr class="section-divider">
+
+        <!-- JAVASCRIPT -->
+        <h2 class="semestre-title">JAVASCRIPT</h2>
+        
+        <div class="matieres-grid">
+            <!-- JavaScript -->
+            <section class="matiere-card">
+                <div class="matiere-header">
+                    <div class="matiere-icon"><i class="fab fa-js"></i></div>
+                    <h3 class="matiere-title">JavaScript</h3>
+                </div>
+                <ul class="matiere-list">
+                    <li class="matiere-item"><a href="ASSETS/js 1.pdf" target="_blank" class="matiere-link">JS 1 - Bases</a></li>
+                    <li class="matiere-item"><a href="ASSETS/js qcm (1).pdf" target="_blank" class="matiere-link">JS QCM (1)</a></li>
+                    <li class="matiere-item"><a href="ASSETS/js qcm.pdf" target="_blank" class="matiere-link">JS QCM</a></li>
+                    <li class="matiere-item"><a href="ASSETS/TD1.pdf" target="_blank" class="matiere-link">TD1 JavaScript</a></li>
+                    <li class="matiere-item"><a href="ASSETS/TD2.pdf" target="_blank" class="matiere-link">TD2 JavaScript</a></li>
+                    <li class="matiere-item"><a href="ASSETS/TD3.pdf" target="_blank" class="matiere-link">TD3 JavaScript</a></li>
+                    <li class="matiere-item"><a href="ASSETS/TD4 (1).pdf" target="_blank" class="matiere-link">TD4 (1) JavaScript</a></li>
+                    <li class="matiere-item"><a href="ASSETS/TD5.pdf" target="_blank" class="matiere-link">TD5 JavaScript</a></li>
+                </ul>
+            </section>
         </div>
 
-        <div class="footer-section">
-            <h3>Ressources</h3>
-            <ul class="footer-links">
-                <li><a href="bibliotheques.html"><i class="fas fa-book"></i> Bibliothèque</a></li>
-                <li><a href="#calendrier"><i class="fas fa-calendar-alt"></i> Calendrier</a></li>
-                <li><a href="FAQ.HTML"><i class="fas fa-question-circle"></i> FAQ</a></li>
-                <li><a href="https://grafikart.fr/"><i class="fas fa-user-graduate"></i>Liens-utiles</a></li>
-                <li><a href="formateur.html"><i class="fas fa-chalkboard-teacher"></i> Nos Formateurs</a></li>
-            </ul>
+        <hr class="section-divider">
+
+        <!-- PROGRAMMATION & ALGORITHMIQUE -->
+        <h2 class="semestre-title">PROGRAMMATION & ALGORITHMIQUE</h2>
+        
+        <div class="matieres-grid">
+            <!-- Programmation -->
+            <section class="matiere-card">
+                <div class="matiere-header">
+                    <div class="matiere-icon"><i class="fas fa-project-diagram"></i></div>
+                    <h3 class="matiere-title">Programmation</h3>
+                </div>
+                <ul class="matiere-list">
+                    <li class="matiere-item"><a href="ASSETS/Atelier 1.pdf" target="_blank" class="matiere-link">Atelier 1</a></li>
+                    <li class="matiere-item"><a href="ASSETS/Atelier 2.pdf" target="_blank" class="matiere-link">Atelier 2</a></li>
+                    <li class="matiere-item"><a href="ASSETS/Atelier 3.pdf" target="_blank" class="matiere-link">Atelier 3</a></li>
+                    <li class="matiere-item"><a href="ASSETS/TD_Séquence2.pdf" target="_blank" class="matiere-link">TD Séquence 2</a></li>
+                    <li class="matiere-item"><a href="ASSETS/Travaux Dirigés_3.pdf" target="_blank" class="matiere-link">Travaux Dirigés 3</a></li>
+                </ul>
+            </section>
+
+            <!-- Algorithme -->
+            <section class="matiere-card">
+                <div class="matiere-header">
+                    <div class="matiere-icon"><i class="fas fa-project-diagram"></i></div>
+                    <h3 class="matiere-title">Algorithme</h3>
+                </div>
+                <ul class="matiere-list">
+                    <li class="matiere-item"><a href="ASSETS/Exercices de Travaux Dirigés1.pdf" target="_blank" class="matiere-link">Exercices TD 1</a></li>
+                    <li class="matiere-item"><a href="ASSETS/Exercices de Travaux Dirigés2 (1).pdf" target="_blank" class="matiere-link">Exercices TD 2 (1)</a></li>
+                    <li class="matiere-item"><a href="ASSETS/Exercices de Travaux Dirigés2.pdf" target="_blank" class="matiere-link">Exercices TD 2</a></li>
+                    <li class="matiere-item"><a href="ASSETS/TD_Algorithmes_Basique.pdf" target="_blank" class="matiere-link">TD Algorithmes Basique</a></li>
+                    <li class="matiere-item"><a href="ASSETS/TD_seq3_algo_ida.pdf" target="_blank" class="matiere-link">TD Séquence 3 Algorithme</a></li>
+                    <li class="matiere-item"><a href="ASSETS/TD2.1.pdf" target="_blank" class="matiere-link">TD2.1 Algorithmes</a></li>
+                    <li class="matiere-item"><a href="ASSETS/TD2.s1.pdf" target="_blank" class="matiere-link">TD2.s1 Algorithmes</a></li>
+                    <li class="matiere-item"><a href="ASSETS/TD4.pdf" target="_blank" class="matiere-link">TD4 Algorithmes</a></li>
+                </ul>
+            </section>
         </div>
 
-        <div class="footer-section">
-            <h3>Contact</h3>
-            <div class="footer-contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>DAKAR, PIKINE, DALIFORT</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+221 77 362 45 39</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>sdbsntech1@gmail.com</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="legal-links">
-                    <a href="mention_legale.html">mention_legale.</a>
-                    <a href="politique_confidentialite.html">politique_confidentialite</a>
-                    <a href="condition_d'utilisation.html">condition_d'utilisation</a>
-                </div>
-    
-<div class="footer-bottom">
-        <p>&copy; 2025 IDA COURS. Plateforme réalisée par Seydou Bakhayokho.</p>
-    </div>
-</footer>
-<script>
-  // protection.js - Code de protection contre l'inspection
-document.addEventListener('DOMContentLoaded', function() {
-    'use strict';
-    
-    // Configuration
-    const config = {
-        disableRightClick: true,
-        disableDevTools: true,
-        disableKeyboardShortcuts: true,
-        showWarning: true,
-        warningMessage: "Cette action n'est pas autorisée sur ce site."
-    };
-    
-    // 🔒 Empêcher le clic droit
-    if (config.disableRightClick) {
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            if (config.showWarning) {
-                showWarning(config.warningMessage);
-            }
-            return false;
-        });
-    }
-    
-    // ⌨️ Empêcher les raccourcis clavier
-    if (config.disableKeyboardShortcuts) {
-        document.addEventListener('keydown', function(e) {
-            // F12 - DevTools
-            if (e.key === 'F12' || e.keyCode === 123) {
-                e.preventDefault();
-                if (config.showWarning) {
-                    showWarning("L'ouverture des outils de développement est désactivée.");
-                }
-                return false;
-            }
-            
-            // Ctrl+Shift+I / Cmd+Opt+I
-            if ((e.ctrlKey && e.shiftKey && e.key === 'I') || 
-                (e.metaKey && e.altKey && e.key === 'I')) {
-                e.preventDefault();
-                if (config.showWarning) {
-                    showWarning("L'inspection du code est désactivée.");
-                }
-                return false;
-            }
-            
-            // Ctrl+U / Cmd+U - View Source
-            if ((e.ctrlKey && e.key === 'u') || (e.metaKey && e.key === 'u')) {
-                e.preventDefault();
-                if (config.showWarning) {
-                    showWarning("La visualisation du code source est désactivée.");
-                }
-                return false;
-            }
-            
-            // Ctrl+Shift+C / Cmd+Shift+C - Inspect Element
-            if ((e.ctrlKey && e.shiftKey && e.key === 'C') || 
-                (e.metaKey && e.shiftKey && e.key === 'C')) {
-                e.preventDefault();
-                if (config.showWarning) {
-                    showWarning("L'inspection d'élément est désactivée.");
-                }
-                return false;
-            }
-            
-            // Ctrl+S / Cmd+S - Save Page
-            if ((e.ctrlKey && e.key === 's') || (e.metaKey && e.key === 's')) {
-                e.preventDefault();
-                if (config.showWarning) {
-                    showWarning("La sauvegarde de la page est désactivée.");
-                }
-                return false;
-            }
-        });
-    }
-    
-    // 🛠️ Détection avancée des DevTools
-    if (config.disableDevTools) {
-        detectDevTools();
-    }
-    
-    // Fonction pour afficher les avertissements
-    function showWarning(message) {
-        // Créer ou mettre à jour l'élément d'avertissement
-        let warning = document.getElementById('protection-warning');
-        if (!warning) {
-            warning = document.createElement('div');
-            warning.id = 'protection-warning';
-            warning.style.cssText = `
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                background: #ff4757;
-                color: white;
-                padding: 15px 20px;
-                border-radius: 8px;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-                z-index: 10000;
-                font-family: Arial, sans-serif;
-                font-size: 14px;
-                max-width: 300px;
-                animation: slideIn 0.3s ease;
-            `;
-            document.body.appendChild(warning);
-            
-            // Ajouter l'animation CSS
-            const style = document.createElement('style');
-            style.textContent = `
-                @keyframes slideIn {
-                    from { transform: translateX(100%); opacity: 0; }
-                    to { transform: translateX(0); opacity: 1; }
-                }
-            `;
-            document.head.appendChild(style);
-        }
-        
-        warning.textContent = message;
-        warning.style.display = 'block';
-        
-        // Masquer après 3 secondes
-        setTimeout(() => {
-            warning.style.display = 'none';
-        }, 3000);
-    }
-    
-    // Fonction de détection des DevTools
-    function detectDevTools() {
-        const threshold = 160;
-        const checkDevTools = function() {
-            const widthThreshold = window.outerWidth - window.innerWidth > threshold;
-            const heightThreshold = window.outerHeight - window.innerHeight > threshold;
-            
-            if (widthThreshold || heightThreshold) {
-                // DevTools détecté
-                document.body.innerHTML = `
-                    <div style="
-                        position: fixed;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                        color: white;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        font-family: Arial, sans-serif;
-                        text-align: center;
-                        z-index: 9999;
-                    ">
-                        <div>
-                            <h1 style="font-size: 2em; margin-bottom: 20px;">🚫 Accès Restreint</h1>
-                            <p style="font-size: 1.2em; margin-bottom: 30px;">
-                                Les outils de développement sont désactivés sur ce site.<br>
-                                Veuillez fermer les DevTools pour continuer.
-                            </p>
-                            <button onclick="location.reload()" style="
-                                background: white;
-                                color: #667eea;
-                                border: none;
-                                padding: 12px 24px;
-                                border-radius: 5px;
-                                font-size: 1em;
-                                cursor: pointer;
-                                font-weight: bold;
-                            ">
-                                Recharger la page
-                            </button>
-                        </div>
-                    </div>
-                `;
-            }
-        };
-        
-        // Vérifier périodiquement
-        setInterval(checkDevTools, 1000);
-        
-        // Événement de redimensionnement
-        window.addEventListener('resize', checkDevTools);
-    }
-    
-    // Protection supplémentaire contre la sélection de texte
-    document.addEventListener('selectstart', function(e) {
-        e.preventDefault();
-        return false;
-    });
-    
-    // Protection contre le drag & drop d'images
-    document.addEventListener('dragstart', function(e) {
-        if (e.target.tagName === 'IMG') {
-            e.preventDefault();
-            return false;
-        }
-    });
-    
-    console.log('🔒 Protection activée - IDA Cours');
-});
+        <hr class="section-divider">
 
-// Protection avancée contre la console
-(function() {
-    'use strict';
-    
-    // Rediriger la console
-    const originalConsole = {
-        log: console.log,
-        warn: console.warn,
-        error: console.error,
-        info: console.info
-    };
-    
-    // Redéfinir les méthodes de la console
-    ['log', 'warn', 'error', 'info'].forEach(method => {
-        console[method] = function() {
-            // Vous pouvez choisir de ne rien faire ou d'afficher un message
-            originalConsole.log(`🚫 Console.${method} est surveillée - IDA Cours`);
-        };
-    });
-    
-    // Empêcher l'accès aux propriétés sensibles
-    Object.defineProperty(window, 'console', {
-        get: function() {
-            return {
-                log: function() { /* bloqué */ },
-                warn: function() { /* bloqué */ },
-                error: function() { /* bloqué */ },
-                info: function() { /* bloqué */ }
-            };
-        },
-        set: function() { /* bloqué */ }
-    });
-})();
-</script>
+        <!-- RÉSEAU & LANGAGES -->
+        <h2 class="semestre-title">RÉSEAU & LANGAGES</h2>
+        
+        <div class="matieres-grid">
+            <!-- Réseau -->
+            <section class="matiere-card">
+                <div class="matiere-header">
+                    <div class="matiere-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3 class="matiere-title">Réseau</h3>
+                </div>
+                <ul class="matiere-list">
+                    <li class="matiere-item"><a href="ASSETS/Travaux-Pratiques1-IntroductionAuxReseaux.pdf" target="_blank" class="matiere-link">TP 1 - Introduction Réseaux</a></li>
+                    <li class="matiere-item"><a href="ASSETS/Travaux-Pratiques2-1-IntroductionAuxReseaux.pdf" target="_blank" class="matiere-link">TP 2-1 - Introduction Réseaux</a></li>
+                    <li class="matiere-item"><a href="ASSETS/Travaux-Pratiques2-2-IntroductionAuxReseaux.pdf" target="_blank" class="matiere-link">TP 2-2 - Introduction Réseaux</a></li>
+                    <li class="matiere-item"><a href="ASSETS/Travaux-Pratiques2-3-IntroductionAuxReseaux.pdf" target="_blank" class="matiere-link">TP 2-3 - Introduction Réseaux</a></li>
+                    <li class="matiere-item"><a href="ASSETS/Travaux-Pratiques3-1-IntroductionAuxReseaux.pdf" target="_blank" class="matiere-link">TP 3-1 - Introduction Réseaux</a></li>
+                    <li class="matiere-item"><a href="ASSETS/Travaux-Pratiques3-2-IntroductionAuxReseaux.pdf" target="_blank" class="matiere-link">TP 3-2 - Introduction Réseaux</a></li>
+                    <li class="matiere-item"><a href="ASSETS/Travaux-Pratiques4-IntroductionAuxReseaux.pdf" target="_blank" class="matiere-link">TP 4 - Introduction Réseaux</a></li>
+                    <li class="matiere-item"><a href="ASSETS/Travaux-Pratiques5-Introduction aux Reseaux.pdf" target="_blank" class="matiere-link">TP 5 - Introduction Réseaux</a></li>
+                </ul>
+            </section>
+
+            <!-- Language C -->
+            <section class="matiere-card">
+                <div class="matiere-header">
+                    <div class="matiere-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3 class="matiere-title">Language C</h3>
+                </div>
+                <ul class="matiere-list">
+                    <li class="matiere-item"><a href="ASSETS/Exercices de Travaux Dirigés1 (1).pdf" target="_blank" class="matiere-link">Exercices TD 1 C</a></li>
+                    <li class="matiere-item"><a href="ASSETS/Exercices de Travaux Dirigés2 (2).pdf" target="_blank" class="matiere-link">Exercices TD 2 C</a></li>
+                </ul>
+            </section>
+
+            <!-- XML -->
+            <section class="matiere-card">
+                <div class="matiere-header">
+                    <div class="matiere-icon"><i class="fas fa-file-code"></i></div>
+                    <h3 class="matiere-title">XML</h3>
+                </div>
+                <ul class="matiere-list">
+                    <li class="matiere-item"><a href="ASSETS/TD seance2.pdf" target="_blank" class="matiere-link">TD Séance 2 XML</a></li>
+                    <li class="matiere-item"><a href="ASSETS/td3 (1).pdf" target="_blank" class="matiere-link">TD 3 (1) XML</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Bouton Voir les cours -->
+        <div class="cta-section">
+            <a href="L1.html" class="cta-button">VOIR LES COURS LICENCE 1</a>
+        </div>
     </main>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Bloquer le clic droit
-    document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-        return false;
-    });
+    <!-- Footer -->
+    <footer class="modern-footer">
+        <div class="footer-wave"></div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="ASSETS/téléchargement (2).jpg" alt="Logo IDA COURS" class="footer-logo">
+                <p>Votre partenaire de confiance pour une formation en ligne de qualité. Développez vos compétences et construisez votre avenir avec nous.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/princeseydoubhk" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/Sdbsntech" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/seydou-bakhayokho-864070343" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/channel/UCCZJBOaAPdAoTiD-iJ2ftkg" class="social-icon" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://github.com/Sdbsntech" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
 
-    // Bloquer copier/coller/couper
-    ['copy', 'cut', 'paste'].forEach(function(evt) {
-        document.addEventListener(evt, function(e) {
-            e.preventDefault();
-            return false;
+            <div class="footer-section">
+                <h3>Liens Rapides</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+                    <li><a href="pdftuto.html"><i class="fas fa-chevron-right"></i> Annexe informative</a></li>
+                    <li><a href="videos.html"><i class="fas fa-chevron-right"></i> Vidéos</a></li>
+                    <li><a href="L1.html"><i class="fas fa-chevron-right"></i> Licence 1</a></li>
+                    <li><a href="L2.html"><i class="fas fa-chevron-right"></i> Licence 2</a></li>
+                    <li><a href="L3.html"><i class="fas fa-chevron-right"></i> Licence 3</a></li>
+                    <li><a href="commentaire.html"><i class="fas fa-chevron-right"></i> Commentaires</a></li>
+                    <li><a href="bibliotheques.html"><i class="fas fa-chevron-right"></i> Bibliothèque</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Ressources</h3>
+                <ul class="footer-links">
+                    <li><a href="bibliotheques.html"><i class="fas fa-book"></i> Bibliothèque</a></li>
+                    <li><a href="#calendrier"><i class="fas fa-calendar-alt"></i> Calendrier</a></li>
+                    <li><a href="FAQ.HTML"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    <li><a href="https://grafikart.fr/"><i class="fas fa-user-graduate"></i> Liens utiles</a></li>
+                    <li><a href="formateur.html"><i class="fas fa-chalkboard-teacher"></i> Nos Formateurs</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <div class="footer-contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>DAKAR, PIKINE, DALIFORT</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+221 77 362 45 39</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>sdbsntech1@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="legal-links">
+            <a href="mention_legale.html">Mentions légales</a>
+            <a href="politique_confidentialite.html">Politique de confidentialité</a>
+            <a href="condition_d'utilisation.html">Conditions d'utilisation</a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 IDA COURS. Plateforme réalisée par Seydou Bakhayokho.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation mobile et effets
+        document.addEventListener('DOMContentLoaded', function() {
+            // Menu mobile
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = menuToggle.querySelector('i');
+                if (icon.classList.contains('fa-bars')) {
+                    icon.classList.replace('fa-bars', 'fa-times');
+                } else {
+                    icon.classList.replace('fa-times', 'fa-bars');
+                }
+            });
+
+            // Navbar scroll effect
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // Animation des sections au scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observer toutes les cartes de matières
+            document.querySelectorAll('.matiere-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+
+            // Fermer le menu mobile en cliquant sur un lien
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    menuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                });
+            });
+
+            // Fermer le menu mobile en cliquant à l'extérieur
+            document.addEventListener('click', (e) => {
+                if (!navbar.contains(e.target) && navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    menuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                }
+            });
         });
-    });
-
-    // Bloquer raccourcis DevTools et code source
-    document.addEventListener('keydown', function(e) {
-        // F12
-        if (e.key === 'F12' || e.keyCode === 123) {
-            e.preventDefault();
-            return false;
-        }
-        // Ctrl+Shift+I / Cmd+Opt+I
-        if ((e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') ||
-            (e.metaKey && e.altKey && e.key.toLowerCase() === 'i')) {
-            e.preventDefault();
-            return false;
-        }
-        // Ctrl+U / Cmd+U
-        if ((e.ctrlKey && e.key.toLowerCase() === 'u') ||
-            (e.metaKey && e.key.toLowerCase() === 'u')) {
-            e.preventDefault();
-            return false;
-        }
-    });
-
-    // Détection DevTools par resize
-    setInterval(function() {
-        if (window.outerWidth - window.innerWidth > 160 ||
-            window.outerHeight - window.innerHeight > 160) {
-            document.body.innerHTML = '<h1 style="color:red;text-align:center;margin-top:20vh;">Accès restreint : DevTools détecté !</h1>';
-        }
-    }, 1000);
-});
-</script>
-
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Bloquer le clic droit
-    document.addEventListener('contextmenu', function(e) { e.preventDefault(); return false; });
-
-    // Bloquer copier/couper/coller
-    ['copy', 'cut', 'paste'].forEach(function(evt) {
-        document.addEventListener(evt, function(e) { e.preventDefault(); return false; });
-    });
-
-    // Bloquer la sélection de texte
-    document.addEventListener('selectstart', function(e) { e.preventDefault(); return false; });
-
-    // Bloquer le drag & drop d'images
-    document.addEventListener('dragstart', function(e) {
-        if (e.target.tagName === 'IMG') { e.preventDefault(); return false; }
-    });
-
-    // Bloquer toutes les touches F1 à F12 et autres combinaisons
-    document.addEventListener('keydown', function(e) {
-        // Bloquer touches F1 à F12
-        if (e.key.match(/^F[1-9]$|^F1[0-2]$/) || (e.keyCode >= 112 && e.keyCode <= 123)) {
-            e.preventDefault(); return false;
-        }
-        // Ctrl+U, Ctrl+Shift+I, Ctrl+Shift+C, Ctrl+S, Ctrl+Alt+I, Ctrl+Alt+J, Ctrl+Alt+C
-        if (
-            (e.ctrlKey && e.key.toLowerCase() === 'u') ||
-            (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') ||
-            (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'c') ||
-            (e.ctrlKey && e.key.toLowerCase() === 's') ||
-            (e.ctrlKey && e.altKey && e.key.toLowerCase() === 'i') ||
-            (e.ctrlKey && e.altKey && e.key.toLowerCase() === 'j') ||
-            (e.ctrlKey && e.altKey && e.key.toLowerCase() === 'c')
-        ) {
-            e.preventDefault(); return false;
-        }
-    });
-
-    // Détection DevTools par resize
-    setInterval(function() {
-        if (window.outerWidth - window.innerWidth > 160 ||
-            window.outerHeight - window.innerHeight > 160) {
-            document.body.innerHTML = '<h1 style="color:red;text-align:center;margin-top:20vh;">Accès restreint : DevTools détecté !</h1>';
-        }
-    }, 1000);
-});
-</script>
-
+    </script>
 </body>
 </html>

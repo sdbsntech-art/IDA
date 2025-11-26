@@ -2,162 +2,740 @@
 <html lang="fr">
 <head>
     <!-- ads.txt: google.com, pub-3830476419469874, DIRECT, f08c47fec0942fa0 -->
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3830476419469874"
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3830476419469874"
      crossorigin="anonymous"></script>
 
-<script async custom-element="amp-auto-ads"
+    <script async custom-element="amp-auto-ads"
         src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
-</script>
+    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="option de cours">
     <meta name="keywords" content="cours, option, pdf, tuto">
     <meta name="author" content="IDA COURS">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="favicon.png" sizes="180x180">
     <link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="favicon.png" sizes="16x16" type="image/png">
     <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="index.css">
     <meta name="google-site-verification" content="8WaeKM-mQAcuLhGP1eHzoO1Gr0IX9lq_NoNGavj0fB8" />
-<title>option de cours</title>
+    <title>Annexe Informative | IDA COURS</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3830476419469874"
+     crossorigin="anonymous"></script>
+    <meta name="google-adsense-account" content="ca-pub-3942650991755175">
 
     <style>
-        .pdf-section {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            margin: 30px auto;
-            max-width: 1200px;
+        /* ===== VARIABLES ET RESET ===== */
+        :root {
+            --main-bg: linear-gradient(135deg, #e0f7fa 0%, #bacdcf 100%);
+            --primary: #0d6efd;
+            --secondary: #6c757d;
+            --accent: #00b894;
+            --light: #f8f9fa;
+            --dark: #222;
+            --radius: 16px;
+            --shadow: 0 4px 24px rgba(0,0,0,0.08);
+            --transition: 0.3s cubic-bezier(.4,2,.6,1);
+            --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --background-color: #f8f9fa;
+            --text-color: #2c3e50;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --gradient-primary: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
+            --gradient-accent: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+            --header-height: 70px;
         }
 
-        .module-section {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .pdf-section h2 {
-            font-size: 1.6rem;
-            color: #2c3e50;
-            margin-bottom: 20px;
-            text-align: left;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
-            font-weight: 600;
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
         }
 
-        .module-title {
-            font-size: 2rem;
-            color: #2c3e50;
-            text-align: center;
-            margin-bottom: 30px;
+        body {
+            font-family: var(--font-main);
+            background: var(--main-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ===== NAVBAR CHIC ET RESPONSIVE ===== */
+        .navbar {
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+            height: var(--header-height);
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+
+        .container-nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            height: 100%;
+        }
+
+        .logo-nav {
+            font-size: 1.8rem;
             font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transition: var(--transition);
+            white-space: nowrap;
         }
 
-        .semester-title {
-            font-size: 2.2rem;
-            color: #2c3e50;
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transition: var(--transition);
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover::before,
+        .nav-link.active::before {
+            width: 80%;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary);
+            background: rgba(13, 110, 253, 0.1);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+            background: none;
+            border: none;
+            padding: 0.5rem;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+            min-height: calc(100vh - var(--header-height) - 400px);
+        }
+
+        .page-header {
             text-align: center;
-            margin: 40px 0;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
         }
 
-        .pdf-list {
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section-divider {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+            margin: 3rem 0;
+        }
+
+        /* ===== SECTIONS STYLÉES ===== */
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-align: center;
+            margin: 3rem 0 2rem 0;
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+        }
+
+        .documents-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px 0;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
         }
 
-        .pdf-item {
+        .document-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .document-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gradient-primary);
+            transition: var(--transition);
+        }
+
+        .document-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+        }
+
+        .document-card:hover::before {
+            width: 6px;
+        }
+
+        .document-header {
             display: flex;
             align-items: center;
-            gap: 15px;
-            background: #f8f9fa;
-            padding: 15px 20px;
-            border-radius: 12px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            border: 1px solid #e9ecef;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
         }
 
-        .pdf-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-            background: #fff;
-            border-color: #3498db;
-        }
-
-        .pdf-item i {
+        .document-icon {
             font-size: 1.8rem;
-            color: #e74c3c;
-            transition: transform 0.3s ease;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            width: 40px;
+            text-align: center;
         }
 
-        .pdf-item:hover i {
-            transform: scale(1.1);
+        .document-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin: 0;
         }
 
-        .pdf-item a {
+        .document-list {
+            list-style: none;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .document-item {
+            padding: 0.8rem 1rem;
+            background: rgba(248, 249, 250, 0.8);
+            border-radius: calc(var(--radius) - 4px);
+            border-left: 3px solid transparent;
+            transition: var(--transition);
+        }
+
+        .document-item:hover {
+            border-left-color: var(--accent);
+            background: rgba(0, 184, 148, 0.1);
+            transform: translateX(5px);
+        }
+
+        .document-link {
             text-decoration: none;
-            color: #2c3e50;
-            font-size: 1rem;
+            color: var(--text-color);
             font-weight: 500;
-            transition: color 0.3s ease;
-            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
         }
 
-        .pdf-item a:hover {
-            color: #3498db;
+        .document-link::before {
+            content: '📄';
+            font-size: 0.9rem;
+        }
+
+        .document-link:hover {
+            color: var(--primary);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero-section {
+            background: linear-gradient(135deg, var(--gradient-primary), var(--gradient-accent));
+            border-radius: var(--radius);
+            padding: 4rem 2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="rgba(255,255,255,0.1)"><polygon points="0,0 1000,50 1000,100 0,100"/></svg>');
+            background-size: cover;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-slogan {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+
+        .btn-cta:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* ===== FOOTER MODERNE ET RESPONSIVE ===== */
+        .modern-footer {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+            color: white;
+            position: relative;
+            margin-top: 4rem;
+        }
+
+        .footer-wave {
+            position: absolute;
+            top: -2px;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z' fill='%23f8f9fa'/%3E%3C/svg%3E");
+            background-size: cover;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        .footer-logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            object-fit: cover;
+        }
+
+        .footer-section p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+
+        .social-icon:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .footer-contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .contact-item i {
+            color: var(--accent);
+            width: 20px;
+        }
+
+        .legal-links {
+            text-align: center;
+            padding: 2rem 0 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 0 2rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .legal-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .legal-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(0, 0, 0, 0.2);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1024px) {
+            .documents-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 1.5rem;
+            }
         }
 
         @media (max-width: 768px) {
-            .pdf-section {
-                padding: 20px;
-                margin: 15px;
+            .container-nav {
+                padding: 0 1rem;
             }
 
-            .pdf-list {
-                grid-template-columns: 1fr;
+            .nav-links {
+                position: fixed;
+                top: var(--header-height);
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - var(--header-height));
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 2rem;
+                transition: var(--transition);
+                gap: 1rem;
+                z-index: 999;
             }
 
-            .semester-title {
+            .nav-links.active {
+                left: 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            main {
+                padding: 1rem;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .section-title {
                 font-size: 1.8rem;
             }
 
-            .module-title {
+            .document-card {
+                padding: 1.5rem;
+            }
+
+            .hero-section {
+                padding: 3rem 1rem;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 3rem 1rem 1rem;
+            }
+
+            .footer-section {
+                text-align: center;
+            }
+
+            .footer-section h3::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .footer-social {
+                justify-content: center;
+            }
+
+            .legal-links {
+                margin: 0 1rem;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-nav {
+                font-size: 1.4rem;
+            }
+
+            .page-title {
                 font-size: 1.6rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .documents-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .document-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
+            }
+
+            .hero-title {
+                font-size: 1.6rem;
+            }
+
+            .footer-content {
+                padding: 2rem 1rem 1rem;
+            }
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .document-card {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .document-card:nth-child(even) {
+            animation-delay: 0.1s;
+        }
+
+        .document-card:nth-child(odd) {
+            animation-delay: 0.2s;
+        }
+
+        /* ===== ACCESSIBILITÉ ===== */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Focus visible pour l'accessibilité */
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        /* Mode sombre automatique */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --main-bg: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+                --card-bg: rgba(30, 30, 46, 0.95);
+                --text-color: #e2e8f0;
+                --light: #2d3748;
+            }
+
+            .navbar {
+                background: rgba(26, 32, 44, 0.95);
+                border-bottom-color: rgba(255, 255, 255, 0.1);
+            }
+
+            .document-item {
+                background: rgba(45, 55, 72, 0.8);
             }
         }
     </style>
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3830476419469874"
-     crossorigin="anonymous"></script>
-
-<meta name="google-adsense-account" content="ca-pub-3942650991755175">
 </head>
 <body>
-<amp-auto-ads type="adsense"
+    <amp-auto-ads type="adsense"
         data-ad-client="ca-pub-3942650991755175">
-</amp-auto-ads>
+    </amp-auto-ads>
 
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container-nav">
             <div class="logo-nav">SDBSN-CODE</div>
             <ul class="nav-links">
-                <li><a href="index.html" class="nav-link ">Accueil</a></li>
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
                 <li><a href="videos.html" class="nav-link">Vidéos</a></li>
                 <li><a href="L1.html" class="nav-link">Licence 1</a></li>
                 <li><a href="L2.html" class="nav-link">Licence 2</a></li>
@@ -165,424 +743,287 @@
                 <li><a href="pdftuto.html" class="nav-link active">Annexe informative</a></li>
                 <li><a href="commentaire.html" class="nav-link">Commentaires</a></li>
             </ul>
-            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
         </div>
     </nav>
 
-    <!-- Main Content -->
+    <!-- Contenu principal -->
     <main>
         <!-- Hero Section -->
-        <section id="hero" class="hero-section">
-            <div class="hero-content">
-                <h1 class="hero-title">Bienvenue sur la plateforme d'apprentissage IDA COURS</h1>
-                <p class="hero-slogan">"Ensemble, développons nos compétences et notre avenir !"</p>
-                <a href="pdftuto.html" class="btn-cta">Commencer &darr;</a>
-            </div>
-            <div class="hero-illustration">
-                <img src="files/ChatGPT Image 1 juil. 2025, 03_24_36.png" alt="Apprentissage">
+        <section class="hero-section">
+            <h1 class="hero-title">Bienvenue sur la plateforme d'apprentissage IDA COURS</h1>
+            <p class="hero-slogan">"Ensemble, développons nos compétences et notre avenir !"</p>
+            <a href="#documents" class="btn-cta">Découvrir les documents &darr;</a>
+        </section>
+
+        <section class="page-header">
+            <h1 class="page-title">DOCUMENTS UTILES</h1>
+            <p class="page-subtitle">Ressources supplémentaires pour compléter votre apprentissage</p>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- Section Documents Supplémentaires -->
+        <section id="documents">
+            <h2 class="section-title">DOCUMENTS SUPPLÉMENTAIRES</h2>
+            
+            <div class="documents-grid">
+                <!-- PHP et Technologies Web -->
+                <section class="document-card">
+                    <div class="document-header">
+                        <div class="document-icon"><i class="fab fa-php"></i></div>
+                        <h3 class="document-title">PHP & Technologies Web</h3>
+                    </div>
+                    <ul class="document-list">
+                        <li class="document-item"><a href="ASSETS/TP_2_25_L2.pdf" target="_blank" class="document-link">TP 2 - PHP</a></li>
+                        <li class="document-item"><a href="ASSETS/TP_3_L2_25.pdf" target="_blank" class="document-link">TP 3 - PHP</a></li>
+                        <li class="document-item"><a href="ASSETS/TP_4_L2_2025.pdf" target="_blank" class="document-link">TP 4 - PHP</a></li>
+                        <li class="document-item"><a href="ASSETS/TP1_L3_25.pdf" target="_blank" class="document-link">TP 1 - PHP</a></li>
+                        <li class="document-item"><a href="ASSETS/bootstrap-4.0.0-dist.zip" target="_blank" class="document-link">Bootstrap 4.0.0 (ZIP)</a></li>
+                        <li class="document-item"><a href="ASSETS/0436-developpement-web-php-avance.pdf" target="_blank" class="document-link">Développement Web PHP Avancé</a></li>
+                    </ul>
+                </section>
+
+                <!-- Programmation et Algorithmes -->
+                <section class="document-card">
+                    <div class="document-header">
+                        <div class="document-icon"><i class="fas fa-code"></i></div>
+                        <h3 class="document-title">Programmation & Algorithmes</h3>
+                    </div>
+                    <ul class="document-list">
+                        <li class="document-item"><a href="ASSETS/Cours_pyton_2025.pdf" target="_blank" class="document-link">Cours Python 2025</a></li>
+                        <li class="document-item"><a href="ASSETS/python_elementaire_td.pdf" target="_blank" class="document-link">Python élémentaire TD</a></li>
+                        <li class="document-item"><a href="ASSETS/TPPython.pdf" target="_blank" class="document-link">TP Python</a></li>
+                        <li class="document-item"><a href="ASSETS/TP-Python-TP1.pdf" target="_blank" class="document-link">TP Python - TP1</a></li>
+                        <li class="document-item"><a href="ASSETS/Chapitre 2 - Les listes chainees.pdf" target="_blank" class="document-link">Chapitre 2 - Les listes chaînées</a></li>
+                        <li class="document-item"><a href="ASSETS/Chapitre 3 - Les arbres binaires.pdf" target="_blank" class="document-link">Chapitre 3 - Les arbres binaires</a></li>
+                    </ul>
+                </section>
+
+                <!-- JavaScript et Développement Frontend -->
+                <section class="document-card">
+                    <div class="document-header">
+                        <div class="document-icon"><i class="fab fa-js-square"></i></div>
+                        <h3 class="document-title">JavaScript & Frontend</h3>
+                    </div>
+                    <ul class="document-list">
+                        <li class="document-item"><a href="ASSETS/Programmer en samusant avec JavaScript.pdf" target="_blank" class="document-link">Programmer en s'amusant avec JavaScript</a></li>
+                        <li class="document-item"><a href="ASSETS/Tout-sur-le-Javascript.pdf" target="_blank" class="document-link">Tout sur le JavaScript</a></li>
+                        <li class="document-item"><a href="ASSETS/Apprenez à résoudre des algorithmes en JavaScript.rar" target="_blank" class="document-link">Résoudre des algorithmes en JavaScript (RAR)</a></li>
+                        <li class="document-item"><a href="ASSETS/0757-apprenez-angularjs.pdf" target="_blank" class="document-link">Apprenez AngularJS</a></li>
+                        <li class="document-item"><a href="ASSETS/0478-introduction-html-xhtml-et-css.pdf" target="_blank" class="document-link">Introduction HTML, XHTML et CSS</a></li>
+                    </ul>
+                </section>
+
+                <!-- Systèmes et Réseaux -->
+                <section class="document-card">
+                    <div class="document-header">
+                        <div class="document-icon"><i class="fas fa-server"></i></div>
+                        <h3 class="document-title">Systèmes & Réseaux</h3>
+                    </div>
+                    <ul class="document-list">
+                        <li class="document-item"><a href="ASSETS/2. Gestion des processus.pdf" target="_blank" class="document-link">Gestion des processus</a></li>
+                        <li class="document-item"><a href="ASSETS/TD1 - Systèmes d'Exploitation II.pdf" target="_blank" class="document-link">TD1 - Systèmes d'Exploitation II</a></li>
+                        <li class="document-item"><a href="ASSETS/TD2 - Systèmes d'Exploitation II.pdf" target="_blank" class="document-link">TD2 - Systèmes d'Exploitation II</a></li>
+                        <li class="document-item"><a href="ASSETS/Paramétrage Cisco.pdf" target="_blank" class="document-link">Paramétrage Cisco</a></li>
+                        <li class="document-item"><a href="ASSETS/Le PC _ architecture maintenance et mise à niveau -18ed.pdf" target="_blank" class="document-link">Le PC : Architecture, Maintenance</a></li>
+                    </ul>
+                </section>
+
+                <!-- Mathématiques et Analyse -->
+                <section class="document-card">
+                    <div class="document-header">
+                        <div class="document-icon"><i class="fas fa-calculator"></i></div>
+                        <h3 class="document-title">Mathématiques & Analyse</h3>
+                    </div>
+                    <ul class="document-list">
+                        <li class="document-item"><a href="ASSETS/Chap.Anal_L2_info_f.pvar (1).pdf" target="_blank" class="document-link">Chap.Anal_L2_info_f.pvar</a></li>
+                        <li class="document-item"><a href="ASSETS/Chap4.Anal_L2_info_25 (1).pdf" target="_blank" class="document-link">Chap4.Anal_L2_info_25</a></li>
+                        <li class="document-item"><a href="ASSETS/exer_series_fourier_plusvar.pdf" target="_blank" class="document-link">Exercices séries Fourier</a></li>
+                        <li class="document-item"><a href="ASSETS/fonc_pl.var.pdf" target="_blank" class="document-link">Fonctions PL</a></li>
+                        <li class="document-item"><a href="ASSETS/L2.an.Four_info (1).pdf" target="_blank" class="document-link">L2 Analyse Fourier Info</a></li>
+                        <li class="document-item"><a href="ASSETS/L2_ana_serie_fourrier.pdf" target="_blank" class="document-link">L2 Analyse série Fourier</a></li>
+                    </ul>
+                </section>
+
+                <!-- Bases de Données -->
+                <section class="document-card">
+                    <div class="document-header">
+                        <div class="document-icon"><i class="fas fa-database"></i></div>
+                        <h3 class="document-title">Bases de Données</h3>
+                    </div>
+                    <ul class="document-list">
+                        <li class="document-item"><a href="ASSETS/cinematheque_v2.sql" target="_blank" class="document-link">cinematheque_v2.sql (SQL)</a></li>
+                        <li class="document-item"><a href="ASSETS/0483-php-data-objects-pdo.ppt" target="_blank" class="document-link">PHP Data Objects (PDO) (PPT)</a></li>
+                        <li class="document-item"><a href="ASSETS/0522-pdf-php-base-de-donnees.pdf" target="_blank" class="document-link">PHP Base de Données</a></li>
+                    </ul>
+                </section>
+
+                <!-- Projets et Exercices -->
+                <section class="document-card">
+                    <div class="document-header">
+                        <div class="document-icon"><i class="fas fa-project-diagram"></i></div>
+                        <h3 class="document-title">Projets & Exercices</h3>
+                    </div>
+                    <ul class="document-list">
+                        <li class="document-item"><a href="ASSETS/ProjetWEB_L2_2025.pdf" target="_blank" class="document-link">Projet WEB L2 2025</a></li>
+                        <li class="document-item"><a href="ASSETS/Série  L2 Informatique 2024-2025.pdf" target="_blank" class="document-link">Série L2 Informatique 2024-2025</a></li>
+                        <li class="document-item"><a href="ASSETS/TD algorithmique et programmation I.docx.pdf" target="_blank" class="document-link">TD Algorithmique et Programmation I</a></li>
+                        <li class="document-item"><a href="ASSETS/W4Websites Projects (1).pdf" target="_blank" class="document-link">W4Websites Projects</a></li>
+                    </ul>
+                </section>
+
+                <!-- Sécurité et Optimisation -->
+                <section class="document-card">
+                    <div class="document-header">
+                        <div class="document-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3 class="document-title">Sécurité & Optimisation</h3>
+                    </div>
+                    <ul class="document-list">
+                        <li class="document-item"><a href="ASSETS/yt1s.io-2- Pourquoi la sécurité informatique.mp4" target="_blank" class="document-link">Pourquoi la sécurité informatique (Vidéo)</a></li>
+                        <li class="document-item"><a href="ASSETS/Chap6-Les sessions et les cookies_24.pdf" target="_blank" class="document-link">Les sessions et les cookies</a></li>
+                        <li class="document-item"><a href="ASSETS/0523-pdf-php-les-cookies.pdf" target="_blank" class="document-link">PHP Les Cookies</a></li>
+                        <li class="document-item"><a href="ASSETS/0524-pdf-php-les-sessions.pdf" target="_blank" class="document-link">PHP Les Sessions</a></li>
+                    </ul>
+                </section>
             </div>
         </section>
-        <h1>DOCUMENT UTILES</h1>
-        <!-- Section PDF/Tutos -->
-        <section id="pdf" class="pdf-section">
-             <h2>DOCUMENTS SUPPLÉMENTAIRES (PHP & AUTRES)</h2>
-            <div class="pdf-list">
-                <!-- PHP -->
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/TP_2_25_L2.pdf" target="_blank" download>TP 2 - PHP</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/TP_3_L2_25.pdf" target="_blank" download>TP 3 - PHP</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/TP_4_L2_2025.pdf" target="_blank" download>TP 4 - PHP</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/TP1_L3_25.pdf" target="_blank" download>TP 1 - PHP</a>
-                </div>
-            </div>
-            <div class="pdf-list">
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/2. Gestion des processus.pdf" target="_blank" download>2. Gestion des processus (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-archive"></i>
-                    <a href="ASSETS/bootstrap-4.0.0-dist.zip" target="_blank" download>Bootstrap 4.0.0 (ZIP)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/Chap.Anal_L2_info_f.pvar (1).pdf" target="_blank" download>Chap.Anal_L2_info_f.pvar (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/Chap4.Anal_L2_info_25 (1).pdf" target="_blank" download>Chap4.Anal_L2_info_25 (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/Chap6-Les sessions et les cookies_24.pdf" target="_blank" download>Chap6 - Les sessions et les cookies (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/Chapitre 2 - Les listes chainees.pdf" target="_blank" download>Chapitre 2 - Les listes chaînées (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/Chapitre 3 - Les arbres binaires.pdf" target="_blank" download>Chapitre 3 - Les arbres binaires (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-database"></i>
-                    <a href="ASSETS/cinematheque_v2.sql" target="_blank" download>cinematheque_v2.sql (SQL)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/Cours_pyton_2025.pdf" target="_blank" download>Cours Python 2025 (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/exer_series_fourier_plusvar.pdf" target="_blank" download>Exercices séries Fourier (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/fonc_pl.var.pdf" target="_blank" download>Fonctions PL (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/L2.an.Four_info (1).pdf" target="_blank" download>L2 Analyse Fourier Info (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/L2_ana_serie_fourrier.pdf" target="_blank" download>L2 Analyse série Fourier (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/Programmer en samusant avec JavaScript.pdf" target="_blank" download>Programmer en s'amusant avec JavaScript (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/ProjetWEB_L2_2025.pdf" target="_blank" download>Projet WEB L2 2025 (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/python_elementaire_td.pdf" target="_blank" download>Python élémentaire TD (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/Série  L2 Informatique 2024-2025.pdf" target="_blank" download>Série L2 Informatique 2024-2025 (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/TD1 - Systèmes d'Exploitation II.pdf" target="_blank" download>TD1 - Systèmes d'Exploitation II (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/TD2 - Systèmes d'Exploitation II.pdf" target="_blank" download>TD2 - Systèmes d'Exploitation II (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/Tout-sur-le-Javascript.pdf" target="_blank" download>Tout sur le JavaScript (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/TP_4_L2_2025.pdf" target="_blank" download>TP 4 - L2 2025 (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/TPPython.pdf" target="_blank" download>TP Python (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/TP-Python-TP1.pdf" target="_blank" download>TP Python - TP1 (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/0436-developpement-web-php-avance.pdf" target="_blank" download>Développement Web PHP Avancé (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/0478-introduction-html-xhtml-et-css.pdf" target="_blank" download>Introduction HTML, XHTML et CSS (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-powerpoint"></i>
-                    <a href="ASSETS/0483-php-data-objects-pdo.ppt" target="_blank" download>PHP Data Objects (PDO) (PPT)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/0504-cours-web-html-1-partie (1).pdf" target="_blank" download>Cours Web HTML 1ère partie (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/0510-pdf-langage-html-2-partie.pdf" target="_blank" download>Langage HTML 2ème partie (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/0519-pdf-php-bases-initiation.pdf" target="_blank" download>PHP Bases Initiation (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/0520-pdf-php-fonctions-formulaire.pdf" target="_blank" download>PHP Fonctions & Formulaires (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/0521-pdf-php-fichiers-repertoires.pdf" target="_blank" download>PHP Fichiers & Répertoires (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/0522-pdf-php-base-de-donnees.pdf" target="_blank" download>PHP Base de Données (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/0523-pdf-php-les-cookies.pdf" target="_blank" download>PHP Les Cookies (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/0524-pdf-php-les-sessions.pdf" target="_blank" download>PHP Les Sessions (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/0525-pdf-php-programmation-objet.pdf" target="_blank" download>PHP Programmation Objet (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/0541-php-oriente-objet.pdf" target="_blank" download>PHP Orienté Objet (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/0555-programmer-en-php (1).pdf" target="_blank" download>Programmer en PHP (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/0566-programmation-en-java-et-exercices.pdf" target="_blank" download>Programmation en Java et Exercices (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/0589-php-accelere (1).pdf" target="_blank" download>PHP Accéléré (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/0591-web-cote-serveur-php-pdo-mvc-dal-controller.pdf" target="_blank" download>Web côté serveur PHP PDO MVC DAL Controller (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/0620-guide-du-developpeur-php (1).pdf" target="_blank" download>Guide du développeur PHP (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/0750_programmation_web_en_php_conception_architectures_et_developpement.pdf" target="_blank" download>Programmation Web en PHP : Conception, Architectures et Développement (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/0757-apprenez-angularjs.pdf" target="_blank" download>Apprenez AngularJS (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-archive"></i>
-                    <a href="ASSETS/Apprenez à résoudre des algorithmes en JavaScript.rar" target="_blank" download>Résoudre des algorithmes en JavaScript (RAR)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-video"></i>
-                    <a href="ASSETS/CREER UN SITE .mp4" target="_blank" download>Créer un site (Vidéo MP4)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/D1-S2 PC 3eme 2019.pdf" target="_blank" download>D1-S2 PC 3ème 2019 (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/Django_5_By_Example_Build_powerful_and_reliable_Python_web_applications.pdf" target="_blank" download>Django 5 By Example (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/Le PC _ architecture maintenance et mise à niveau -18ed.pdf" target="_blank" download>Le PC : Architecture, Maintenance et Mise à Niveau (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/Paramétrage Cisco.pdf" target="_blank" download>Paramétrage Cisco (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/TD algorithmique et programmation I.docx.pdf" target="_blank" download>TD Algorithmique et Programmation I (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <a href="ASSETS/W4Websites Projects (1).pdf" target="_blank" download>W4Websites Projects (PDF)</a>
-                </div>
-                <div class="pdf-item">
-                    <i class="fas fa-file-video"></i>
-                    <a href="ASSETS/yt1s.io-2- Pourquoi la sécurité informatique.mp4" target="_blank" download>Pourquoi la sécurité informatique (Vidéo MP4)</a>
-                </div>
-            </div>
-        </section>
-       
-        
     </main>
+
+    <!-- Footer -->
     <footer class="modern-footer">
-    <div class="footer-wave"></div>
-    <div class="footer-content">
-        <div class="footer-section">
-            <img src="ASSETS/téléchargement (2).jpg" alt="Logo IDA COURS" class="footer-logo">
-            <p>Votre partenaire de confiance pour une formation en ligne de qualité. Développez vos compétences et construisez votre avenir avec nous.</p>
-            <div class="footer-social">
-                <a href="https://www.instagram.com/princeseydoubhk" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://twitter.com/Sdbsntech" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/seydou-bakhayokho-864070343" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.youtube.com/channel/UCCZJBOaAPdAoTiD-iJ2ftkg" class="social-icon" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a href="https://github.com/Sdbsntech" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
-            </div>
-        </div>
-
-        <div class="footer-section">
-            <h3>Liens Rapides</h3>
-            <ul class="footer-links">
-                <li><a href="index.html"><i class="fas fa-chevron-right"></i> Accueil</a></li>
-                <li><a href="pdftuto.html"><i class="fas fa-chevron-right"></i> Annexe informative</a></li>
-                <li><a href="videos.html"><i class="fas fa-chevron-right"></i> Vidéos</a></li>
-                <li><a href="L1.html"><i class="fas fa-chevron-right"></i> Licence 1</a></li>
-                <li><a href="L2.html"><i class="fas fa-chevron-right"></i> Licence 2</a></li>
-                <li><a href="L3.html"><i class="fas fa-chevron-right"></i> Licence 3</a></li>
-                <li><a href="commentaire.html"><i class="fas fa-chevron-right"></i> Commentaires</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h3>Ressources</h3>
-            <ul class="footer-links">
-                <li><a href="bibliotheques.html"><i class="fas fa-book"></i> Bibliothèque</a></li>
-                <li><a href="#calendrier"><i class="fas fa-calendar-alt"></i> Calendrier</a></li>
-                <li><a href="FAQ.HTML"><i class="fas fa-question-circle"></i> FAQ</a></li>
-                <li><a href="https://grafikart.fr/"><i class="fas fa-user-graduate"></i>Liens-utiles</a></li>
-                <li><a href="formateur.html"><i class="fas fa-chalkboard-teacher"></i> Nos Formateurs</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h3>Contact</h3>
-            <div class="footer-contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>DAKAR, PIKINE, DALIFORT</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+221 77 362 45 39</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>sdbsntech1@gmail.com</span>
+        <div class="footer-wave"></div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="ASSETS/téléchargement (2).jpg" alt="Logo IDA COURS" class="footer-logo">
+                <p>Votre partenaire de confiance pour une formation en ligne de qualité. Développez vos compétences et construisez votre avenir avec nous.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/princeseydoubhk" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/Sdbsntech" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/seydou-bakhayokho-864070343" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/channel/UCCZJBOaAPdAoTiD-iJ2ftkg" class="social-icon" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://github.com/Sdbsntech" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="legal-links">
-                    <a href="mention_legale.html">mention_legale.</a>
-                    <a href="politique_confidentialite.html">politique_confidentialite</a>
-                    <a href="condition_d'utilisation.html">condition_d'utilisation</a>
+
+            <div class="footer-section">
+                <h3>Liens Rapides</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+                    <li><a href="pdftuto.html"><i class="fas fa-chevron-right"></i> Annexe informative</a></li>
+                    <li><a href="videos.html"><i class="fas fa-chevron-right"></i> Vidéos</a></li>
+                    <li><a href="L1.html"><i class="fas fa-chevron-right"></i> Licence 1</a></li>
+                    <li><a href="L2.html"><i class="fas fa-chevron-right"></i> Licence 2</a></li>
+                    <li><a href="L3.html"><i class="fas fa-chevron-right"></i> Licence 3</a></li>
+                    <li><a href="commentaire.html"><i class="fas fa-chevron-right"></i> Commentaires</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Ressources</h3>
+                <ul class="footer-links">
+                    <li><a href="bibliotheques.html"><i class="fas fa-book"></i> Bibliothèque</a></li>
+                    <li><a href="#calendrier"><i class="fas fa-calendar-alt"></i> Calendrier</a></li>
+                    <li><a href="FAQ.HTML"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    <li><a href="https://grafikart.fr/"><i class="fas fa-user-graduate"></i> Liens utiles</a></li>
+                    <li><a href="formateur.html"><i class="fas fa-chalkboard-teacher"></i> Nos Formateurs</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <div class="footer-contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>DAKAR, PIKINE, DALIFORT</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+221 77 362 45 39</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>sdbsntech1@gmail.com</span>
+                    </div>
                 </div>
-    
-<div class="footer-bottom">
-        <p>&copy; 2025 IDA COURS. Plateforme réalisée par Seydou Bakhayokho.</p>
-    </div>
-</footer>
-    <script src="main.js"></script>
+            </div>
+        </div>
+        <div class="legal-links">
+            <a href="mention_legale.html">Mentions légales</a>
+            <a href="politique_confidentialite.html">Politique de confidentialité</a>
+            <a href="condition_d'utilisation.html">Conditions d'utilisation</a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 IDA COURS. Plateforme réalisée par Seydou Bakhayokho.</p>
+        </div>
+    </footer>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Bloquer le clic droit
-    document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-        return false;
-    });
+    <script>
+        // Navigation mobile et effets
+        document.addEventListener('DOMContentLoaded', function() {
+            // Menu mobile
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = menuToggle.querySelector('i');
+                if (icon.classList.contains('fa-bars')) {
+                    icon.classList.replace('fa-bars', 'fa-times');
+                } else {
+                    icon.classList.replace('fa-times', 'fa-bars');
+                }
+            });
 
-    // Bloquer copier/coller/couper
-    ['copy', 'cut', 'paste'].forEach(function(evt) {
-        document.addEventListener(evt, function(e) {
-            e.preventDefault();
-            return false;
+            // Navbar scroll effect
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // Animation des sections au scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observer toutes les cartes de documents
+            document.querySelectorAll('.document-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+
+            // Fermer le menu mobile en cliquant sur un lien
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    menuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                });
+            });
+
+            // Fermer le menu mobile en cliquant à l'extérieur
+            document.addEventListener('click', (e) => {
+                if (!navbar.contains(e.target) && navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    menuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                }
+            });
         });
-    });
-
-    // Bloquer raccourcis DevTools et code source
-    document.addEventListener('keydown', function(e) {
-        // F12
-        if (e.key === 'F12' || e.keyCode === 123) {
-            e.preventDefault();
-            return false;
-        }
-        // Ctrl+Shift+I / Cmd+Opt+I
-        if ((e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') ||
-            (e.metaKey && e.altKey && e.key.toLowerCase() === 'i')) {
-            e.preventDefault();
-            return false;
-        }
-        // Ctrl+U / Cmd+U
-        if ((e.ctrlKey && e.key.toLowerCase() === 'u') ||
-            (e.metaKey && e.key.toLowerCase() === 'u')) {
-            e.preventDefault();
-            return false;
-        }
-    });
-
-    // Détection DevTools par resize
-    setInterval(function() {
-        if (window.outerWidth - window.innerWidth > 160 ||
-            window.outerHeight - window.innerHeight > 160) {
-            document.body.innerHTML = '<h1 style="color:red;text-align:center;margin-top:20vh;">Accès restreint : DevTools détecté !</h1>';
-        }
-    }, 1000);
-});
-</script>
-
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Bloquer le clic droit
-    document.addEventListener('contextmenu', function(e) { e.preventDefault(); return false; });
-
-    // Bloquer copier/couper/coller
-    ['copy', 'cut', 'paste'].forEach(function(evt) {
-        document.addEventListener(evt, function(e) { e.preventDefault(); return false; });
-    });
-
-    // Bloquer la sélection de texte
-    document.addEventListener('selectstart', function(e) { e.preventDefault(); return false; });
-
-    // Bloquer le drag & drop d'images
-    document.addEventListener('dragstart', function(e) {
-        if (e.target.tagName === 'IMG') { e.preventDefault(); return false; }
-    });
-
-    // Bloquer toutes les touches F1 à F12 et autres combinaisons
-    document.addEventListener('keydown', function(e) {
-        // Bloquer touches F1 à F12
-        if (e.key.match(/^F[1-9]$|^F1[0-2]$/) || (e.keyCode >= 112 && e.keyCode <= 123)) {
-            e.preventDefault(); return false;
-        }
-        // Ctrl+U, Ctrl+Shift+I, Ctrl+Shift+C, Ctrl+S, Ctrl+Alt+I, Ctrl+Alt+J, Ctrl+Alt+C
-        if (
-            (e.ctrlKey && e.key.toLowerCase() === 'u') ||
-            (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') ||
-            (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'c') ||
-            (e.ctrlKey && e.key.toLowerCase() === 's') ||
-            (e.ctrlKey && e.altKey && e.key.toLowerCase() === 'i') ||
-            (e.ctrlKey && e.altKey && e.key.toLowerCase() === 'j') ||
-            (e.ctrlKey && e.altKey && e.key.toLowerCase() === 'c')
-        ) {
-            e.preventDefault(); return false;
-        }
-    });
-
-    // Détection DevTools par resize
-    setInterval(function() {
-        if (window.outerWidth - window.innerWidth > 160 ||
-            window.outerHeight - window.innerHeight > 160) {
-            document.body.innerHTML = '<h1 style="color:red;text-align:center;margin-top:20vh;">Accès restreint : DevTools détecté !</h1>';
-        }
-    }, 1000);
-});
-</script>
-
+    </script>
 </body>
 </html>
